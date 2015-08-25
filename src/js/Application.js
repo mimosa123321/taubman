@@ -6,6 +6,7 @@ var $ = require('jquery-compat'),
     EventProxy = require('./eventProxy/EventProxy'),
     Main = require('./modules/Main'),
     Resize = require('./utils/Resize'),
+    Animate = require('./utils/Animate'),
     ViewsManager = require('./view/ViewsManager');
 
 var Application = module.exports = {
@@ -14,7 +15,7 @@ var Application = module.exports = {
         this.eventProxy = new EventProxy(this.model);
         this.main = new Main(this.model);
         this.resizeUtil = new Resize(this.model);
-
+        this.animateUtil = new Animate(this.model);
         this.viewsManager = React.render( <ViewsManager model={this.model}/> , document.getElementById('pagesApp'));
         setTimeout(this.initResize.bind(this),100);
     },
@@ -22,22 +23,28 @@ var Application = module.exports = {
     initResize:function() {
         var self = this;
         self.manageBg((1920 / 1079),$('#homePage'),$('#homePageBg'));
-        self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'));
+        self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'), "v");
+
         self.model.stage.resize(function() {
             //resize home page
             self.manageBg((1920 / 1079),$('#homePage'),$('#homePageBg'));
-            self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'));
+            self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'),"v");
             self.manageVideos();
+
         });
     },
 
-    manageBg: function(ratio, el, elImg) {
+    manageBg: function(ratio, el, elImg, type) {
         var ratio = ratio;
+        var domImg = elImg.find('img');
         var returnObj = this.resizeUtil.resize(el, ratio);
         var rW = returnObj.width;
         var rH = returnObj.height;
         elImg.css('width', rW);
         elImg.css('height', rH);
+        domImg.css('width',rW);
+        domImg.css('height',rH);
+
     },
 
     manageVideos:function() {
@@ -51,7 +58,6 @@ var Application = module.exports = {
             $('#middleBar').css('height','85%');
         }
     }
-
 };
 
 $(function() {

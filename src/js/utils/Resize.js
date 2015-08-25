@@ -11,13 +11,15 @@ Resize.prototype.resize = function(el, ratio) {
     this.el_height = parseInt(this.el.css('height'));
 
     this.ratio = ratio;
-    if (this.el_width / this.el_height >= this.ratio) {
-        rW = this.el_width;
-        rH = this.el_width / this.ratio;
+    if ( this.ratio > this.el_width / this.el_height) {
+        rW = 'auto';
+        rH = '100%';
+
     } else {
-        rW = this.ratio * this.el_height;
-        rH = this.el_height;
+        rW = '100%';
+        rH = 'auto';
     }
+
     var returnObj = {
         width: rW,
         height: rH

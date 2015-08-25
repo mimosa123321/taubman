@@ -81,6 +81,7 @@ html, body {
       position: absolute;
       width: 18%;
       height: 100%;
+      cursor: pointer;
       //border:1px solid blue;
 
       #logoImg {
@@ -457,7 +458,113 @@ html, body {
         @extend .fullSize;
         position: absolute;
         background-color: black;
+        overflow: hidden;
 
+        .pairs {
+          position: absolute;
+          @extend .fullSize;
+          @include transform(translateX(0));
+          visibility: hidden;
+
+          &.hide.right {
+            //@include transform(translateX(100%));
+            @include animation(hide-section .6s ease-in-out);
+            @include fill-mode(forwards);
+
+            @keyframes hide-section {
+              0% {
+                @include transform(translateX(0));
+              }
+              100% {
+                @include transform(translateX(100%));
+              }
+            }
+
+            @-webkit-keyframes hide-section {
+              0% {
+                @include transform(translateX(0));
+              }
+              100% {
+                @include transform(translateX(100%));
+              }
+            }
+
+          }
+
+          &.show.right {
+            //@include transform(translateX(-100%));
+            @include animation(show-section .6s ease-in-out);
+            @include fill-mode(forwards);
+
+            @keyframes show-section {
+              0% {
+                @include transform(translateX(-100%));
+              }
+              100% {
+                @include transform(translateX(0));
+              }
+            }
+
+            @-webkit-keyframes show-section {
+              0% {
+                @include transform(translateX(-100%));
+              }
+              100% {
+                @include transform(translateX(0));
+              }
+            }
+
+          }
+
+          &.hide.left {
+            @include animation(hide-section-left .6s ease-in-out);
+            @include fill-mode(forwards);
+
+            @keyframes hide-section-left {
+              0% {
+                @include transform(translateX(0));
+              }
+              100% {
+                @include transform(translateX(-100%));
+              }
+            }
+
+            @-webkit-keyframes hide-section-left {
+              0% {
+                @include transform(translateX(0));
+              }
+              100% {
+                @include transform(translateX(-100%));
+              }
+            }
+
+          }
+
+          &.show.left {
+            @include transform(translateX(100%));
+            @include animation(show-section-left .6s ease-in-out);
+            @include fill-mode(forwards);
+
+            @keyframes show-section-left {
+              0% {
+                @include transform(translateX(100%));
+              }
+              100% {
+                @include transform(translateX(0));
+              }
+            }
+
+            @-webkit-keyframes show-section-left {
+              0% {
+                @include transform(translateX(100%));
+              }
+              100% {
+                @include transform(translateX(0));
+              }
+            }
+
+          }
+        }
 
         .contentSize {
           position: absolute;

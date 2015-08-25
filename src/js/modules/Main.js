@@ -1,13 +1,14 @@
 var $ = require('jquery-compat'),
     Menu = require('./Menu');
 
-
 var Main = module.exports = function(model) {
     this.model = model;
     this.menu = new Menu(this.model);
     this.app = $('#pagesApp');
     this.init();
+    this.isOpenContent = false;
     this.model.eventProxy.addListener('onChangeSection', this.changeSection.bind(this));
+    this.model.eventProxy.addListener('onBackHomePage', this.backHomePage.bind(this));
 };
 
 Main.prototype.init = function() {
@@ -30,22 +31,52 @@ Main.prototype.getContents = function() {
 Main.prototype.changeSection = function() {
     //showApp
     this.showApp();
+    var target = $('#pair' + (this.model.currentSection));
+    var pre = $('#pair' + (this.model.prevSection));
+    target.css('visibility','visible');
+    target.css('display','block');
+    if(!this.isOpenContent) {
+        this.isOpenContent = true;
+        return;
+    }else {
+        if(this.model.currentSection < this.model.prevSection) {
+            pre.removeClass('show hide left right').addClass('hide right');
+            target.removeClass('show hide left right').addClass('show right');
+        }
 
+        if(this.model.currentSection > this.model.prevSection) {
+            pre.removeClass('show hide left right').addClass('hide left');
+            target.removeClass('show hide left right').addClass('show left');
+        }
 
+        /*this.model.animateUtil.animationEnd(pre, function(){
+            pre.css('display','none');
+            pre.css('visibility','hidden');
+        });*/
+    }
+};
+
+Main.prototype.backHomePage = function() {
+    //hideApp
+    this.hideApp();
+    this.clearApp();
 };
 
 Main.prototype.hideApp = function() {
-    if( this.app.hasClass('show')) {
-        this.app.removeClass('show');
-    }
-    this.app.addClass('hide');
+    this.app.removeClass('show hide').addClass('hide');
 };
 
 Main.prototype.showApp = function() {
-    if( this.app.hasClass('hide')) {
-        this.app.removeClass('hide');
-    }
-    this.app.addClass('show');
+    this.app.removeClass('show hide').addClass('show');
+};
+
+Main.prototype.clearApp = function() {
+    this.isOpenContent = false;
+    this.currentSection = null;
+    this.prevSection = null;
+    $('.pairs').removeClass('show hide left right');
+    $('.pairs').css('visibility','hidden');
+    //$('.pairs').css('display','none');
 };
 
 /*Main.prototype.getData = function(url) {

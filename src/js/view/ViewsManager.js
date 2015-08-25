@@ -15,6 +15,7 @@ var ViewsManager = module.exports = React.createClass({
         var self = this;
         self.model = this.props.model;
         self.model.eventProxy.addListener('onContentsReady',function() {
+            console.log("onContent Ready");
             self.updateContents(self);
         });
 
@@ -30,7 +31,7 @@ var ViewsManager = module.exports = React.createClass({
 
     updateContents:function(self) {
         var currentSection = this.model.currentSection - 1;
-        var contents = this.model.contents[currentSection];
+        var contents = this.model.contents;
         self.setState({contents: contents});
     },
 
