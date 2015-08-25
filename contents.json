@@ -1,0 +1,154 @@
+{
+  "data":[
+    {
+      "leftContent": {
+        "type":"image",
+        "title":"China’s Malls:\nPalaces of Experience, \nNot Consumption",
+        "desc":"Forget shop til’ you drop. Chinese people are increasingly heading out to the mall to socialise with friends and family, prompting operators to ramp up their dining, entertainment and cultural attractions.",
+        "url":"build/images/brandbg1.jpg",
+        "btnType":"click-more",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets, \n\n\n Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets \n\n Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets \n\n Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets \n Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets \n\n Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets, \n Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      },
+      "rightContent": {
+        "type":"video",
+        "title":"Up Close and Personal",
+        "desc":"Physical stores increasingly offer consumers unique and tailored experiences, which have yet to be matched in the online world, says a leading retail executive.",
+        "url":"build/images/brandbg2.jpg",
+        "btnType":"click-more",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "Up Close and Personal",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      }
+    },
+    {
+      "leftContent": {
+        "type":"image",
+        "title":"China’s Malls:\nPalaces of Experience, \nNot Consumption",
+        "desc":"Forget shop til’ you drop. Chinese people are increasingly heading out to the mall to socialise with friends and family, prompting operators to ramp up their dining, entertainment and cultural attractions.",
+        "url":"build/images/brandbg1.jpg",
+        "btnType":"click-more",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "China’s Malls:\nPalaces of Experience, \nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      },
+      "rightContent": {
+        "type":"video",
+        "title":"Up Close and Personal",
+        "desc":"Physical stores increasingly offer consumers unique and tailored experiences, which have yet to be matched in the online world, says a leading retail executive.",
+        "url":"build/images/brandbg2.jpg",
+        "btnType":"click-more",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "Up Close and Personal",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      }
+    },
+    {
+      "leftContent": {
+        "type":"image",
+        "title":"Stores Get Savvy\nWith Digital Tech\n",
+        "desc":"Augmented reality, bespoke multimedia content and live event streaming. How some retailers, including luxury brand Burberry, are offering their customers a cutting-edge digital experience.",
+        "url":"build/images/digitalbg1.jpg",
+        "btnType":"click-more",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      },
+      "rightContent": {
+        "type":"video",
+        "title":"Trust Issues Challenge\nGrowth of Online Retail",
+        "desc":"Widespread concerns over counterfeit goods and online scams mean that many brands and consumers remain wary of taking the virtual leap.",
+        "url":"build/images/digitalbg2.jpg",
+        "btnType":"click-more",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      }
+    },
+    {
+      "leftContent": {
+        "type":"image",
+        "title":"The Rise of M-Commerce:\nFour Retailers Leading the Way",
+        "desc":"China's rapid adoption of mobile platforms is driving a surge in online spending. Retailers are also taking advantage of mobile technology to enhance the in-store experience.",
+        "url":"build/images/mobilebg1.jpg",
+        "btnType":"click-more",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      },
+      "rightContent": {
+        "type":"video",
+        "title":"China Sets Pace in\nMobile Payments Market",
+        "desc":"Alibaba’s Alipay and Tencent’s Tenpay dominate China’s mobile payment industry. We compare and contrast the two giants in our interactive snapshot.",
+        "url":"build/images/mobilebg2.jpg",
+        "btnType":"info",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      }
+    },
+    {
+      "leftContent": {
+        "type":"image",
+        "title":"Design For Life",
+        "desc":"Malls will need to be more open, flexible and digitally-enabled if they are to keep pace with rapidly advancing technologies and changing consumer requirements.",
+        "url":"build/images/mallbg1.jpg",
+        "btnType":"click-more",
+        "btnText":"click for more",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      },
+      "rightContent": {
+        "type":"video",
+        "title":"The Mall of the Future",
+        "desc":"Check out our interactive slideshow for a glimpse of how mall design is evolving around the world.",
+        "url":"build/images/mallbg2.jpg",
+        "btnType":"click-more",
+        "btnText":"click here to play slideshow",
+        "btnUrl":"build/images/icon-arrow-right.png",
+        "subContent": {
+          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "url":"build/images/content-placeholder.jpg"
+        }
+      }
+    }
+  ]
+}
