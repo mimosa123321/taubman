@@ -743,6 +743,12 @@ html, body {
                   border: 1px solid #7B7373;
                   border-radius: 23px;
                   text-align: center;
+                  cursor: pointer;
+
+                  &:hover {
+                    
+
+                  }
 
                   .buttonDetailContainer {
                     position: absolute;
