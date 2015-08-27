@@ -27,16 +27,26 @@ module.exports = function(grunt) {
             }
         },
 
-        'clean': ['build/'],
+        'clean': {
+            both: ['build/', 'buildtemp/'],
+            temp: ['buildtemp/']
+        },
 
         'copy': {
             main: {
                 files: [{
                     expand: true,
                     cwd: 'src/',
-                    src: ['**', '!js/**'],
+                    src: ['**', '!js/**', '!css/**'],
                     dest: 'build/'
                 }]
+            }
+        },
+
+        'concat': {
+            sass: {
+                src: ['src/css/**/*.scss', '!src/css/ie8.scss'],
+                dest: 'buildtemp/style.scss'
             }
         },
 
@@ -46,8 +56,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'build/css/style.css': 'src/css/style.scss',
-                    'build/css/ie8.css': 'src/css/ie8.scss'
+                    'buildtemp/style.css': 'buildtemp/style.scss',
+                    'buildtemp/ie8.css': ['src/css/ie8.scss']
                 }
             }
         },
@@ -56,10 +66,10 @@ module.exports = function(grunt) {
             'scss': {
                 files: [{
                     expand: true,
-                    cwd: 'build/css/',
-                    src: ['style.css','ie8.css','fonts.css'],
+                    cwd: 'buildtemp/',
+                    src: ['*.css'],
                     dest: 'build/css/',
-                    ext: '.css'
+                    ext: '.min.css'
                 }]
             }
         },
@@ -104,5 +114,5 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
     //grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'browserify', 'uglify']);
-    grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'browserify']);
+    grunt.registerTask('default', ['clean:both', 'copy', 'concat:sass', 'sass', 'cssmin', 'browserify', 'clean:temp']);
 };
