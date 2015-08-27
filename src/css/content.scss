@@ -1,19 +1,70 @@
 $font-content: din-bold, Helvetica;
 
 .contentPages {
-  width: 477px;
+  background-color: #333;
+  width: 50%;
 
   .content {
+    padding: 25px;
     font-size: 10px;
 
+    img {
+      width: 100%;
+    }
+
+    h1 {
+      padding-left: 45px;
+      padding-top: 5px;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: auto 30px;
+    }
+    h3 {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    hr {
+      height: 1px;
+      background-color: #fff;
+    }
+
+  }
+
+  .content.opening {
     .title {
       font-size: 24px;
       color: white;
-      padding: 0;
-      margin: 0;
-      white-space: pre;
+      white-space: pre-line;
       text-transform: uppercase;
       font-family: $font-content;
+      padding-left: 0;
+      background: none;
     }
   }
+
+  .content.malls {
+    h1 {
+      background-image: url('../images/icon-title-malls.png');
+    }
+  }
+
+  .content.ecommerce {
+    h1 {
+      background-image: url('../images/icon-title-ecommerce.png');
+    }
+  }
+
+  .content.retail {
+    h1 {
+      background-image: url('../images/icon-title-retail.png');
+    }
+  }
+
+  .content.demographics {
+    h1 {
+      background-image: url('../images/icon-title-demographics.png');
+    }
+  }
+
 }
