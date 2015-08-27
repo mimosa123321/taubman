@@ -40,8 +40,8 @@
         "btnText":"click for more",
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
-          "title": "China’s Malls:\nPalaces of Experience, \nNot Consumption",
-          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "title": "China’s Malls: Palaces of Experience, \nNot Consumption",
+          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets.\n\n “Most shoppers in China’s shopping malls do not want to shop – they actually want to eat, they want to socialize, they want to go out, they want to escape their other part of their life”, says Gergely Bodo, Head of Retail Leasing at real estate consultancy Trigranit Management Corporation. “While previously the consumers’ priority was shopping, food, and fun, the tendency today is the opposite: fun, food, and then shopping”. \n\n Backing this up is a new survey from McKinsey. It shows that almost three quarters of Chinese consumers (73%) identify shopping as a leisure activity, with around half describing the activity as “among the best ways to spend time with the family”. \n\n The trend is partly driven by the limited number of public spaces in China, coupled with the prevalence of smaller homes and multigenerational living. As a result, modern-day consumers regard malls as far more than functional shopping destinations. They are places to eat, be entertained and absorb culture with family and friends. \n\n Mall operators have responded by adding live entertainment, such as music or fashion shows, restaurants, cinemas, ice-skating rinks, bowling alleys, and special seasonal activities to celebrate occasions like the Lunar New Year. \n\n Adding a cultural element to mall offerings has also become a popular way for developers to draw the crowds; sculptures, small marine parks, ancient temples and art exhibits are commonplace in the modern-day mall.",
           "url":"build/images/content-placeholder.jpg"
         }
       },
@@ -55,14 +55,14 @@
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
           "title": "Up Close and Personal",
-          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "desc": "Physical stores increasingly offer consumers unique and tailored experiences, which have yet to be matched in the online world, says a leading retail executive.",
           "url":"build/images/content-placeholder.jpg"
         }
       }
     },
     {
       "leftContent": {
-        "type":"image",
+        "type":"video",
         "title":"Stores Get Savvy\nWith Digital Tech\n",
         "desc":"Augmented reality, bespoke multimedia content and live event streaming. How some retailers, including luxury brand Burberry, are offering their customers a cutting-edge digital experience.",
         "url":"build/images/digitalbg1.jpg",
@@ -70,13 +70,13 @@
         "btnText":"click for more",
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
-          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
-          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "title": "Stores Get Savvy\nWith Digital Tech",
+          "desc": "Physical stores increasingly offer consumers unique and tailored experiences, which have yet to be matched in the online world, says a leading retail executive.",
           "url":"build/images/content-placeholder.jpg"
         }
       },
       "rightContent": {
-        "type":"video",
+        "type":"image",
         "title":"Trust Issues Challenge\nGrowth of Online Retail",
         "desc":"Widespread concerns over counterfeit goods and online scams mean that many brands and consumers remain wary of taking the virtual leap.",
         "url":"build/images/digitalbg2.jpg",
@@ -84,9 +84,9 @@
         "btnText":"click for more",
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
-          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
-          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
-          "url":"build/images/content-placeholder.jpg"
+          "title": "Trust Issues Challenge\nGrowth of Online Retail",
+          "desc": "This abundance of fake merchandise has become a major impediment to the e-commerce industry, causing consumers to shy away from online retail, owing to concerns over reliability and scams. Moreover, with slightly less than half of all cases of online shopping reportedly being caused by counterfeits, the wariness of consumers seems justified. \n\n According to Chinese tech powerhouse, Tencent, more than half (58.2%) of Chinese shoppers who admitted to having bought imitation goods online claimed they did so because they were scammed by fake online reviews or artificially inflated product ratings. As a result, 53 per cent of consumers surveyed believed that the number of online shopping scams has increased, suggesting that mistrust of online retail among Chinese shoppers is spreading, too. \n\n However, consumers are not the only ones with concerns, many brands are reluctant to sell online.  Jon Seliger, former president and CEO of Coach China, is quick to highlight the risk which counterfeit products sold online pose to the luxury sector: \n\n However, consumers are not the only ones with concerns, many brands are reluctant to sell online.  Jon Seliger, former president and CEO of Coach China, is quick to highlight the risk which counterfeit products sold online pose to the luxury sector: \n\n “The problem is that the more of a presence you have in e-commerce with your full price collection, the more it is driving customers to Taobao where they are buying parallel goods and fakes.”\n\n Seliger warns equally that opting to use Tmall as a single point of brand entry into e-commerce is equally risky, as luxury companies that do so face devaluing of their brand given the threat of fakes, in addition to lack of control over merchandising and how the brand is presented. Instead, Seliger says that the only way brands can control the environment in the online market is by maintaining their own branded sites.",
+          "url":"build/images/content-digital.jpg"
         }
       }
     },
@@ -100,9 +100,9 @@
         "btnText":"click for more",
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
-          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
-          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
-          "url":"build/images/content-placeholder.jpg"
+          "title": "The Rise of M-Commerce:\nFour Retailers Leading the Way",
+          "desc": "Tencent. It will integrate its shopping channel into the company’s WeChat messaging app, tapping into the mobile platform’s 468 million monthly active users.\n\n Other brands, such as the Spanish clothing and accessories retailer Zara, have built dedicated mobile apps. The Zara app provides a complete end-to-end customer journey, allowing shoppers to search, buy, and get detailed information about delivery, payment options for their items. \n\n Daryl Ho, managing director of public relations firm Zeno Group, says:  “Zara is a really good example of a brand that is using mobile and technology to not change the actual retail experience but to add on and enhance it. You don’t feel like you’re getting a lesser experience by buying online.” \n\n For physical stores, much of the mobile focus has been on using devices to pay for goods at the checkout. In May, Wal-mart said it was teaming up with Alibaba to allow customers to make purchases in 25 of its stores in southern China using Alipay Wallet, the mobile application of Alibaba's online payment unit Alipay. The mobile payment system’s 270 million active users will be able to use branch scanners to read barcodes in the app, with payment then taken in seconds. \n\n Mobile payments are also catching on with local brands. In Beijing, Wangfujing Department Store lets customers pay for merchandise using WeChat Pay at checkouts. It also offers the option to pick up merchandise purchased on the app at in-store specialty counters. \n\n “The mobile device in China is becoming a replacement of other platforms, whether I’m using a tablet or a PC or even watching e-content”, says Oliver Rust, Managing Director of Nielsen China. “As a result of that, it’s no surprise to see e-commerce as a business, or m-commerce as a business, growing significantly, and that will only continue to grow rapidly as we move forward”",
+          "url":"build/images/content-mobile.jpg"
         }
       },
       "rightContent": {
@@ -130,9 +130,9 @@
         "btnText":"click for more",
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
-          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
-          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
-          "url":"build/images/content-placeholder.jpg"
+          "title": "Design for life \n\n",
+          "desc": "In a market which is continuing to evolve at rapid rates, mall design poses many challenges. There is mounting evidence to suggest that the uses of the future mall may be entirely different to those of the current retail landscape. With China set to be home to over 4,000 malls by the end of 2015, according to research published by China Chain Store Association and professional services firm Deloitte, ensuring that a certain level of adaptability is integrated into these spaces to allow for their use to evolve over time is a key priority for the modern day mall developer. \n\n The latest trend for use of ceiling, floor, and wall space for interactive displays is a key example of the changeability of mall design. Where once skylights were a favored design, digital requirements mean that ‘feature ceilings’ are now increasingly being used to host technical equipment such as wireless routers. \n\n One brand quick to adapt to digital has been British luxury fashion house Burberry, whose new store in Shanghai uses RFID chips built into the store that trigger unique multimedia content on screens as the consumer walks by. The content showcases runway footage and exclusive product videos, offering customers a more personalized shopping experience. \n\n Fashion brands and big-box electronics stores have been among the first retailers to begin upgrading their retail environment with advanced technologies like motion and heat sensors, iBeacons, infrared, and mobile tracking software. \n\n Alongside allowing retailers to tailor the consumer experience, these technologies are also useful to the brands themselves. Through technologies like motion and heat sensors, retailers can analyze consumer shopping behavior and gather intelligence about the touch-points shoppers make; information which ultimately provides them with a more comprehensive view of how their customers shop.",
+          "url":"build/images/content-mall.jpg"
         }
       },
       "rightContent": {
@@ -144,8 +144,8 @@
         "btnText":"click here to play slideshow",
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
-          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
-          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "title": "The Mall of the Future",
+          "desc": "",
           "url":"build/images/content-placeholder.jpg"
         }
       }

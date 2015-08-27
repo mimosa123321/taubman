@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'din-bold';
+    src: url('../fonts/din-bold.eot');
+    src: url('../fonts/din-bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/din-bold.woff') format('woff'),
+    url('../fonts/din-bold.ttf') format('truetype'),
+    url('../fonts/din-bold.svg#din-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'din-condensed-bold';
+    src: url('../fonts/DIN-Condensed-Bold.eot');
+    src: url('../fonts/DIN-Condensed-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DIN-Condensed-Bold.woff') format('woff'),
+    url('../fonts/DIN-Condensed-Bold.ttf') format('truetype'),
+    url('../fonts/DIN-Condensed-Bold.svg#din-condensed-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'din-alternate-bold';
+    src: url('../fonts/DIN-Alternate-Bold.eot');
+    src: url('../fonts/DIN-Alternate-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DIN-Alternate-Bold.woff') format('woff'),
+    url('../fonts/DIN-Alternate-Bold.ttf') format('truetype'),
+    url('../fonts/DIN-Alternate-Bold.svg#din-alternate-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'din-mittelschrift-regular';
+    /*src: url('../fonts/DINMittelschrift-Regular.eot');*/
+    /*src: url('../fonts/DINMittelschrift-Regular.eot?#iefix') format('embedded-opentype'),*/
+    src: url('../fonts/DINMittelschrift-Regular.woff') format('woff'),
+    url('../fonts/DINMittelschrift-Regular.ttf') format('truetype'),
+    url('../fonts/DINMittelschrift-Regular.svg#din-mittelschrift-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+

@@ -57,7 +57,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'build/css/',
-                    src: ['style.css','ie8.css'],
+                    src: ['style.css','ie8.css','fonts.css'],
                     dest: 'build/css/',
                     ext: '.css'
                 }]

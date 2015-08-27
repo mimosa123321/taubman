@@ -79,6 +79,8 @@ Main.prototype.clearApp = function() {
     //$('.pairs').css('display','none');
 };
 
+
+
 /*Main.prototype.getData = function(url) {
     return new Promise(function(resolve, reject){
         var req = new XMLHttpRequest();

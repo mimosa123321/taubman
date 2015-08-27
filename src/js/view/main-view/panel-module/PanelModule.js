@@ -9,7 +9,13 @@ var PanelModule = module.exports = React.createClass({
     componentDidMount: function() {
 
     },
+
+    clickCloseHandler:function() {
+        this.props.onClickCloseBtn();
+    },
+
     render:function(){
+        this.model = this.props.model;
         var status;
         switch (this.props.hidden) {
             case true:
@@ -27,7 +33,7 @@ var PanelModule = module.exports = React.createClass({
                 <div className="contents-video">
                     <PanelText contents={this.props.contents}/>
                     <PanelVideo contents={this.props.contents}/>
-                    <PanelClose />
+                    <PanelClose onClickCloseBtn = {this.clickCloseHandler}/>
                 </div>
             </div>
         }
@@ -36,7 +42,7 @@ var PanelModule = module.exports = React.createClass({
             <div className="contents">
                 <PanelScrollText contents={this.props.contents}/>
                 <PanelImage contents={this.props.contents}/>
-                <PanelClose />
+                <PanelClose onClickCloseBtn = {this.clickCloseHandler} />
             </div>
         </div>
     }

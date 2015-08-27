@@ -1,5 +1,6 @@
 var React = require('./../../../../node_modules/react/lib/React');
 var ContentModule = require('./content-module/ContentModule');
+var InfoModule = require('./info-module/InfoModule');
 
 var MainView = module.exports = React.createClass({
     componentDidMount: function() {
@@ -10,19 +11,28 @@ var MainView = module.exports = React.createClass({
     },
 
     render: function() {
+        var self = this;
         var myModel = this.props.model;
         var contentsNodes = this.props.contents.map(function (contents, index) {
             var contentId = 'pair' + (index + 1);
-            return (
-                <div key={index} className="pairs" id={contentId}>
-                    <ContentModule model = {myModel} contents = {contents.leftContent}
-                                   name = {'leftContent'}
-                                   onButtonClick = {this.onHandleButtonClick}/>
-                    <ContentModule model = {myModel} contents = {contents.rightContent}
-                                   name = {'rightContent'}
-                                   onButtonClick = {this.onHandleButtonClick}/>
-                </div>
-            );
+            if(index === 0) {
+                return (
+                        <div key={index} className="info" id={contentId}>
+                            <InfoModule />
+                        </div>
+                    )
+            }else {
+                return (
+                    <div key={index} className="pairs" id={contentId}>
+                        <ContentModule model = {myModel} contents = {contents.leftContent}
+                                       name = {'leftContent'}
+                                       onButtonClick = {self.onHandleButtonClick}/>
+                        <ContentModule model = {myModel} contents = {contents.rightContent}
+                                       name = {'rightContent'}
+                                       onButtonClick = {self.onHandleButtonClick}/>
+                    </div>
+                );
+            }
         });
         return <div className="mainView">
             {contentsNodes}

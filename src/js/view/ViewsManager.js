@@ -24,9 +24,12 @@ var ViewsManager = module.exports = React.createClass({
         });
     },
 
+    onClosePanelHandler:function() {
+        this.setState({isHidePanel:true});
+    },
+
     onShowSubContent:function(subContents) {
         this.setState({subContents:subContents.subContent, type:subContents.type, isHidePanel:false});
-
     },
 
     updateContents:function(self) {
@@ -40,9 +43,11 @@ var ViewsManager = module.exports = React.createClass({
             <MainView model={this.props.model}
                       contents={this.state.contents}
                       onShowSubContent={this.onShowSubContent}/>
-            <PanelModule hidden={this.state.isHidePanel}
+            <PanelModule model={this.props.model}
+                         hidden={this.state.isHidePanel}
                          contents={this.state.subContents}
-                         type = {this.state.type} />
+                         type = {this.state.type}
+                         onClickCloseBtn = {this.onClosePanelHandler}/>
         </div>;
     }
 });
