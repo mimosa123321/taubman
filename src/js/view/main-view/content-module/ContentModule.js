@@ -1,6 +1,7 @@
 var React = require('./../../../../../node_modules/react/lib/React');
 var ContentImage = require('./ContentImage');
 var ContentText = require('./ContentText');
+var ContentIcon = require('./ContentIcon');
 
 var ContentModule = module.exports = React.createClass({
     componentDidMount: function() {
@@ -29,6 +30,7 @@ var ContentModule = module.exports = React.createClass({
         return <div className={name}>
             <ContentImage model = {this.props.model}
                           data = {url} />
+            <ContentIcon type = {this.props.contents.type} />
             <ContentText model = {this.props.model}
                          data = {text}
                          onButtonClick = {this.onButtonClick}/>

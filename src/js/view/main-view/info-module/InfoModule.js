@@ -4,9 +4,10 @@ var InfoMap = require('./InfoMap');
 
 var infoModule = module.exports = React.createClass({
     render:function() {
+
         return <div className = "contents">
-            <InfoMap />
-            <InfoDetail />
+            <InfoMap model = {this.props.model} />
+            <InfoDetail model = {this.props.model} />
         </div>
     }
 });

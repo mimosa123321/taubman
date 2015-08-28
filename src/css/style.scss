@@ -83,19 +83,20 @@ html, body {
     #logo {
       display: block;
       position: absolute;
-      width: 18%;
+      width: 16.5%;
       height: 100%;
       cursor: pointer;
       //border:1px solid blue;
 
       #logoImg {
         display: block;
-        width: 70%;
+        width: 75%;
         height:100%;
         margin: 0 auto;
         white-space: nowrap;
 
         img {
+          //display: inline-block;
           vertical-align: middle;
           margin: -4px;
         }
@@ -104,13 +105,21 @@ html, body {
 
     ul {
       position: absolute;
-      width: 82%;
+      width: 83.5%;
       height:100%;
       right:0;
       padding:0;
       margin:0;
       list-style: none;
       //border:1px solid orange;
+
+      .menu.chosen #icon1, .menu.chosen #icon2, .menu.chosen #icon3, .menu.chosen #icon4, .menu.chosen #icon5 {
+        background-position: 0 -25px;
+      }
+
+      .menu.chosen .titles {
+        color: white;
+      }
 
       li {
         position: relative;
@@ -122,6 +131,10 @@ html, body {
         //background-color: #f37421;
         background-color: white;
         cursor: pointer;
+
+        &.chosen {
+          background-color: #f37421;
+        }
 
         &:hover {
           background-color: #f37421;
@@ -321,9 +334,16 @@ html, body {
           cursor: pointer;
           //border:1px solid red;
 
+          &:hover #dlPaperIcon{
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          }
+
           #dlPaperIcon {
             @extend .alignCenter;
             width: 56%;
+            opacity: 0.6;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
             //height: 56%;
           }
         }
@@ -337,9 +357,16 @@ html, body {
           cursor: pointer;
           //border:1px solid red;
 
-            #viewPreziIcon {
+          &:hover #viewPreziIcon{
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          }
+
+          #viewPreziIcon {
               @extend .alignCenter;
               width: 56%;
+              opacity: 0.6;
+              -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
               //height: 44%;
             }
         }
@@ -362,6 +389,7 @@ html, body {
           width:100%;
           height:48%;
           cursor: pointer;
+
           //border:1px solid red;
 
           #searchBar {
@@ -388,13 +416,22 @@ html, body {
             height:auto;
             //border: 1px solid black;
             overflow: hidden;
+            margin: 20% auto;
 
             .icons {
               position: relative;
               float:left;
               width: 24%;
               //border: 1px solid red;
-              padding:0 12%
+              padding:9% 12%;
+              opacity: 0.6;
+              -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+
+              &:hover {
+                opacity: 1;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+              }
+
             }
           }
         }
@@ -407,9 +444,16 @@ html, body {
           height: 48%;
           //border:1px solid yellow;
 
+          &:hover #asiaIcon{
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          }
+
           #asiaIcon {
             @extend .alignCenter;
             width:60%;
+            opacity: 0.6;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
             //height: 49%;
           }
         }
@@ -637,6 +681,17 @@ html, body {
             text-align: center;
           }
         }
+
+        .videoIcon {
+          position: absolute;
+          left: 0;
+          width: 11%;
+          right: 0;
+          top: 50%;
+          margin: -18% auto;
+        }
+
+
         img {
           width:100%;
           height:auto;
@@ -680,6 +735,20 @@ html, body {
           .buttons {
             @extend .fullSize;
 
+            .button-unit.notChosen:hover .buttonContainer .buttonTop .buttonTitle, .button-unit.chosen .buttonContainer .buttonTop .buttonTitle,
+            .button-unit:hover .buttonContainer .buttonContent, .button-unit.chosen .buttonContainer .buttonContent {
+              color: white;
+            }
+
+            .button-unit.notChosen:hover .buttonContainer .buttonLine, .button-unit.chosen .buttonContainer .buttonLine {
+              background-color: white;
+            }
+
+            .button-unit.notChosen:hover .buttonContainer .buttonDetail, .button-unit.chosen .buttonContainer .buttonDetail {
+              background-color: #e56d1f;
+              border: 1px solid #f69c61;
+            }
+
             .button-unit {
               position: absolute;
               width: 36%;
@@ -687,6 +756,16 @@ html, body {
               background-color: white;
               border: 2px solid #6f6f6f;
               border-radius: 7px;
+
+              &.chosen {
+                background-color: #f37421;
+                border: 2px solid white;
+              }
+
+              &:hover {
+                background-color: #f37421;
+                border: 2px solid white;
+              }
 
               .buttonContainer {
                 position: absolute;
@@ -720,6 +799,7 @@ html, body {
                     font-size: 13px;
                     line-height: 16px;
                     color: #6f6f6f;
+                    text-align: left;
                   }
                 }
 
@@ -745,10 +825,6 @@ html, body {
                   text-align: center;
                   cursor: pointer;
 
-                  &:hover {
-                    
-
-                  }
 
                   .buttonDetailContainer {
                     position: absolute;
@@ -757,13 +833,13 @@ html, body {
                     right: 0;
                     margin: auto;
                     color: white;
+                    font-size: 13px;
 
                     span {
                       vertical-align: middle;
                       display: inline-block;
                     }
                   }
-
                 }
 
                 .buttonContent {
@@ -793,7 +869,7 @@ html, body {
 
               .buttonTop {
                 img {
-                  width:8%;
+                  width:6%;
                 }
               }
             }
@@ -804,7 +880,7 @@ html, body {
 
               .buttonTop {
                 img {
-                  width:9%;
+                  width:8%;
                 }
               }
 
@@ -816,7 +892,7 @@ html, body {
 
               .buttonTop {
                 img {
-                  width:7%;
+                  width:6%;
                 }
               }
             }
@@ -827,7 +903,7 @@ html, body {
 
               .buttonTop {
                 img {
-                  width:9%;
+                  width:8%;
                 }
               }
             }

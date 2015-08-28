@@ -9,6 +9,7 @@ var Main = module.exports = function(model) {
     this.isOpenContent = false;
     this.model.eventProxy.addListener('onChangeSection', this.changeSection.bind(this));
     this.model.eventProxy.addListener('onBackHomePage', this.backHomePage.bind(this));
+    this.model.eventProxy.addListener('onClickInfoButton', this.changeDetail.bind(this));
 };
 
 Main.prototype.init = function() {
@@ -60,6 +61,26 @@ Main.prototype.backHomePage = function() {
     //hideApp
     this.hideApp();
     this.clearApp();
+};
+
+Main.prototype.changeDetail = function(data) {
+    console.log(data);
+    var index = data + 1;
+
+    this.model.preDetailId = this.model.detailId;
+    this.model.detailId = index;
+
+
+    var target = $('#detailContent' + this.model.detailId);
+    var pre = $('#detailContent' + this.model.preDetailId);
+    target.css('visibility','visible');
+    target.css('display','block');
+
+    console.log(target);
+
+    pre.removeClass('show hide').addClass('hide');
+    target.removeClass('show hide').addClass('show');
+
 };
 
 Main.prototype.hideApp = function() {

@@ -1,12 +1,88 @@
 $font-content: din-bold, Helvetica;
+@mixin animation($animate...) {
+  -webkit-animation: $animate;
+  animation: $animate;
+}
+
+@mixin fill-mode($fillmode...) {
+  -webkit-animation-fill-mode: $fillmode;
+  animation-fill-mode: $fillmode;
+}
+
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  transform: $transform;
+}
+
+
+@mixin transition($transition...) {
+  -webkit-transition:$transition;
+  transition: $transition;
+}
 
 .contentPages {
-  background-color: #333;
-  width: 50%;
+  //background-color: #333;
+  width: 100%;
+  height:100%;
 
   .content {
-    padding: 25px;
+    padding: 0 6%;
     font-size: 10px;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    color: white;
+
+    &.show {
+      //@include transform(translateX(100%));
+      visibility: visible;
+      @include animation(show-detail 0.4s ease-out);
+      @include fill-mode(forwards);
+    }
+
+    &.hide {
+      visibility: hidden;
+      //@include transform(translateX(100%));
+      @include animation(hide-detail 0.4s ease-out);
+      @include fill-mode(forwards);
+    }
+
+
+    @keyframes show-detail {
+      0% {
+        @include transform(translateX(100%));
+      }
+      100% {
+        @include transform(translateX(0));
+      }
+    }
+
+    @-webkit-keyframes show-detail {
+      0% {
+        @include transform(translateX(100%));
+      }
+      100% {
+        @include transform(translateX(0));
+      }
+    }
+
+    @keyframes hide-detail {
+      0% {
+        @include transform(translateX(0%));
+      }
+      100% {
+        @include transform(translateX(100%));
+      }
+    }
+
+    @-webkit-keyframes hide-detail {
+      0% {
+        @include transform(translateX(0%));
+      }
+      100% {
+        @include transform(translateX(100%));
+      }
+    }
 
     img {
       width: 100%;
@@ -29,9 +105,11 @@ $font-content: din-bold, Helvetica;
       background-color: #fff;
     }
 
+
   }
 
   .content.opening {
+    //visibility: hidden;
     .title {
       font-size: 24px;
       color: white;
@@ -44,27 +122,35 @@ $font-content: din-bold, Helvetica;
   }
 
   .content.malls {
+    visibility: hidden;
     h1 {
       background-image: url('../images/icon-title-malls.png');
     }
   }
 
   .content.ecommerce {
+    visibility: hidden;
     h1 {
       background-image: url('../images/icon-title-ecommerce.png');
     }
   }
 
   .content.retail {
+    visibility: hidden;
     h1 {
       background-image: url('../images/icon-title-retail.png');
     }
   }
 
   .content.demographics {
+    visibility: hidden;
     h1 {
       background-image: url('../images/icon-title-demographics.png');
     }
   }
+  p {
+    color:white;
+  }
+
 
 }

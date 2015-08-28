@@ -17,8 +17,8 @@ var MainView = module.exports = React.createClass({
             var contentId = 'pair' + (index + 1);
             if(index === 0) {
                 return (
-                        <div key={index} className="info" id={contentId}>
-                            <InfoModule />
+                        <div key={index} className="info pairs" id={contentId}>
+                            <InfoModule model = {myModel}/>
                         </div>
                     )
             }else {

@@ -11,12 +11,14 @@ Menu.prototype.init = function() {
     var menu = $('#menusList').find('.menu');
     menu.each(function(index){
         $(this).click(function(){
+            $('.menu').removeClass('chosen');
             if(self.model.currentSection) {
                 self.model.prevSection = self.model.currentSection;
             }
             self.model.currentSection = index + 1;
             //self.model.eventProxy.emit('onMenuClick');
             self.model.eventProxy.emit('onChangeSection');
+            $(this).addClass('chosen');
 
         });
     });
@@ -27,5 +29,8 @@ Menu.prototype.initLogo = function() {
     var logo = $('#logo');
     logo.click(function(){
         self.model.eventProxy.emit('onBackHomePage');
+        $('.menu').removeClass('chosen');
+
+        $('#pagesApp').css('visibility','hidden');
     });
 };

@@ -10,7 +10,7 @@ var InfoMap= module.exports = React.createClass({
                     <img src="./build/images/map.png" />
                 </div>
             </div>
-            <InfoButton />
+            <InfoButton model = {this.props.model}/>
         </div>
     }
 });
