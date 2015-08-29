@@ -2,6 +2,11 @@ module.exports = function(grunt) {
     'use strict';
 
     grunt.initConfig({
+
+        'eslint': {
+            target: ['src/js/**/*.js']
+        },
+
         'jsbeautifier' : {
             files : ['src/js/**/*.js'],
             options: {
@@ -114,5 +119,5 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
     //grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'browserify', 'uglify']);
-    grunt.registerTask('default', ['clean:both', 'copy', 'concat:sass', 'sass', 'cssmin', 'browserify', 'clean:temp']);
+    grunt.registerTask('default', ['clean:both', 'eslint', 'copy', 'concat:sass', 'sass', 'cssmin', 'browserify', 'clean:temp']);
 };
