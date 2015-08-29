@@ -5,8 +5,12 @@ var ContentImage = module.exports = React.createClass({
         this.model = this.props.model;
     },
 
+    handleSubmit:function() {
+        this.props.onButtonClick();
+    },
+
     render: function() {
-        return <div className="contentImage">
+        return <div className="contentImage" onClick={this.handleSubmit}>
             <img src={this.props.data} />
         </div>
     }

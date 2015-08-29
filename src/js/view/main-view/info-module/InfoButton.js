@@ -56,7 +56,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonDetail" id="buttonDetail1" onClick={this.handleSubmit.bind(null,1)}>
                         <div className= "buttonDetailContainer">
                             <span className = "center"></span>
-                            <span>more details</span>
+                            <span className="buttonDetailText">more details</span>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonDetail" id="buttonDetail2" onClick={this.handleSubmit.bind(null,2)}>
                         <div className= "buttonDetailContainer">
                             <span className = "center"></span>
-                            <span>more details</span>
+                            <span className="buttonDetailText">more details</span>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonDetail" id="buttonDetail3" onClick={this.handleSubmit.bind(null,3)}>
                         <div className= "buttonDetailContainer">
                             <span className = "center"></span>
-                            <span>more details</span>
+                            <span className="buttonDetailText">more details</span>
                         </div>
                     </div>
                 </div>
@@ -116,21 +116,11 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonDetail" id="buttonDetail4" onClick={this.handleSubmit.bind(null,4)}>
                         <div className= "buttonDetailContainer">
                             <span className = "center"></span>
-                            <span>more details</span>
+                            <span className="buttonDetailText">more details</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     }
 });
-
-
-/*
- <div className = "buttonBg"><img src="./build/images/infobg1.png" /></div>
-
-
-
- <div className = "buttonDetail"><img src="./build/images/infodetailbtn1.png" /></div>
- */

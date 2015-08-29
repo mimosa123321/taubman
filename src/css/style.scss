@@ -26,6 +26,17 @@ $topbar-height: 8%;
   transition: $transition;
 }
 
+@mixin graidentBackground ($r,$g,$b,$a,$hex,$r2,$g2,$b2,$a2,$hex2) {
+  background: rgba($r,$g,$b,$a);
+  background: -moz-linear-gradient(top, rgba($r,$g,$b,$a) 0%, rgba($r2,$g2,$b2,$a2) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba($r,$g2,$b2,$a)), color-stop(100%, rgba($r2,$g2,$b2,$a2)));
+  background: -webkit-linear-gradient(top, rgba($r,$g,$b,$a) 0%, rgba($r2,$g2,$b2,$a2) 100%);
+  background: -o-linear-gradient(top, rgba($r,$g,$b,$a) 0%, rgba($r2,$g2,$b2,$a2) 100%);
+  background: -ms-linear-gradient(top, rgba($r,$g,$b,$a) 0%, rgba($r2,$g2,$b2,$a2) 100%);
+  background: linear-gradient(to bottom, rgba($r,$g,$b,$a) 0%, rgba($r2,$g2,$b2,$a2) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$hex', endColorstr='$hex2', GradientType=0 );
+}
+
 
 html, body {
   margin: 0;
@@ -171,7 +182,7 @@ html, body {
 
           #icon3 {
             width: 25px;
-            height: 23px;
+            height: 24px;
             background-image: url(../images/icon3.png);
             background-position: 0 0px;
 
@@ -627,11 +638,19 @@ html, body {
         .leftContent {
           @extend .contentSize;
           left: 0;
+
+          .contentImage {
+            cursor: pointer;
+          }
         }
 
         .rightContent {
           @extend .contentSize;
           right: 0;
+
+          .contentImage {
+            cursor: pointer;
+          }
         }
 
         .contentText {
@@ -673,6 +692,7 @@ html, body {
           &-img {
             width:30%;
             margin: 0 auto;
+            cursor: pointer;
           }
 
           &-text {
@@ -703,11 +723,19 @@ html, body {
         @extend .fullSize;
         background-color: white;
 
+        .contentBg {
+          position: absolute;
+          width:100%;
+          height:auto;
+          z-index:1;
+        }
+
         .map {
-          position: relative;
-          float:left;
+          position: absolute;
+          left:0;
           width:66%;
           height:100%;
+          z-index:2;
 
           .bg {
             position: absolute;
@@ -745,7 +773,7 @@ html, body {
             }
 
             .button-unit.notChosen:hover .buttonContainer .buttonDetail, .button-unit.chosen .buttonContainer .buttonDetail {
-              background-color: #e56d1f;
+              @include graidentBackground(241,116,33,1,#f17421,193,93,26,1,#c15d1a);
               border: 1px solid #f69c61;
             }
 
@@ -756,6 +784,7 @@ html, body {
               background-color: white;
               border: 2px solid #6f6f6f;
               border-radius: 7px;
+              box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
 
               &.chosen {
                 background-color: #f37421;
@@ -824,7 +853,7 @@ html, body {
                   border-radius: 23px;
                   text-align: center;
                   cursor: pointer;
-
+                  @include graidentBackground(111,111,111,1,#6f6f6f,88,88,88,1,#585858);
 
                   .buttonDetailContainer {
                     position: absolute;
@@ -835,9 +864,8 @@ html, body {
                     color: white;
                     font-size: 13px;
 
-                    span {
-                      vertical-align: middle;
-                      display: inline-block;
+                    .buttonDetailText {
+                      text-transform: uppercase;
                     }
                   }
                 }
@@ -914,11 +942,12 @@ html, body {
         }
 
         .detail {
-          position: relative;
-          float:left;
+          position: absolute;
+          right:0;
            width:34%;
            height:100%;
            background-color: #6f6f6f;
+          z-index:2;
         }
 
         img {
@@ -1189,7 +1218,8 @@ html, body {
         position: absolute;
         right: 0;
         top: 0;
-        width: 25px;
+        width:57px;
+        //width: 25px;
       }
     }
   }
@@ -1224,7 +1254,7 @@ html, body {
 
     #footer {
       height:100%;
-      font-size: 6px;
+      font-size: 12px;
       color:white;
 
       #copyright {

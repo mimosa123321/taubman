@@ -24,11 +24,13 @@ var Application = module.exports = {
         var self = this;
         self.manageBg((1920 / 1079),$('#homePage'),$('#homePageBg'));
         self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'), "v");
+        self.manageBg((1920 / 1077),$('#infoContent'),$('#infoBg'));
 
         self.model.stage.resize(function() {
             //resize home page
             self.manageBg((1920 / 1079),$('#homePage'),$('#homePageBg'));
-            self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'),"v");
+            self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'), "v");
+            self.manageBg((1920 / 1077),$('#infoContent'),$('#infoBg'));
             self.manageVideos();
 
         });

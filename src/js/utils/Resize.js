@@ -9,7 +9,6 @@ Resize.prototype.resize = function(el, ratio) {
     this.el = el;
     this.el_width = parseInt(this.el.css('width'));
     this.el_height = parseInt(this.el.css('height'));
-
     this.ratio = ratio;
     if ( this.ratio > this.el_width / this.el_height) {
         rW = 'auto';
