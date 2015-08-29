@@ -37,6 +37,12 @@ $topbar-height: 8%;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$hex', endColorstr='$hex2', GradientType=0 );
 }
 
+@mixin opacity ($o) {
+  opacity: $o;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$o*100)";
+  -moz-opacity: $o;
+}
+
 
 html, body {
   margin: 0;
@@ -496,7 +502,9 @@ html, body {
       position: absolute;
       @extend .fullSize;
       visibility: hidden;
-      opacity: 0;
+      //opacity: 0;
+      @include opacity(0);
+      background-color: red;
 
       &.show {
         visibility: visible;
@@ -527,6 +535,11 @@ html, body {
           @extend .fullSize;
           @include transform(translateX(0));
           visibility: hidden;
+
+          .no-cssgradients .show {
+            visibility: visible;
+          }
+
 
           &.hide.right {
             //@include transform(translateX(100%));
@@ -576,6 +589,10 @@ html, body {
               }
             }
 
+          }
+
+          .no-cssgradients .hide {
+            visibility: hidden;
           }
 
           &.hide.left {

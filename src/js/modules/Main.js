@@ -34,20 +34,37 @@ Main.prototype.changeSection = function() {
     this.showApp();
     var target = $('#pair' + (this.model.currentSection));
     var pre = $('#pair' + (this.model.prevSection));
-    target.css('visibility','visible');
-    target.css('display','block');
+    if (Modernizr.csstransitions){
+        target.css('visibility','visible');
+        target.css('display','block');
+    }
     if(!this.isOpenContent) {
+        if (!Modernizr.csstransitions){
+            target.removeClass('show').addClass('show');
+        }
         this.isOpenContent = true;
         return;
     }else {
-        if(this.model.currentSection < this.model.prevSection) {
-            pre.removeClass('show hide left right').addClass('hide right');
-            target.removeClass('show hide left right').addClass('show right');
-        }
+        if (Modernizr.csstransitions){
+            if(this.model.currentSection < this.model.prevSection) {
+                pre.removeClass('show hide left right').addClass('hide right');
+                target.removeClass('show hide left right').addClass('show right');
+            }
 
-        if(this.model.currentSection > this.model.prevSection) {
-            pre.removeClass('show hide left right').addClass('hide left');
-            target.removeClass('show hide left right').addClass('show left');
+            if(this.model.currentSection > this.model.prevSection) {
+                pre.removeClass('show hide left right').addClass('hide left');
+                target.removeClass('show hide left right').addClass('show left');
+            }
+        }else {
+            if(this.model.currentSection < this.model.prevSection) {
+                //pre.removeClass('show hide left right').addClass('hide right');
+                //target.removeClass('show hide left right').addClass('show right');
+            }
+
+            if(this.model.currentSection > this.model.prevSection) {
+                //pre.removeClass('show hide left right').addClass('hide left');
+                //target.removeClass('show hide left right').addClass('show left');
+            }
         }
 
         /*this.model.animateUtil.animationEnd(pre, function(){
@@ -76,8 +93,6 @@ Main.prototype.changeDetail = function(data) {
     target.css('visibility','visible');
     target.css('display','block');
 
-    console.log(target);
-
     pre.removeClass('show hide').addClass('hide');
     target.removeClass('show hide').addClass('show');
 
@@ -88,7 +103,21 @@ Main.prototype.hideApp = function() {
 };
 
 Main.prototype.showApp = function() {
-    this.app.removeClass('show hide').addClass('show');
+    if (Modernizr.csstransitions){
+        this.app.removeClass('show hide').addClass('show');
+    } else {
+        this.app.css('visibility','visible');
+        this.app.css('opacity',0);
+        setTimeout(this.ieFixShowApp.bind(this),100);
+    }
+};
+
+Main.prototype.ieFixShowApp = function() {
+    this.app.animate({
+        opacity:1
+    },1000,function(){
+        $(this).css('display','block');
+    });
 };
 
 Main.prototype.clearApp = function() {
