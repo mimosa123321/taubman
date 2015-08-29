@@ -536,11 +536,6 @@ html, body {
           @include transform(translateX(0));
           visibility: hidden;
 
-          .no-cssgradients .show {
-            visibility: visible;
-          }
-
-
           &.hide.right {
             //@include transform(translateX(100%));
             @include animation(hide-section .6s ease-in-out);
@@ -591,7 +586,7 @@ html, body {
 
           }
 
-          .no-cssgradients .hide {
+          .no-cssgradients .iehide {
             visibility: hidden;
           }
 

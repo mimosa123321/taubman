@@ -12,7 +12,6 @@ var InfoDetail = module.exports = React.createClass({
                     <p>Click on each of the icons on the map to explore the key market drivers in depth.</p>
                 </div>
 
-
                 <div className="content retail" id="detailContent1">
                     <h1 className="title">Retail Industry</h1>
                     <hr></hr>
@@ -29,9 +28,6 @@ var InfoDetail = module.exports = React.createClass({
                         <img src="./build/images/content-retail-inline.png" />
                     </div>
                 </div>
-
-
-
 
                 <div className="content demographics" id="detailContent2">
                     <h1 className="title">Demographics and Economy</h1>

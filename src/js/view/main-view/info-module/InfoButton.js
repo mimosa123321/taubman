@@ -8,7 +8,10 @@ var InfoButton= module.exports = React.createClass({
         this.iconOver = ["./build/images/buttonicon1b.png", "./build/images/buttonicon2b.png" ,"./build/images/buttonicon3b.png" ,"./build/images/buttonicon4b.png"];
         $('.button-unit').addClass('notChosen');
 
-        this.handleSubmit(this.props.model.detailId);
+        if (Modernizr.csstransitions){
+            this.handleSubmit(this.props.model.detailId);
+        }
+
     },
 
     handleSubmit: function(id) {

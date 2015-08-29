@@ -15,6 +15,10 @@ var Main = module.exports = function(model) {
 Main.prototype.init = function() {
     this.model.currentSection = 1;
     this.getContents();
+
+    if (!Modernizr.csstransitions){
+        $('#detailContent0').removeClass('ieshow');
+    }
 };
 
 Main.prototype.getContents = function() {
@@ -37,10 +41,13 @@ Main.prototype.changeSection = function() {
     if (Modernizr.csstransitions){
         target.css('visibility','visible');
         target.css('display','block');
+
     }
     if(!this.isOpenContent) {
         if (!Modernizr.csstransitions){
-            target.removeClass('show').addClass('show');
+            var targetDetail = $('#detailContent' + this.model.detailId);
+            target.removeClass('ieshow').addClass('ieshow');
+            targetDetail.addClass('ieshow');
         }
         this.isOpenContent = true;
         return;
@@ -56,15 +63,8 @@ Main.prototype.changeSection = function() {
                 target.removeClass('show hide left right').addClass('show left');
             }
         }else {
-            if(this.model.currentSection < this.model.prevSection) {
-                //pre.removeClass('show hide left right').addClass('hide right');
-                //target.removeClass('show hide left right').addClass('show right');
-            }
-
-            if(this.model.currentSection > this.model.prevSection) {
-                //pre.removeClass('show hide left right').addClass('hide left');
-                //target.removeClass('show hide left right').addClass('show left');
-            }
+            pre.removeClass('iehide ieshow').addClass('iehide');
+            target.removeClass('iehide ieshow').addClass('ieshow');
         }
 
         /*this.model.animateUtil.animationEnd(pre, function(){
@@ -81,7 +81,7 @@ Main.prototype.backHomePage = function() {
 };
 
 Main.prototype.changeDetail = function(data) {
-    console.log(data);
+    console.log("changeDetail="+data);
     var index = data + 1;
 
     this.model.preDetailId = this.model.detailId;
@@ -93,9 +93,13 @@ Main.prototype.changeDetail = function(data) {
     target.css('visibility','visible');
     target.css('display','block');
 
-    pre.removeClass('show hide').addClass('hide');
-    target.removeClass('show hide').addClass('show');
-
+    if (Modernizr.csstransitions){
+        pre.removeClass('show hide').addClass('hide');
+        target.removeClass('show hide').addClass('show');
+    }else {
+        pre.removeClass('ieshow iehide').addClass('iehide');
+        target.removeClass('ieshow iehide').addClass('ieshow');
+    }
 };
 
 Main.prototype.hideApp = function() {

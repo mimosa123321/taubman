@@ -57,6 +57,31 @@
   }
 }
 
+.no-cssgradients .pairs {
+  visibility: hidden !important;
+  &.ieshow {
+    visibility: visible !important;
+  }
+  &.iehide {
+    visibility: hidden !important;
+  }
+
+  .contentPages {
+    .content {
+      &.ieshow {
+        visibility: visible !important;
+      }
+
+      &.iehide{
+        visibility: hidden !important;
+      }
+    }
+  }
+}
+
+
+
+
 .panel {
   &.show {
     visibility: visible;
