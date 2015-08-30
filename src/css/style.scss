@@ -1290,14 +1290,43 @@ html, body {
 
 @media only screen
 and (min-width : 1920px) {
-  .icons {
+  //.menu.chosen #icon1, .menu.chosen #icon2, .menu.chosen #icon3, .menu.chosen #icon4, .menu.chosen #icon5 {
+  //
+  //}
+
+  #topBar {
+    ul {
+      li {
+        .content {
+          .titles {
+            font-size: 20px !important;
+          }
+
+          #icon1 {
+            width: 38px !important;
+            height: 38px !important;
+          }
+
+          #icon2 {
+            width: 53px !important;
+            height: 38px !important;
+          }
+        }
+        &:hover .icons {
+          background-position: 0 -38px !important;
+        }
+      }
+    }
+  }
+
+  /*.icons {
     width: 40px;
     height: 36px;
   }
   .icons {
     width: 50px;
     height: 36px;
-  }
+  }*/
 }
 
 
