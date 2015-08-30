@@ -103,17 +103,17 @@ module.exports = function(grunt) {
                     'build/js/main.min.js': ['build/js/main.min.js']
                 }
             }
-        }
+        },
 
-        //'watch': {
-        //    scripts: {
-        //        files: ['./src/js/**/*.js'],
-        //        tasks: ['default'],
-        //        options: {
-        //            spawn: false
-        //        }
-        //    }
-        //}
+        'watch': {
+            scripts: {
+                files: ['./src/**/*'],
+                tasks: ['default'],
+                options: {
+                    spawn: false
+                }
+            }
+        }
 
     });
 

@@ -685,6 +685,8 @@ html, body {
           }
 
           .desc {
+            position: absolute;
+            top: 62%;
             font-size: 18px;
             color: #fff;
             padding: 0 3%;
@@ -701,7 +703,7 @@ html, body {
           font-family: $font-menu;
 
           &-img {
-            width:30%;
+            width:27%;
             margin: 0 auto;
             cursor: pointer;
           }
@@ -1138,7 +1140,7 @@ html, body {
               .scrollWrap {
                 position: relative;
                 height:100%;
-                width: 95%;
+                width: 90%;
 
                 .wrap {
                   position: relative;
@@ -1326,19 +1328,89 @@ and (min-width : 1920px) {
         &:hover .icons {
           background-position: 0 -38px !important;
         }
+
+        &.chosen .icons {
+          background-position: 0 -38px !important;
+        }
       }
     }
   }
 
   .pairs {
+    .contentText {
+      .desc {
+        width: 67%;
+      }
+      .contentButton {
+        &-text {
+          font-size: 16px !important;
+        }
+      }
+    }
+
+    .videoIcon {
+      width: 14% !important;
+    }
+    .map {
+      .button-unit {
+        .buttonTitle {
+          font-size: 25px !important;
+        }
+
+        .buttonText {
+          font-size: 21px !important;
+        }
+      }
+    }
     .detail {
-      .title {
-        font-size: 48px !important;
+      .content {
+        .title {
+          text-transform: uppercase;
+        }
       }
 
-      p {
+      .opening {
+        .title {
+          font-size: 48px !important;
+        }
+
+        p {
+          font-size: 20px !important;
+        }
+      }
+
+      .retail, .demographics, .ecommerce, .malls {
+        .title {
+          font-size: 34px !important;
+        }
+
+        .box {
+          h3 {
+            font-size: 25px !important;
+          }
+          p {
+            font-size: 20px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .panel {
+    .panelText {
+      .title {
+        font-size: 40px !important;
+      }
+      .seperator {
+        height: 98px !important;
+      }
+      .desc {
         font-size: 20px !important;
       }
+    }
+
+    .panelClose {
+      width: 56px;
     }
   }
 
