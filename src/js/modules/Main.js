@@ -17,8 +17,10 @@ Main.prototype.init = function() {
     this.getContents();
 
     if (!Modernizr.csstransitions){
-        $('#detailContent0').removeClass('ieshow');
+        console.log($('.detail'));
+        $('.detail').css('display','none');
     }
+
 };
 
 Main.prototype.getContents = function() {
@@ -45,9 +47,9 @@ Main.prototype.changeSection = function() {
     }
     if(!this.isOpenContent) {
         if (!Modernizr.csstransitions){
-            var targetDetail = $('#detailContent' + this.model.detailId);
+            // IE - open tab
             target.removeClass('ieshow').addClass('ieshow');
-            targetDetail.addClass('ieshow');
+            this.checkInfoBar();
         }
         this.isOpenContent = true;
         return;
@@ -63,6 +65,8 @@ Main.prototype.changeSection = function() {
                 target.removeClass('show hide left right').addClass('show left');
             }
         }else {
+            //IE --------------------------------------------
+            this.checkInfoBar();
             pre.removeClass('iehide ieshow').addClass('iehide');
             target.removeClass('iehide ieshow').addClass('ieshow');
         }
@@ -81,7 +85,6 @@ Main.prototype.backHomePage = function() {
 };
 
 Main.prototype.changeDetail = function(data) {
-    console.log("changeDetail="+data);
     var index = data + 1;
 
     this.model.preDetailId = this.model.detailId;
@@ -97,32 +100,44 @@ Main.prototype.changeDetail = function(data) {
         pre.removeClass('show hide').addClass('hide');
         target.removeClass('show hide').addClass('show');
     }else {
+        //IE --------------------------------------------
         pre.removeClass('ieshow iehide').addClass('iehide');
         target.removeClass('ieshow iehide').addClass('ieshow');
     }
 };
 
 Main.prototype.hideApp = function() {
-    this.app.removeClass('show hide').addClass('hide');
+    if (Modernizr.csstransitions){
+        this.app.removeClass('show hide').addClass('hide');
+    } else {
+        //IE --
+        $('.pairs').removeClass('ieshow iehide');
+        this.app.css('visibility','hidden');
+        this.app.css('display','none');
+        this.app.css('opacity',0);
+    }
 };
 
 Main.prototype.showApp = function() {
     if (Modernizr.csstransitions){
         this.app.removeClass('show hide').addClass('show');
     } else {
+        //IE --
         this.app.css('visibility','visible');
-        this.app.css('opacity',0);
-        setTimeout(this.ieFixShowApp.bind(this),100);
+        this.app.css('display','block');
+        this.app.css('opacity',1);
     }
 };
 
-Main.prototype.ieFixShowApp = function() {
-    this.app.animate({
-        opacity:1
-    },1000,function(){
-        $(this).css('display','block');
-    });
+Main.prototype.checkInfoBar = function() {
+    var detail = $('.detail');
+    if(this.model.currentSection === 1) {
+        detail.css('display','block');
+    }else {
+        detail.css('display','none');
+    }
 };
+
 
 Main.prototype.clearApp = function() {
     this.isOpenContent = false;

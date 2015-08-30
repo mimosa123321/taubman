@@ -448,7 +448,6 @@ html, body {
                 opacity: 1;
                 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
               }
-
             }
           }
         }
@@ -1016,7 +1015,6 @@ html, body {
           }
         }
 
-
         @keyframes hide-panel {
           0%   {
             @include transform(translateX(0px));
@@ -1472,8 +1470,6 @@ and (max-width : 1199px) {
     font-size: 11px !important;
   }
 }
-
-
 
 
 #updateBrowser {

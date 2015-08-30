@@ -1,162 +1,149 @@
+.no-cssgradients #wrapper {
+  #topBar {
+    ul {
+      li {
+        .content {
+          #icon1 {
+            width: 25px;
+            height: 23px;
+            background-image: url(../images/icon1b.png) !important;
+            background-position: 0 0px;
+          }
+          #icon2 {
+            width: 32px;
+            height: 23px;
+            background-image: url(../images/icon2b.png) !important;
+            background-position: 0 0px;
+          }
 
-#topBar {
-  ul {
-    li {
-      .content {
-        #icon1 {
-          width: 25px;
-          height: 23px;
-          background-image: url(../images/icon1b.png) !important;
-          background-position: 0 0px;
-        }
-        #icon2 {
-          width: 32px;
-          height: 23px;
-          background-image: url(../images/icon2b.png) !important;
-          background-position: 0 0px;
-        }
+          #icon3 {
+            width: 25px;
+            height: 24px;
+            background-image: url(../images/icon3b.png) !important;
+            background-position: 0 0px;
 
-        #icon3 {
-          width: 25px;
-          height: 24px;
-          background-image: url(../images/icon3b.png) !important;
-          background-position: 0 0px;
+          }
 
-        }
+          #icon4 {
+            width: 15px;
+            height: 23px;
+            background-image: url(../images/icon4b.png) !important;
+            background-position: 0 0px;
+          }
 
-        #icon4 {
-          width: 15px;
-          height: 23px;
-          background-image: url(../images/icon4b.png) !important;
-          background-position: 0 0px;
-        }
+          #icon5 {
+            width: 25px;
+            height: 23px;
+            background-image: url(../images/icon5b.png) !important;
+            background-position: 0 0px;
+          }
 
-        #icon5 {
-          width: 25px;
-          height: 23px;
-          background-image: url(../images/icon5b.png) !important;
-          background-position: 0 0px;
-        }
-
-        &:hover #icon1, &:hover #icon2, &:hover #icon3, &:hover #icon4, &:hover #icon5 {
-          background-position: 0 -25px;
-        }
-      }
-    }
-  }
-}
-
-
-.contentText {
-  .title {
-    font-size: 18px !important;
-  }
-
-  .desc {
-    font-size: 11px !important;
-  }
-}
-
-.no-cssgradients .pairs {
-  visibility: hidden !important;
-  &.ieshow {
-    visibility: visible !important;
-  }
-  &.iehide {
-    visibility: hidden !important;
-  }
-
-  .contentPages {
-    .content {
-      &.ieshow {
-        visibility: visible !important;
-      }
-
-      &.iehide{
-        visibility: hidden !important;
-      }
-    }
-  }
-}
-
-
-
-
-.panel {
-  &.show {
-    visibility: visible;
-    z-index:2;
-  }
-
-  &.hide {
-    visibility: hidden !important;
-  }
-
-  .panelText {
-    display:block !important;
-    position: absolute !important;
-    width: 50%;
-    height: 100%;
-
-    .title {
-      display:inline-block !important;
-      color: white;
-      white-space: pre-line;
-    }
-
-    .seperator {
-      display:none;
-      height:0px;
-    }
-
-    .scroll{
-      display:block !important;
-      width:100%;
-      height: 100% !important;
-
-      .scrollWrap {
-        position: relative !important;
-        width: 95% !important;
-        height:100%;
-
-        .wrap {
-          position: relative;
-          height: 86% !important;
-          overflow: auto;
-          color: #fff;
-
-          .desc {
-            width: 94% !important;
+          &:hover #icon1, &:hover #icon2, &:hover #icon3, &:hover #icon4, &:hover #icon5 {
+            background-position: 0 -25px;
           }
         }
       }
     }
+  }
 
-    .desc {
-      font-size: 11px !important;
+  #pagesApp {
+    .mainView {
+       .pairs {
+        visibility: hidden !important;
+        &.ieshow {
+          visibility: visible !important;
+        }
+        &.iehide {
+          visibility: hidden !important;
+        }
+
+        .contentText {
+          .title {
+            font-size: 18px !important;
+          }
+          .desc {
+            font-size: 11px !important;
+          }
+        }
+        .detail {
+          display:none;
+          .contentPages {
+            .content {
+              &.ieshow {
+                visibility: visible !important;
+              }
+
+              &.iehide{
+                visibility: hidden !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .panel {
+      &.show {
+        visibility: visible;
+        z-index:2;
+      }
+
+      &.hide {
+        visibility: hidden !important;
+      }
+
+      .panelText {
+        display:block !important;
+        position: absolute !important;
+        width: 50%;
+        height: 100%;
+
+        .title {
+          display:inline-block !important;
+          color: white;
+          white-space: pre-line;
+        }
+
+        .seperator {
+          display:none;
+          height:0px;
+        }
+
+        .scroll{
+          display:block !important;
+          width:100%;
+          height: 100% !important;
+
+          .scrollWrap {
+            position: relative !important;
+            width: 95% !important;
+            height:100%;
+
+            .wrap {
+              position: relative;
+              height: 86% !important;
+              overflow: auto;
+              color: #fff;
+
+              .desc {
+                width: 94% !important;
+              }
+            }
+          }
+        }
+
+        .desc {
+          font-size: 11px !important;
+        }
+      }
     }
   }
 }
 
 
-.contentPages {
 
 
-  .content {
-    &.show {
-      visibility: hidden !important;
-      display: block;
-    }
-
-    &.hide {
-      display: none;
-      visibility: hidden !important;
-    }
 
 
-  }
 
-
-}
 
 
