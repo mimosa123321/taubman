@@ -1,4 +1,4 @@
-var React = require('./../../../../../node_modules/react/lib/React');
+var React = require('React');
 
 var ContentImage = module.exports = React.createClass({
     componentDidMount: function() {

@@ -1,4 +1,4 @@
-var React = require('./../../../../../node_modules/react/lib/React');
+var React = require('React');
 
 var PanelClose = module.exports = React.createClass({
     getInitialState: function() {

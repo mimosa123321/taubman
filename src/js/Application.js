@@ -1,7 +1,7 @@
 require('./../../node_modules/es5-shim/es5-shim');
 require('./../../node_modules/es5-shim/es5-sham');
 var $ = require('jquery-compat'),
-    React = require('./../../node_modules/react/lib/React'),
+    React = require('React'),
     Model = require('./model/Model'),
     EventProxy = require('./eventProxy/EventProxy'),
     Main = require('./modules/Main'),

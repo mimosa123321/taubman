@@ -1,4 +1,4 @@
-var React = require('./../../../../node_modules/react/lib/React');
+var React = require('React');
 var ContentModule = require('./content-module/ContentModule');
 var InfoModule = require('./info-module/InfoModule');
 

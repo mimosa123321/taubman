@@ -1,4 +1,4 @@
-var React = require('./../../../node_modules/react/lib/React');
+var React = require('React');
 var MainView = require('./main-view/MainView');
 var PanelModule = require('./main-view/panel-module/PanelModule');
 

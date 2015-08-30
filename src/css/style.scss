@@ -1290,10 +1290,6 @@ html, body {
 
 @media only screen
 and (min-width : 1920px) {
-  //.menu.chosen #icon1, .menu.chosen #icon2, .menu.chosen #icon3, .menu.chosen #icon4, .menu.chosen #icon5 {
-  //
-  //}
-
   #topBar {
     ul {
       li {
@@ -1308,13 +1304,40 @@ and (min-width : 1920px) {
           }
 
           #icon2 {
-            width: 53px !important;
+            width: 48px !important;
             height: 38px !important;
+          }
+
+          #icon3 {
+            width: 38px !important;
+            height: 38px !important;
+          }
+
+          #icon4 {
+            width: 23px!important;
+            height: 38px!important;
+          }
+
+          #icon5 {
+            width: 37px!important;
+            height: 38px!important;
           }
         }
         &:hover .icons {
           background-position: 0 -38px !important;
         }
+      }
+    }
+  }
+
+  .pairs {
+    .detail {
+      .title {
+        font-size: 48px !important;
+      }
+
+      p {
+        font-size: 20px !important;
       }
     }
   }

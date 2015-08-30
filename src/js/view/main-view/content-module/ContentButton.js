@@ -1,4 +1,4 @@
-var React = require('./../../../../../node_modules/react/lib/React');
+var React = require('React');
 
 var ContentButton = module.exports = React.createClass({
     handleSubmit: function(e) {

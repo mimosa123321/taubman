@@ -1,4 +1,4 @@
-var React = require('./../../../../../node_modules/react/lib/React');
+var React = require('React');
 var PanelScrollText = require('./panel-image/PanelScrollText');
 var PanelClose= require('./PanelClose');
 var PanelImage = require('./panel-image/PanelImage');
