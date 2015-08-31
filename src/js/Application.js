@@ -1,5 +1,9 @@
 require('./../../node_modules/es5-shim/es5-shim');
 require('./../../node_modules/es5-shim/es5-sham');
+
+// Make bxslider work
+global.jQuery = require("jquery-compat");
+
 var $ = require('jquery-compat'),
     React = require('React'),
     Model = require('./model/Model'),
@@ -7,7 +11,8 @@ var $ = require('jquery-compat'),
     Main = require('./modules/Main'),
     Resize = require('./utils/Resize'),
     Animate = require('./utils/Animate'),
-    ViewsManager = require('./view/ViewsManager');
+    ViewsManager = require('./view/ViewsManager'),
+    BxSlider = require('./../../lib/bxslider/jquery.bxslider.min');
 
 var Application = module.exports = {
     init: function() {

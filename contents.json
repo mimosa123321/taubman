@@ -136,7 +136,7 @@
         }
       },
       "rightContent": {
-        "type":"video",
+        "type":"slideshow",
         "title":"The Mall of the Future",
         "desc":"Check out our interactive slideshow for a glimpse of how mall design is evolving around the world.",
         "url":"build/images/mallbg2.jpg",
@@ -145,8 +145,24 @@
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
           "title": "The Mall of the Future",
-          "desc": "",
-          "url":"build/images/content-placeholder.jpg"
+            "imagesUrl":[
+              "build/images/slideshow1.png",
+              "build/images/slideshow1.png",
+              "build/images/slideshow1.png",
+              "build/images/slideshow1.png",
+              "build/images/slideshow1.png",
+              "build/images/slideshow1.png",
+              "build/images/slideshow1.png"
+            ],
+          "thumbsUrl":[
+            "build/images/thumb1.png",
+            "build/images/thumb1.png",
+            "build/images/thumb1.png",
+            "build/images/thumb1.png",
+            "build/images/thumb1.png",
+            "build/images/thumb1.png",
+            "build/images/thumb1.png"
+          ]
         }
       }
     }

@@ -10,6 +10,8 @@ var Main = module.exports = function(model) {
     this.model.eventProxy.addListener('onChangeSection', this.changeSection.bind(this));
     this.model.eventProxy.addListener('onBackHomePage', this.backHomePage.bind(this));
     this.model.eventProxy.addListener('onClickInfoButton', this.changeDetail.bind(this));
+
+    this.initScrollDownBtn();
 };
 
 Main.prototype.init = function() {
@@ -50,6 +52,8 @@ Main.prototype.changeSection = function() {
             // IE - open tab
             target.removeClass('ieshow').addClass('ieshow');
             this.checkInfoBar();
+        }else {
+            target.removeClass('show hide left right').addClass('show left');
         }
         this.isOpenContent = true;
         return;
@@ -104,6 +108,34 @@ Main.prototype.changeDetail = function(data) {
         pre.removeClass('ieshow iehide').addClass('iehide');
         target.removeClass('ieshow iehide').addClass('ieshow');
     }
+};
+
+Main.prototype.initScrollDownBtn = function() {
+    var self = this;
+    $('#scrollDownBtn').click(function() {
+
+        if(!self.isOpenContent) {
+            self.menu.choseMenu(0);
+            self.showApp();
+            var target =  $('#pair1');
+            if (Modernizr.csstransitions){
+                target.css('visibility','visible');
+                target.css('display','block');
+
+            }
+            if (!Modernizr.csstransitions){
+                // IE - open tab
+                target.removeClass('ieshow').addClass('ieshow');
+                this.checkInfoBar();
+            }else {
+                target.removeClass('show hide left right').addClass('show left');
+            }
+            self.isOpenContent = true;
+        }
+    });
+
+
+
 };
 
 Main.prototype.hideApp = function() {

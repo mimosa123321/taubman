@@ -1,0 +1,110 @@
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  transform: $transform;
+}
+
+.contents-slideShow {
+  position: relative;
+  margin: 3% auto;
+  width: 100%;
+  min-height:600px;
+  overflow: auto;
+
+  .panelText {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    font-size: 20px;
+    text-transform: uppercase;
+    color:white;
+    padding-bottom: 2%;
+
+  }
+
+  .panelClose {
+    top:1px !important;
+    right: 5% !important;
+  }
+
+  .panelSlideShow {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+    .bx-controls {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      a {
+
+      }
+
+      .bx-prev {
+        position: absolute;
+        width: 62px !important;
+        height: 61px !important;
+        @include transform(scale(0.5));
+        left:0 !important;
+        top:45%;
+        left: 20px;
+      }
+
+      .bx-next {
+        position: absolute;
+        width: 62px !important;
+        height: 61px !important;
+        @include transform(scale(0.5));
+        top:45%;
+        right: 20px;
+        background-position: -73px 0;
+      }
+      .bx-next:hover {
+        background-position: -73px -62px !important;
+      }
+
+      .bx-pager {
+        position: absolute;
+        top: 106%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+@media only screen
+and (min-width : 1700px) {
+  .contents-slideShow  {
+    .panelText {
+      font-size: 40px !important;
+    }
+  }
+}
+
+
+@media only screen
+and (min-width : 1200px)
+and (max-width : 1699px){
+
+}
+
+
+@media only screen
+and (min-width : 992px)
+and (max-width : 1199px) {
+
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+
+}

@@ -24,6 +24,18 @@ Menu.prototype.init = function() {
     });
 };
 
+Menu.prototype.choseMenu = function(id) {
+    var self = this;
+    var menu = $('#menusList').find('.menu');
+    menu.each(function(index){
+        if(index === id) {
+            $('.menu').removeClass('chosen');
+
+            $(this).addClass('chosen');
+        }
+    });
+};
+
 Menu.prototype.initLogo = function() {
     var self = this;
     var logo = $('#logo');

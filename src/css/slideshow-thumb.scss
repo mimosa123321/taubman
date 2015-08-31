@@ -1,0 +1,47 @@
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  transform: $transform;
+}
+
+.panelSlideShowThumb {
+  position: relative;
+  width: 100%;
+  margin: 3% auto;
+  ul {
+    li {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .bx-viewport {
+    width: 86%!important;
+    margin: 0 auto !important;
+  }
+
+  .bx-controls {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    a {
+      width: 62px !important;
+      height: 61px !important;
+      @include transform(scale(0.5));
+    }
+
+    .bx-prev {
+      position: absolute;
+      left: 1% !important;
+      top: 30%;
+    }
+
+    .bx-next {
+      position: absolute;
+      top: 30%;
+      right: 1%;
+      background-position: -69px 0;
+    }
+  }
+}

@@ -64,6 +64,7 @@ html, body {
   box-sizing: border-box;
   min-width: 768px;
   min-height: 600px;
+  overflow: hidden;
 
   #topBar {
     position: relative;
@@ -486,6 +487,7 @@ html, body {
         width:11%;
         height:auto;
         margin:0 auto;
+        cursor: pointer;
       }
     }
 
@@ -532,7 +534,7 @@ html, body {
         .pairs {
           position: absolute;
           @extend .fullSize;
-          @include transform(translateX(0));
+          @include transform(translateY(100%));
           visibility: hidden;
 
           &.hide.right {
@@ -542,19 +544,19 @@ html, body {
 
             @keyframes hide-section {
               0% {
-                @include transform(translateX(0));
+                @include transform(translateY(0));
               }
               100% {
-                @include transform(translateX(100%));
+                @include transform(translateY(100%));
               }
             }
 
             @-webkit-keyframes hide-section {
               0% {
-                @include transform(translateX(0));
+                @include transform(translateY(0));
               }
               100% {
-                @include transform(translateX(100%));
+                @include transform(translateY(100%));
               }
             }
 
@@ -567,19 +569,19 @@ html, body {
 
             @keyframes show-section {
               0% {
-                @include transform(translateX(-100%));
+                @include transform(translateY(-100%));
               }
               100% {
-                @include transform(translateX(0));
+                @include transform(translateY(0));
               }
             }
 
             @-webkit-keyframes show-section {
               0% {
-                @include transform(translateX(-100%));
+                @include transform(translateY(-100%));
               }
               100% {
-                @include transform(translateX(0));
+                @include transform(translateY(0));
               }
             }
 
@@ -595,44 +597,44 @@ html, body {
 
             @keyframes hide-section-left {
               0% {
-                @include transform(translateX(0));
+                @include transform(translateY(0));
               }
               100% {
-                @include transform(translateX(-100%));
+                @include transform(translateY(-100%));
               }
             }
 
             @-webkit-keyframes hide-section-left {
               0% {
-                @include transform(translateX(0));
+                @include transform(translateY(0));
               }
               100% {
-                @include transform(translateX(-100%));
+                @include transform(translateY(-100%));
               }
             }
 
           }
 
           &.show.left {
-            @include transform(translateX(100%));
+            @include transform(translateY(100%));
             @include animation(show-section-left .6s ease-in-out);
             @include fill-mode(forwards);
 
             @keyframes show-section-left {
               0% {
-                @include transform(translateX(100%));
+                @include transform(translateY(100%));
               }
               100% {
-                @include transform(translateX(0));
+                @include transform(translateY(0));
               }
             }
 
             @-webkit-keyframes show-section-left {
               0% {
-                @include transform(translateX(100%));
+                @include transform(translateY(100%));
               }
               100% {
-                @include transform(translateX(0));
+                @include transform(translateY(0));
               }
             }
 
@@ -976,6 +978,7 @@ html, body {
         background-color: #282b2d;
         background-color: rgb(40,43,45);
         z-index:1;
+        overflow: auto;
 
         &.show {
           visibility: visible;
@@ -1228,8 +1231,7 @@ html, body {
         position: absolute;
         right: 0;
         top: 0;
-        width:57px;
-        //width: 25px;
+        width: 30px;
       }
     }
   }
