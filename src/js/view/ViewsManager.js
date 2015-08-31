@@ -22,6 +22,10 @@ var ViewsManager = module.exports = React.createClass({
         self.model.eventProxy.addListener('onMenuClick',function() {
             self.updateContents(self);
         });
+
+        self.model.eventProxy.addListener('onClosePanel',function() {
+            self.onClosePanelHandler();
+        });
     },
 
     onClosePanelHandler:function() {

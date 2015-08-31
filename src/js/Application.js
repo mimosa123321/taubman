@@ -12,7 +12,7 @@ var $ = require('jquery-compat'),
     Resize = require('./utils/Resize'),
     Animate = require('./utils/Animate'),
     ViewsManager = require('./view/ViewsManager'),
-    BxSlider = require('./../../lib/bxslider/jquery.bxslider.min');
+    BxSlider = require('./../../lib/bxslider/jquery.bxslider');
 
 var Application = module.exports = {
     init: function() {

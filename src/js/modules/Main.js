@@ -40,6 +40,10 @@ Main.prototype.getContents = function() {
 Main.prototype.changeSection = function() {
     //showApp
     this.showApp();
+
+    //close panel
+    this.model.eventProxy.emit('onClosePanel');
+
     var target = $('#pair' + (this.model.currentSection));
     var pre = $('#pair' + (this.model.prevSection));
     if (Modernizr.csstransitions){

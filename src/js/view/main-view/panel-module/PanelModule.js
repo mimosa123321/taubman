@@ -15,6 +15,7 @@ var PanelModule = module.exports = React.createClass({
 
     clickCloseHandler:function() {
         this.props.onClickCloseBtn();
+
     },
 
     render:function() {

@@ -14,28 +14,35 @@ var PanelSlideShowThumb = module.exports = React.createClass({
 
     componentDidMount: function() {
         var self = this;
-        this.initSlider();
+
+        self.props.model.eventProxy.addListener('onSlider_1_LoadComplete',function() {
+            self.initBxSlider();
+            console.log("init");
+        });
     },
 
-    initSlider:function() {
+    initBxSlider:function() {
         var self = this;
-        self.bxslider = $('#bxslider2').bxSlider({
-            minSlides: 4,
-            maxSlides: 7,
-            slideWidth: 173,
-            slideMargin: 20,
-            speed: 500,
-            pager: false,
-            infiniteLoop: false,
-            onSliderLoad: function(index) {
-                console.log("bxsliderThumb load Done");
-            },
+        if(this.bxslider2 == null) {
+            this.bxslider2 = $('#bxslider2').bxSlider({
+                minSlides: 2,
+                maxSlides: 7,
+                slideWidth: 173,
+                slideMargin: 62,
+                speed: 500,
+                pager: false,
+                infiniteLoop: false,
+                onSliderLoad: function(index) {
+                    console.log("bxsliderThumb load Done");
+                },
 
-            onSlideBefore: function($slideElement, oldIndex, newIndex) {
-            },
+                onSlideBefore: function($slideElement, oldIndex, newIndex) {
+                },
 
-            onSlideAfter: function() {}
-        });
+                onSlideAfter: function() {}
+            });
+        }
+
     },
 
     render:function(){
@@ -50,5 +57,4 @@ var PanelSlideShowThumb = module.exports = React.createClass({
             </ul>
         </div>
     }
-
 });

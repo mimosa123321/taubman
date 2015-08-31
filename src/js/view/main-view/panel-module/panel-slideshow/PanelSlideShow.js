@@ -7,38 +7,38 @@ var PanelSlideShow = module.exports = React.createClass({
         return {contents: []};
     },
     componentDidMount: function() {
-        self = this;
-
-        this.initBxSlider();
-
-        this.props.model.eventProxy.addListener('onClickSlideShowThumb', function(id){
+        var self = this;
+        self.initBxSlider();
+        self.props.model.eventProxy.addListener('onClickSlideShowThumb', function(id){
             self.bxslider.goToSlide(id);
         });
     },
 
     initBxSlider: function() {
-        self.bxslider = $('#bxslider1').bxSlider({
-            speed: 500,
-            pager: true,
-            infiniteLoop: true,
-            onSliderLoad: function(index) {
-                console.log("bxslider load Done");
-            },
+        var self = this;
+        if(self.bxslider == null){
+            self.bxslider = $('#bxslider1').bxSlider({
+                speed: 500,
+                pager: true,
+                infiniteLoop: false,
+                onSliderLoad: function(index) {
+                    console.log("bxslider load Done");
+                    self.props.model.eventProxy.emit('onSlider_1_LoadComplete');
+                },
 
-            onSlideBefore: function($slideElement, oldIndex, newIndex) {
-            },
+                onSlideBefore: function($slideElement, oldIndex, newIndex) {
+                },
 
-            onSlideAfter: function() {}
-        });
+                onSlideAfter: function() {}
+            });
+        }
+
     },
 
     render:function(){
-
         var contentsNode =  this.props.contents.imagesUrl.map(function(contents, index) {
             return <li key={index}><img src={contents}/></li>
         });
-
-
 
         return <div className = "panelSlideShow">
             <ul className="bxslider" id = "bxslider1">
@@ -46,5 +46,4 @@ var PanelSlideShow = module.exports = React.createClass({
             </ul>
         </div>
     }
-
 });
