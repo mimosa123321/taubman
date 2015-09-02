@@ -45,6 +45,8 @@ $topbar-height: 8%;
 
 
 html, body {
+  position: absolute;
+  width: 100%;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -52,6 +54,7 @@ html, body {
   color: $primary-color;
   background: $primary-color;
   background-color: $primary-color;
+  @include transition(all 0.6s ease-out);
 }
 
 #wrapper {
@@ -64,10 +67,9 @@ html, body {
   box-sizing: border-box;
   min-width: 768px;
   min-height: 600px;
-  overflow: hidden;
 
   #topBar {
-    position: relative;
+    position: fixed;
     top:0;
     left:0;
     width:100%;
@@ -76,6 +78,7 @@ html, body {
     max-height:100px;
     background-color: white;
     border-bottom: 2px solid #f37421;
+    z-index:3;
     @include transform(translateY(-100%));
     @include animation(show-bar 0.4s ease-out);
     @include fill-mode(forwards);
@@ -156,6 +159,7 @@ html, body {
 
       .menu.chosen #icon1, .menu.chosen #icon2, .menu.chosen #icon3, .menu.chosen #icon4, .menu.chosen #icon5 {
         background-position: 0 -25px;
+
       }
 
       .menu.chosen .titles {
@@ -172,6 +176,8 @@ html, body {
         //background-color: #f37421;
         background-color: white;
         cursor: pointer;
+        @include transition(background-color 0.6s ease-out);
+
 
         &.chosen {
           background-color: #f37421;
@@ -256,6 +262,11 @@ html, body {
           border-left: 1px solid #b3a399;
           border-right: 1px solid #dc986b;
         }
+
+        &.chosen .content {
+          border-left: 1px solid #b3a399;
+          border-right: 1px solid #dc986b;
+        }
       }
     }
   }
@@ -263,38 +274,26 @@ html, body {
   #middleBar {
     position: relative;
     width:100%;
-    height: 85%;
-    opacity: 0;
-    @include animation(show-middleBar 0.8s ease-out 0.3s);
-    @include fill-mode(forwards);
-
-    @keyframes show-middleBar {
-      0% {
-        opacity:0;
-      }
-      100% {
-        opacity:1;
-      }
-    }
-
-    @-webkit-keyframes show-middleBar {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+    height: 100%;
+    top: 8%;
+    opacity: 1;
+    //@include animation(show-middleBar 0.8s ease-out 0.3s);
+    //@include fill-mode(forwards);
 
     #homePage {
-      position: absolute;
+      position: relative;
       left:0;
       top:0;
       width: 100%;
-      height: 100%;
-      overflow:hidden;
+      padding-bottom: 56%;
 
       #homePageBg {
+        position: absolute;
+        left:0;
+        top:0;
+      }
+
+      .contents {
         position: absolute;
         left:0;
         top:0;
@@ -331,7 +330,6 @@ html, body {
             opacity: 1;
           }
         }
-
 
         .center {
           height:88%;
@@ -525,142 +523,35 @@ html, body {
     #pagesApp {
       position: absolute;
       @extend .fullSize;
-      visibility: hidden;
-      //opacity: 0;
-      @include opacity(0);
-      background-color: red;
-
-      &.show {
-        visibility: visible;
-        opacity: 1;
-        @include transition(opacity 0.5s ease-in-out);
-      }
-
-      &.hide {
-        visibility: visible;
-        opacity: 0;
-        @include transition(opacity 0.5s ease-in-out);
-      }
+      visibility: visible !important;
+      opacity: 1 !important;
+      background-color: white;
 
       .contents {
-        @extend .fullSize;
+        position: absolute;
+        width:100%;
+        height:100%;
       }
 
       .mainView {
-        @extend .fullSize;
+        position: absolute;
+        width: 100%;
+        //@extend .fullSize;
         position: absolute;
         background-color: black;
-        overflow: hidden;
+        //overflow: hidden;
         -webkit-font-smoothing: antialiased;
         z-index:2;
+        padding-bottom: 5%;
 
         .pairs {
-          position: absolute;
-          @extend .fullSize;
-          @include transform(translateY(100%));
-          visibility: hidden;
+          position: relative;
+          width:100%;
+          padding-bottom: 56%;
 
-          &.hide.right {
-            //@include transform(translateX(100%));
-            @include animation(hide-section .6s ease-in-out);
-            @include fill-mode(forwards);
-
-            @keyframes hide-section {
-              0% {
-                @include transform(translateY(0));
-              }
-              100% {
-                @include transform(translateY(100%));
-              }
-            }
-
-            @-webkit-keyframes hide-section {
-              0% {
-                @include transform(translateY(0));
-              }
-              100% {
-                @include transform(translateY(100%));
-              }
-            }
-
-          }
-
-          &.show.right {
-            //@include transform(translateX(-100%));
-            @include animation(show-section .6s ease-in-out);
-            @include fill-mode(forwards);
-
-            @keyframes show-section {
-              0% {
-                @include transform(translateY(-100%));
-              }
-              100% {
-                @include transform(translateY(0));
-              }
-            }
-
-            @-webkit-keyframes show-section {
-              0% {
-                @include transform(translateY(-100%));
-              }
-              100% {
-                @include transform(translateY(0));
-              }
-            }
-
-          }
 
           .no-cssgradients .iehide {
             visibility: hidden;
-          }
-
-          &.hide.left {
-            @include animation(hide-section-left .6s ease-in-out);
-            @include fill-mode(forwards);
-
-            @keyframes hide-section-left {
-              0% {
-                @include transform(translateY(0));
-              }
-              100% {
-                @include transform(translateY(-100%));
-              }
-            }
-
-            @-webkit-keyframes hide-section-left {
-              0% {
-                @include transform(translateY(0));
-              }
-              100% {
-                @include transform(translateY(-100%));
-              }
-            }
-
-          }
-
-          &.show.left {
-            @include transform(translateY(100%));
-            @include animation(show-section-left .6s ease-in-out);
-            @include fill-mode(forwards);
-
-            @keyframes show-section-left {
-              0% {
-                @include transform(translateY(100%));
-              }
-              100% {
-                @include transform(translateY(0));
-              }
-            }
-
-            @-webkit-keyframes show-section-left {
-              0% {
-                @include transform(translateY(100%));
-              }
-              100% {
-                @include transform(translateY(0));
-              }
-            }
-
           }
         }
 
@@ -997,7 +888,7 @@ html, body {
       .panel {
         @extend .fullSize;
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         background-color: #282b2d;
         background-color: rgb(40,43,45);
         z-index:1;
@@ -1076,7 +967,7 @@ html, body {
           @extend .contentsClass;
           left: 4%;
           right: 4%;
-          top: 7%;
+          top: 12%;
           bottom: 7%;
           -webkit-font-smoothing: antialiased;
 
@@ -1261,11 +1152,13 @@ html, body {
   }
 
   #bottomBar {
-    position: relative;
+    position: fixed;
     width:100%;
     height: 8%;
+    bottom:0;
     background-color: black;
     font-family: $font-footer;
+    z-index:3;
     @include transform(translateY(100%));
     @include animation(show-bottomBar 0.4s ease-out);
     @include fill-mode(forwards);
@@ -1654,3 +1547,62 @@ and (max-width : 1199px) {
 .player .title {
   display: none !important;
 }
+
+
+
+
+/*device bigger than 320 and smaller than width - 800*/
+/*@media only screen and (min-device-width : 320px) and (max-device-width : 800px) {
+  #wrapper {
+    min-width: 0px;
+  }
+
+  #section1 {
+    min-width: 320px;
+  }
+
+  #section1 #bioDesc {
+    position: absolute;
+    width: 70%;
+    left: 8%;
+    top: 46%;
+  }
+
+  #section1 #bioDesc p {
+    font-size: 11px;
+    color: white;
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+  }
+
+  #section3 #contacts {
+    top: 59%;
+  }
+
+  #subMenu {
+    display: none;
+    z-index: 99;
+    opacity: 0;
+    top: 50%;
+    position: absolute;
+    right: 7.6%;
+    height:auto;
+  }
+
+  #section2 #fullscreen #fullscreenIcon {
+    display: none;
+  }
+}
+
+/*device bigger than 481
+@media only screen and (min-width : 801px) {
+  #wrapper {
+    min-width: 700px;
+  }
+
+  #section1 {
+    min-width: 700px;
+  }
+}*/
+

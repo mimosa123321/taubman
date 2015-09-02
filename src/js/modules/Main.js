@@ -12,6 +12,7 @@ var Main = module.exports = function(model) {
     this.model.eventProxy.addListener('onClickInfoButton', this.changeDetail.bind(this));
 
     this.initScrollDownBtn();
+    this.initScroll();
 };
 
 Main.prototype.init = function() {
@@ -19,9 +20,38 @@ Main.prototype.init = function() {
     this.getContents();
 
     if (!Modernizr.csstransitions){
-        console.log($('.detail'));
         $('.detail').css('display','none');
     }
+};
+
+Main.prototype.initScroll = function() {
+    var self = this;
+
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        var posArr = self.getPosition();
+        var filterPosArr = posArr.filter(function(obj,index){
+            if(scroll >= obj) {
+                return index;
+            }
+        });
+
+        var currentSection = filterPosArr.length;
+        self.model.eventProxy.emit('changeMenuBtn',currentSection);
+
+
+    });
+};
+
+Main.prototype.getPosition = function() {
+    var i, self = this, pairsPos = [];
+    pairsPos.push(0);
+    for (i = 0; i<self.model.pairs.length; i++) {
+        var target = $('#'+self.model.pairs[i]);
+        pairsPos.push((target.offset().top - this.model.stage.width() * 0.049));
+    }
+
+    return pairsPos;
 
 };
 
@@ -45,46 +75,14 @@ Main.prototype.changeSection = function() {
     this.model.eventProxy.emit('onClosePanel');
 
     var target = $('#pair' + (this.model.currentSection));
-    var pre = $('#pair' + (this.model.prevSection));
-    if (Modernizr.csstransitions){
-        target.css('visibility','visible');
-        target.css('display','block');
 
-    }
-    if(!this.isOpenContent) {
-        if (!Modernizr.csstransitions){
-            // IE - open tab
-            target.removeClass('ieshow').addClass('ieshow');
-            this.checkInfoBar();
-        }else {
-            target.removeClass('show hide left right').addClass('show left');
-        }
-        this.isOpenContent = true;
-        return;
-    }else {
-        if (Modernizr.csstransitions){
-            if(this.model.currentSection < this.model.prevSection) {
-                pre.removeClass('show hide left right').addClass('hide right');
-                target.removeClass('show hide left right').addClass('show right');
-            }
-
-            if(this.model.currentSection > this.model.prevSection) {
-                pre.removeClass('show hide left right').addClass('hide left');
-                target.removeClass('show hide left right').addClass('show left');
-            }
-        }else {
-            //IE --------------------------------------------
-            this.checkInfoBar();
-            pre.removeClass('iehide ieshow').addClass('iehide');
-            target.removeClass('iehide ieshow').addClass('ieshow');
-        }
-
-        /*this.model.animateUtil.animationEnd(pre, function(){
-            pre.css('display','none');
-            pre.css('visibility','hidden');
-        });*/
-    }
+    var offsetHeight = target.offset().top - this.model.stage.width() * 0.049;
+    $('html, body').animate({
+        scrollTop: offsetHeight
+    }, 600);
 };
+
+
 
 Main.prototype.backHomePage = function() {
     //hideApp
@@ -144,13 +142,13 @@ Main.prototype.initScrollDownBtn = function() {
 
 Main.prototype.hideApp = function() {
     if (Modernizr.csstransitions){
-        this.app.removeClass('show hide').addClass('hide');
+        //this.app.removeClass('show hide').addClass('hide');
     } else {
         //IE --
-        $('.pairs').removeClass('ieshow iehide');
-        this.app.css('visibility','hidden');
-        this.app.css('display','none');
-        this.app.css('opacity',0);
+        //$('.pairs').removeClass('ieshow iehide');
+        //this.app.css('visibility','hidden');
+        //this.app.css('display','none');
+        //this.app.css('opacity',0);
     }
 };
 

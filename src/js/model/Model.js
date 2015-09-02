@@ -6,5 +6,6 @@ module.exports = function() {
     this.prevSection = null;
     this.detailId = 0;
     this.preDetailId = null;
+    this.pairs = [];
     this.getContentsURL = "./././contents.json";
 };
