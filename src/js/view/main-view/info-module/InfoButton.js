@@ -41,7 +41,7 @@ var InfoButton= module.exports = React.createClass({
         //console.log(this.props.model);
         var n = "\n";
         return <div className = "buttons">
-            <div className = "button-unit" id="button1" onMouseOver={this.handleOver.bind(null,1)} onMouseOut={this.handleOut.bind(null,1)}>
+            <div className = "button-unit " data-stellar-ratio="1.5" id="button1" onMouseOver={this.handleOver.bind(null,1)} onMouseOut={this.handleOut.bind(null,1)}>
                 <div className = "buttonContainer">
                     <div className = "buttonTop">
                         <div className = "center"></div>

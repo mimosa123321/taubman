@@ -106,7 +106,7 @@
         }
       },
       "rightContent": {
-        "type":"video",
+        "type":"info",
         "title":"China Sets Pace in\nMobile Payments Market",
         "desc":"Alibaba’s Alipay and Tencent’s Tenpay dominate China’s mobile payment industry. We compare and contrast the two giants in our interactive snapshot.",
         "url":"build/images/mobilebg2.jpg",
@@ -114,8 +114,8 @@
         "btnText":"click for more",
         "btnUrl":"build/images/icon-arrow-right.png",
         "subContent": {
-          "title": "China’s Malls: Palaces of Experience,\nNot Consumption",
-          "desc": "Guangjie, which roughly translates as window shopping, is increasingly seen by China’s newly affluent consumers as a key pastime. The trend highlights a new phenomenon in China, whereby mall-goers leave establishments without purchases in their hands, yet less money in their pockets",
+          "title": "China sets pace in \nmobile payments",
+          "desc": "While Paypal has been around much longer and Apple Pay garners more headlines, the biggest players in mobile payments are in China. Alibaba and Tencent are the dominant providers and the numbers from China today far exceed the US, according to figures from iResearch and Forrester.",
           "url":"build/images/content-placeholder.jpg"
         }
       }

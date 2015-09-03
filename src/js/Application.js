@@ -1,6 +1,5 @@
 require('./../../node_modules/es5-shim/es5-shim');
 require('./../../node_modules/es5-shim/es5-sham');
-
 // Make bxslider work
 global.jQuery = require("jquery-compat");
 
@@ -12,7 +11,8 @@ var $ = require('jquery-compat'),
     Resize = require('./utils/Resize'),
     Animate = require('./utils/Animate'),
     ViewsManager = require('./view/ViewsManager'),
-    BxSlider = require('./../../lib/bxslider/jquery.bxslider');
+    BxSlider = require('./../../lib/bxslider/jquery.bxslider'),
+    skrollr = require('skrollr');
 
 var Application = module.exports = {
     init: function() {
@@ -69,5 +69,23 @@ var Application = module.exports = {
 
 $(function() {
     console.log("ready");
+
+    /*setTimeout(function() {
+        skrollr.init(
+            {
+                constants: {
+                    skrollr: "skrollr"
+                },
+                edgeStrategy: 'set',
+                easing: {
+                    WTF: Math.random,
+                    inverted: function(p) {
+                        return 1-p;
+                    }
+                }
+            }
+        );
+    }, 500);*/
+
     Application.init();
 });

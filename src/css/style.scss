@@ -68,6 +68,16 @@ html, body {
   min-width: 768px;
   min-height: 600px;
 
+  #testing {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    top:200px;
+    left:54px;
+    z-index:100;
+  }
+
   #topBar {
     position: fixed;
     top:0;
@@ -542,7 +552,7 @@ html, body {
         //overflow: hidden;
         -webkit-font-smoothing: antialiased;
         z-index:2;
-        padding-bottom: 5%;
+        padding-bottom: 7%;
 
         .pairs {
           position: relative;

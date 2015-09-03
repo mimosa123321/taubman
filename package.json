@@ -26,8 +26,12 @@
     "load-grunt-tasks": "^3.2.0",
     "mocha": "^2.2.5",
     "react": "^0.13.3",
-    "reactify": "^1.1.1"
+    "reactify": "^1.1.1",
+    "skrollr": "^0.6.26"
   },
   "scripts": {},
-  "author": "Mimosa Poon"
+  "author": "Mimosa Poon",
+  "dependencies": {
+    "jquery.stellar": "markdalgleish/stellar.js#v0.6.2"
+  }
 }

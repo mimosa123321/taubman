@@ -2,10 +2,12 @@ var React = require('React');
 
 var HomePage = module.exports = React.createClass({
     render:function() {
+        var opts = [];
+        opts['data-0-start'] = 'data-0-start';
         return <div className="homePage" id="homePage" section="1">
             <div id="homePageBg"><img src="build/images/bg.jpg"/></div>
             <div className ="contents">
-                <div id="chinaMall">
+                <div id="chinaMall" {...opts} >
                     <span className="center"></span>
                     <img src="build/images/chinamall.png"/>
                 </div>

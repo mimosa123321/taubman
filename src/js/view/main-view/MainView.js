@@ -19,7 +19,7 @@ var MainView = module.exports = React.createClass({
             myModel.pairs.push(contentId);
             if(index === 0) {
                 return (
-                        <div key={index} className="info pairs" id={contentId}>
+                        <div key={index} className="info pairs" id={contentId} data-stellar-offset-parent="true">
                             <InfoModule model = {myModel}/>
                         </div>
                     )
