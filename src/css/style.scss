@@ -65,7 +65,7 @@ html, body {
   height:100%;
   //border: 1px solid red;
   box-sizing: border-box;
-  min-width: 768px;
+  //min-width: 768px;
   min-height: 600px;
 
   #testing {
@@ -296,6 +296,11 @@ html, body {
       top:0;
       width: 100%;
       padding-bottom: 56%;
+      background: url("./../images/bg.jpg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
 
       #homePageBg {
         position: absolute;
@@ -554,10 +559,45 @@ html, body {
         z-index:2;
         padding-bottom: 7%;
 
+
+        #pair2 {
+          background: url("./../images/brangbg.jpg");
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+        #pair3 {
+          background: url("./../images/digitalbg.jpg");
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          //background-attachment: fixed;
+          background-size: cover;
+        }
+
+        #pair4 {
+          background: url("./../images/mobilebg.jpg");
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+        #pair5 {
+          background: url("./../images/mallbg.jpg");
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          //background-attachment: fixed;
+          background-size: cover;
+        }
+
+
         .pairs {
           position: relative;
           width:100%;
           padding-bottom: 56%;
+
 
 
           .no-cssgradients .iehide {

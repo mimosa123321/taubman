@@ -27,10 +27,12 @@ var ContentModule = module.exports = React.createClass({
             this.subContent = text.subContent;
             this.type = type;
         }
+        /*<<ContentImage model = {this.props.model}
+         data = {url}
+         onButtonClick = {this.onButtonClick} />*/
+
         return <div className={name}>
-            <ContentImage model = {this.props.model}
-                          data = {url}
-                          onButtonClick = {this.onButtonClick} />
+
             <ContentIcon type = {this.props.contents.type} />
             <ContentText model = {this.props.model}
                          data = {text}
