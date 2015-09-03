@@ -6,7 +6,7 @@ var PanelText = require('./panel-video/PanelText');
 var PanelVideo = require('./panel-video/PanelVideo');
 var PanelSlideShow = require('./panel-slideshow/PanelSlideShow');
 var PanelSlideShowThumb = require('./panel-slideshow/PanelSlideShowThumb');
-//var PanelInfo = require('./panel-info/PanelInfo');
+var PanelInfo = require('./panel-info/PanelInfo');
 
 var PanelModule = module.exports = React.createClass({
     componentDidMount: function() {

@@ -884,7 +884,7 @@ html, body {
            height:100%;
            background-color: #6f6f6f;
           z-index:2;
-          overflow: auto;
+          overflow-y: auto;
         }
 
         img {
@@ -902,7 +902,7 @@ html, body {
         background-color: #282b2d;
         background-color: rgb(40,43,45);
         z-index:1;
-        overflow: auto;
+        overflow: hidden;
         @include transform(translateX(-100%));
         @include transition(all 0.8s ease-out);
 
