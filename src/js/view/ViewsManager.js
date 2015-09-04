@@ -30,10 +30,16 @@ var ViewsManager = module.exports = React.createClass({
 
     onClosePanelHandler:function() {
         this.setState({isHidePanel:true});
+        this.model.eventProxy.emit('reset');
+        //allow drag after close panel
+        //$('body').removeClass('noscroll');
+
     },
 
     onShowSubContent:function(subContents) {
         this.setState({subContents:subContents.subContent, type:subContents.type, isHidePanel:false});
+        //avoid drag after open panel
+        //$('body').addClass('noscroll');
     },
 
     updateContents:function(self) {

@@ -18,8 +18,8 @@
   .panelClose {
     position: absolute !important;
     right: 2%  !important;;
-    top: 11%  !important;;
-    width: 30px  !important;
+    top: 4%  !important;;
+    width: 30px;
   }
 
 }
@@ -104,7 +104,7 @@
     width: 33%;
     height: 100%;
     background-color: #6f6f6f;
-    padding: 7% 0;
+    padding: 1% 0;
     color:white;
 
     h1 {
@@ -114,7 +114,7 @@
 
   .right {
     position: absolute;
-    padding: 7% 0;
+    padding: 1% 0;
     right: 0;
     width: 67%;
     height: 100%;
@@ -160,6 +160,8 @@
       margin:0;
       font-size: 30px;
       text-align: center;
+      text-transform: none !important;
+      color: #f37421;
     }
 
     h2.vs {
@@ -282,7 +284,7 @@ and (max-width : 1699px){
   }
 
   .goAliBtn {
-    margin: 8% auto 0 !important;
+    margin: 8% auto 6% !important;
   }
 }
 
@@ -314,6 +316,8 @@ and (max-width : 1199px) {
     #middle {
       h2 {
         font-size: 18px;
+        text-transform: none !important;
+        color: #f37421;
       }
 
       h2.vs {

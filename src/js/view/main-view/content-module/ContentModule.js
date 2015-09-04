@@ -31,8 +31,12 @@ var ContentModule = module.exports = React.createClass({
          data = {url}
          onButtonClick = {this.onButtonClick} />*/
 
-        return <div className={name}>
+        var bg = (isIE8? <ContentImage model = {this.props.model}
+                                       data = {url}/>:'' );
 
+
+        return <div className={name} onClick = {this.onButtonClick} >
+            {bg}
             <ContentIcon type = {this.props.contents.type} />
             <ContentText model = {this.props.model}
                          data = {text}

@@ -27,6 +27,8 @@ Main.prototype.init = function() {
 Main.prototype.initScroll = function() {
     var self = this;
 
+    var scrollBtn = $('#scrollDownBtn');
+
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
         var posArr = self.getPosition();
@@ -39,7 +41,11 @@ Main.prototype.initScroll = function() {
         var currentSection = filterPosArr.length;
         self.model.eventProxy.emit('changeMenuBtn',currentSection);
 
+        if(!scrollBtn) {
+            scrollBtn = $('#scrollDownBtn');
+        }
 
+        (scroll > 200? scrollBtn.removeClass('show').addClass('hide') : scrollBtn.removeClass('hide').addClass('show'));
     });
 };
 
@@ -85,9 +91,7 @@ Main.prototype.changeSection = function() {
 
 
 Main.prototype.backHomePage = function() {
-    //hideApp
-    this.hideApp();
-    this.clearApp();
+    $('html, body').animate({ scrollTop: "0px" });
 };
 
 Main.prototype.changeDetail = function(data) {

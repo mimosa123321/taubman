@@ -113,7 +113,7 @@ $font-content: din-bold, Helvetica;
     .title {
       font-size: 24px;
       color: white;
-      white-space: pre-line;
+      white-space: pre;
       text-transform: uppercase;
       font-family: $font-content;
       padding-left: 0;
@@ -123,6 +123,11 @@ $font-content: din-bold, Helvetica;
     p {
       font-size: 20px;
     }
+
+    img {
+      width: 92%;
+      height: auto;
+    }
   }
 
   .content.malls {
@@ -130,12 +135,24 @@ $font-content: din-bold, Helvetica;
     h1 {
       background-image: url('../images/icon-title-malls.png');
     }
+
+    img {
+      width:92% !important;
+    }
   }
 
   .content.ecommerce {
     visibility: hidden;
     h1 {
       background-image: url('../images/icon-title-ecommerce.png');
+    }
+
+    h3 {
+      img {
+        width: 10% !important;
+        vertical-align: middle;
+      }
+
     }
   }
 
@@ -159,44 +176,61 @@ $font-content: din-bold, Helvetica;
 
 }
 
+
+
+
 @media only screen
-and (min-height: 1000px)
-{
+and (min-width : 1700px) {
   .content.opening {
     p {
-      font-size: 20px;
+      font-size: 20px !important;
+    }
+  }
+
+}
+
+
+@media only screen
+and (min-width : 1200px)
+and (max-width : 1699px){
+  .content.opening {
+    p {
+      font-size: 14px !important;
     }
   }
 }
 
 
 @media only screen
-and (min-height: 900px)
-and (max-height: 999px)
-{
+and (min-width : 992px)
+and (max-width : 1199px) {
   .content.opening {
     p {
-      font-size: 19px !important;
+      font-size: 12px !important;
     }
   }
+
 }
-
-
-@media only screen
-and (max-height : 899px)
-and (min-height : 600px) {
-  .content.opening {
-    p {
-      font-size: 17px !important;
-    }
-  }
-}
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .content.opening {
+    p {
+      font-size: 12px !important;
+    }
+  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 767px) {
+  .content.opening {
+    p {
+      font-size: 12px !important;
+    }
+  }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 480px) {
+  .content.opening {
+    p {
+      font-size: 12px !important;
+    }
+  }
 }

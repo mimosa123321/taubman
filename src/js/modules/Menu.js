@@ -7,7 +7,6 @@ var Menu = module.exports = function(model) {
     this.init();
     this.initLogo();
     this.model.eventProxy.addListener('changeMenuBtn',function(id){
-        console.log(id);
         self.choseMenu(id - 1);
 
     });
@@ -33,6 +32,10 @@ Menu.prototype.init = function() {
 
 Menu.prototype.choseMenu = function(id) {
     var self = this;
+    if(id === -1) {
+        $('.menu').removeClass('chosen');
+        return;
+    }
     var menu = $('#menusList').find('.menu');
     menu.each(function(index){
         if(index === id) {

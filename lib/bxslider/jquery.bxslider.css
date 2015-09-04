@@ -96,7 +96,7 @@
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-	background: #212121;
+	background: #ffffff;
 	text-indent: -9999px;
 	display: block;
 	width: 7px;
@@ -111,7 +111,7 @@
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active,
 .bx-wrapper .bx-pager.bx-default-pager a:focus {
-	background: #989898;
+	background: #f37421;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */

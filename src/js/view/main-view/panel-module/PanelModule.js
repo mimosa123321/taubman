@@ -55,7 +55,7 @@ var PanelModule = module.exports = React.createClass({
             </div>
         }else if(this.props.type === "info") {
             html = <div className="contents-info">
-                <PanelInfo type ={this.props.type} contents={this.props.contents}/>
+                <PanelInfo model={this.props.model} type ={this.props.type} contents={this.props.contents}/>
                 <PanelClose onClickCloseBtn = {this.clickCloseHandler} />
             </div>
         }

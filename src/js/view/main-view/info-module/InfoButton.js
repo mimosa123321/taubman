@@ -51,7 +51,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonLine"></div>
                     <div className = "buttonContent">
                         <div className = "center"></div>
-                        <span className = "buttonText"><span className = "boldText">No. 1 tomorrow ? {n}</span>China's RMB 26 trillion in retail sales to the US</span>
+                        <span className = "buttonText"><span className = "boldText">Number 1 tomorrow? {n}</span>China's RMB 26 trillion in retail sales{n}in 2014 is second only to the US</span>
                     </div>
                     <div className = "buttonDetail" id="buttonDetail1" onClick={this.handleSubmit.bind(null,1)}>
                         <div className= "buttonDetailContainer">
@@ -71,7 +71,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonLine"></div>
                     <div className = "buttonContent">
                         <div className = "center"></div>
-                        <span className = "buttonText"><span className = "boldText">22%:</span> Projected spending surge by upper middle class from 2012 to 2022 </span>
+                        <span className = "buttonText"><span className = "boldText">22%:</span> Projected annual spending surge{n}by upper middle class from 2012 to 2022  </span>
                     </div>
                     <div className = "buttonDetail" id="buttonDetail2" onClick={this.handleSubmit.bind(null,2)}>
                         <div className= "buttonDetailContainer">
@@ -86,12 +86,12 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonTop">
                         <div className = "center"></div>
                         <img src="./build/images/buttonicon3.png" />
-                        <span className = "buttonTitle">E-Commerce</span>
+                        <span className = "buttonTitle">E-Commerce Boom</span>
                     </div>
                     <div className = "buttonLine"></div>
                     <div className = "buttonContent">
                         <div className = "center"></div>
-                        <span className = "buttonText"><span className = "boldText">RMB 6.4 trillion:</span> Predicted value of China's e-commerce sector by 2019 </span>
+                        <span className = "buttonText"><span className = "boldText">RMB 6.4 trillion:</span> Predicted value of{n}China's e-commerce sector by 2019 </span>
                     </div>
                     <div className = "buttonDetail" id="buttonDetail3" onClick={this.handleSubmit.bind(null,3)}>
                         <div className= "buttonDetailContainer">
@@ -111,7 +111,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonLine"></div>
                     <div className = "buttonContent">
                         <div className = "center"></div>
-                        <span className = "buttonText"><span className = "boldText">30% bigger:</span> China's malls versus malls abroad – the average mall in China is 95,000 square meters </span>
+                        <span className = "buttonText"><span className = "boldText">44%</span> of all global shopping market{n}completions in 2014 were in China </span>
                     </div>
                     <div className = "buttonDetail" id="buttonDetail4" onClick={this.handleSubmit.bind(null,4)}>
                         <div className= "buttonDetailContainer">

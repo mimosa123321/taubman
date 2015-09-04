@@ -68,24 +68,5 @@ var Application = module.exports = {
 };
 
 $(function() {
-    console.log("ready");
-
-    /*setTimeout(function() {
-        skrollr.init(
-            {
-                constants: {
-                    skrollr: "skrollr"
-                },
-                edgeStrategy: 'set',
-                easing: {
-                    WTF: Math.random,
-                    inverted: function(p) {
-                        return 1-p;
-                    }
-                }
-            }
-        );
-    }, 500);*/
-
     Application.init();
 });

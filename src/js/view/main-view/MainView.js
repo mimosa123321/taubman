@@ -14,6 +14,7 @@ var MainView = module.exports = React.createClass({
     render: function() {
         var self = this;
         var myModel = this.props.model;
+        myModel.pairs = [];
         var contentsNodes = this.props.contents.map(function (contents, index) {
             var contentId = 'pair' + (index + 1);
             myModel.pairs.push(contentId);

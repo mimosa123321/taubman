@@ -105,6 +105,26 @@ module.exports = function(grunt) {
             }
         },
 
+        pngmin: {
+            compile: {
+                options: {
+                    concurrency: 8,             // specify how many exucutables get spawned in parallel
+                    colors: 256,                // reduce colors to 128
+                    ext: '.png',                // use .png as extension for the optimized files
+                    quality: '65-80',           // output quality should be between 65 and 80 like jpeg quality
+                    speed: 10,                  // pngquant should be as fast as possible
+                    iebug: false                 // optimize image for use in Internet Explorer 6
+                },
+                files: [
+                    {
+                        src: 'src/images/*.png',
+                        dest: 'build/images/**/*.png'
+                    }
+                ]
+            }
+        },
+
+
         'watch': {
             scripts: {
                 files: ['./src/**/*'],
@@ -119,5 +139,5 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
     //grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'browserify', 'uglify']);
-    grunt.registerTask('default', ['clean:both', 'eslint', 'copy', 'concat:sass', 'sass', 'cssmin', 'browserify', 'clean:temp']);
+    grunt.registerTask('default', ['clean:both', 'eslint', 'copy', 'concat:sass', 'sass', 'cssmin', 'browserify','pngmin', 'clean:temp']);
 };

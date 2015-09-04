@@ -48,13 +48,45 @@
 
   #pagesApp {
     .mainView {
+      .homePage {
+        background: none !important;
+
+        .emailForm {
+          display:none  !important;
+          opacity: 0  !important;
+
+          &.show {
+            display:block  !important;
+            opacity: 1  !important;
+          }
+
+          &.hide {
+            display:none  !important;
+            opacity: 0  !important;
+          }
+
+          .emailForm {
+            background-color: black !important;
+          }
+
+          .closeArea {
+            background-color: black !important;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+          }
+
+        }
+      }
+
+
+
        .pairs {
-        visibility: hidden !important;
+        //visibility: hidden !important;
+         background: none !important;
         &.ieshow {
-          visibility: visible !important;
+          //visibility: visible !important;
         }
         &.iehide {
-          visibility: hidden !important;
+          //visibility: hidden !important;
         }
 
         .contentText {
@@ -66,7 +98,6 @@
           }
         }
         .detail {
-          display:none;
           .contentPages {
             .content {
               &.ieshow {

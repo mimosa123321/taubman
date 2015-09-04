@@ -10,6 +10,31 @@
     <![endif]-->
     <script src="lib/modernizr.custom.77939.js"></script>
     <script src="build/js/main.min.js"></script>
+    <script>
+        var isIE8 = false;
+        checkVersion();
+        function checkVersion() {
+            var msg = "You're not using Windows Internet Explorer.";
+            var ver = getInternetExplorerVersion();
+            if (ver > -1) {
+                if (ver === 8.0) {
+                    isIE8 = true;
+                }
+            }
+        }
+
+        function getInternetExplorerVersion() {
+            var rv = -1; // Return value assumes failure.
+            if (navigator.appName == 'Microsoft Internet Explorer') {
+                var ua = navigator.userAgent;
+                var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                if (re.exec(ua) != null)
+                    rv = parseFloat(RegExp.$1);
+            }
+            return rv;
+        }
+
+    </script>
 </head>
 <body>
 <div id="wrapper">
@@ -73,6 +98,7 @@
             <span id="copyright">© 2015 THE TAUBMAN COMPANY LLC ALL RIGHTS RESERVED</span>
         </div>
     </div>
+
 </div>
 <div id="updateBrowser"><div class="content">Your browser version is unsupported. Please download a newer browser such as <a href="http://www.google.com/chrome">Chrome</a> or <a href="http://www.microsoft.com/internetexplorer">Internet Explorer</a>.</div></div>
 <!--[if lt IE 8]><script>document.getElementById('updateBrowser').style.display = 'block';</script><![endif]-->

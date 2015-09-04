@@ -3,12 +3,14 @@ var $ = require('jquery-compat');
 
 var PanelInfo = module.exports = React.createClass({
     componentDidMount: function () {
+        this.props.model.eventProxy.addListener('reset',function() {
+            $('.info1').removeClass('hide').addClass('show');
+            $('.info2').removeClass('show').addClass('hide');
+        });
         return {}
     },
 
     handleSubmit: function () {
-        console.log('click');
-        //show info 2 hide info 1
         $('.info1').removeClass('show').addClass('hide');
         $('.info2').removeClass('hide').addClass('show');
     },
@@ -19,26 +21,26 @@ var PanelInfo = module.exports = React.createClass({
         return <div className="info">
             <div className="left">
                 <div  className = "info1" >
-                    <h1>China sets pace in mobile payments </h1>
-                    <h3>While Paypal has been around much longer and Apple Pay garners more headlines, the biggest players in mobile payments are in China. Alibaba and Tencent are the dominant providers and the numbers from China today far exceed the US, according to figures from iResearch and Forrester. </h3>
+                    <h1>China sets pace in{n}mobile payments </h1>
+                    <h3>While Paypal has been around much longer and Apple Pay garners more headlines, the biggest players in mobile payments are in China. Alibaba and Tencent are the dominant providers and the numbers from China today far exceed the US, according to figures from iResearch and Forrester.</h3>
                     <div id ="middle">
-                        <h2>RMB 6 trillion (US$ 980 billion)</h2>
-                        <h3>Gross merchandise volume (GMV) {n} of mobile payments in China in 2014</h3>
+                        <h2>RMB 6 trillion (USD 980 billion)</h2>
+                        <h3>Gross merchandise volume (GMV){n} of mobile payments in China in 2014</h3>
                         <h2 className = "vs">VS</h2>
-                        <h2>RMB 330 billion (US$ 52billion)</h2>
+                        <h2>RMB 330 billion (USD 52 billion)</h2>
                         <h3>Total value of US mobile payments in 2014</h3>
                         <h2 className = "vs">VS</h2>
-                        <h2>Over RMB 18 trillion (US$ 52billion)</h2>
+                        <h2>Over RMB 18 trillion (USD 3 trillion)</h2>
                         <h3>China’s projected total value in 2018</h3>
                     </div>
 
                     <h2>Drivers for China’s surge:</h2>
                     <ul>
-                        <li>China: 1.5 billion mobile phone users in 2014 vs
+                        <li>China: 1.5 billion mobile phone users in 2014 vs{n}
                             USA: 250 million in 2014</li>
-                        <li>Only 10% in China have credit cards / history vs
-                            70% in the US: consumers seek other payment
-                            methods to enable mobile commerce</li>
+                        <li>Only 10% in China have credit cards vs 70% in the US.{n}
+                            Consumers seek other payment methods to enable{n}
+                            mobile commerce</li>
                     </ul>
                     <div className="goAliBtn" onClick={this.handleSubmit}><img src="./build/images/goalibtn.png" /></div>
                 </div>
