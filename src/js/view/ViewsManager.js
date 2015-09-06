@@ -15,7 +15,6 @@ var ViewsManager = module.exports = React.createClass({
         var self = this;
         self.model = this.props.model;
         self.model.eventProxy.addListener('onContentsReady',function() {
-            console.log("onContent Ready");
             self.updateContents(self);
         });
 
@@ -29,17 +28,24 @@ var ViewsManager = module.exports = React.createClass({
     },
 
     onClosePanelHandler:function() {
+        this.props.model.didShowSubContent = false;
         this.setState({isHidePanel:true});
         this.model.eventProxy.emit('reset');
         //allow drag after close panel
-        //$('body').removeClass('noscroll');
+        $('body').removeClass('noscroll');
+        $(window).scrollTop(this.model.saveScrollTop);
+        console.log("close");
 
     },
 
     onShowSubContent:function(subContents) {
         this.setState({subContents:subContents.subContent, type:subContents.type, isHidePanel:false});
         //avoid drag after open panel
-        //$('body').addClass('noscroll');
+        this.model.saveScrollTop = $(window).scrollTop();
+        setTimeout(function(){
+            $('body').addClass('noscroll');
+        },1000);
+
     },
 
     updateContents:function(self) {

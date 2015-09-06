@@ -12,8 +12,14 @@ var InfoButton= module.exports = React.createClass({
     },
 
     handleSubmit: function(id) {
+        var self = this;
         var index = id - 1;
-        $('.button-unit').removeClass('chosen hover').addClass('notChosen');
+        $('.button-unit').each(function(buttonId){
+            if(buttonId != index) {
+                $(this).removeClass('chosen hover').addClass('notChosen');
+                $(this).find('.buttonTop').find('img').attr('src', self.icon[buttonId]);
+            }
+        });
         $('#button' + id).removeClass('notChosen').addClass('chosen');
         $('#button' + id).find('.buttonTop').find('img').attr('src', this.iconOver[index]);
 
@@ -51,7 +57,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonLine"></div>
                     <div className = "buttonContent">
                         <div className = "center"></div>
-                        <span className = "buttonText"><span className = "boldText">Number 1 tomorrow? {n}</span>China's RMB 26 trillion in retail sales{n}in 2014 is second only to the US</span>
+                        <span className = "buttonText"><span className = "boldText">Number 1 tomorrow? {n}</span>China's retail sales were RMB 26 trillion in 2014, second only to the US</span>
                     </div>
                     <div className = "buttonDetail" id="buttonDetail1" onClick={this.handleSubmit.bind(null,1)}>
                         <div className= "buttonDetailContainer">
@@ -86,7 +92,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonTop">
                         <div className = "center"></div>
                         <img src="./build/images/buttonicon3.png" />
-                        <span className = "buttonTitle">E-Commerce Boom</span>
+                        <span className = "buttonTitle">E-Commerce</span>
                     </div>
                     <div className = "buttonLine"></div>
                     <div className = "buttonContent">

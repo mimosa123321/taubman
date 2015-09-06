@@ -7,6 +7,7 @@
   position: relative;
   margin: 3% auto;
   width: 100%;
+  height:100%;
   min-height:600px;
   overflow: auto;
 
@@ -28,8 +29,12 @@
 
   .panelSlideShow {
     position: relative;
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
+
+    .bx-wrapper {
+      height:auto !important;
+    }
 
     .bx-controls {
       position: absolute;
@@ -43,36 +48,48 @@
 
       .bx-prev {
         position: absolute;
-        width: 62px !important;
-        height: 61px !important;
-        @include transform(scale(0.5));
-        left:0 !important;
+        width: 45px;
+        height: 45px;
         top:45%;
         left: 20px;
+        background: url(../images/leftarrow.png) no-repeat;
+        background-position: 0px 0px;
+      }
+
+      .bx-prev:hover {
+        background-position: 0px -43px;
       }
 
       .bx-next {
         position: absolute;
-        width: 62px !important;
-        height: 61px !important;
-        @include transform(scale(0.5));
+        width: 45px;
+        height: 45px;
         top:45%;
         right: 20px;
-        background-position: -73px 0;
+        background: url(../images/rightarrow.png) no-repeat;
+        background-position: 0px 0;
       }
       .bx-next:hover {
-        background-position: -73px -62px !important;
+        background-position: 0px -43px;
       }
 
       .bx-pager {
         position: absolute;
-        top: 106%;
         width: 100%;
+        bottom: -5%;
       }
     }
   }
 }
 
+/*height*/
+@media only screen
+and (min-height : 1200px) {
+  .panelSlideShow {
+    width: 90% !important;
+  }
+
+}
 
 
 @media only screen
@@ -82,12 +99,46 @@ and (min-width : 1700px) {
       font-size: 40px !important;
     }
   }
+
+  .bx-prev {
+    position: absolute;
+    width: 62px !important;
+    height: 61px !important;
+    background: url(../images/leftarrow.png) no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% auto !important;
+
+    &:hover {
+      background-size: 100% auto !important;
+      background-position: 0 -59px !important;
+    }
+  }
+
+  .bx-next {
+    width: 62px !important;
+    height: 61px !important;
+    background: url(../images/rightarrow.png) no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% auto !important;
+
+    &:hover {
+      background-size: 100% auto !important;
+      background-position: 0 -59px !important;
+    }
+  }
 }
 
 
 @media only screen
 and (min-width : 1200px)
 and (max-width : 1699px){
+  .bx-prev {
+    position: absolute;
+    width: 45px !important;
+    height: 45px !important;
+    background: url(../images/leftarrow.png) no-repeat;
+    background-position: 0px 0px;
+  }
 
 }
 

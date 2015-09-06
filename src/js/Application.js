@@ -22,23 +22,32 @@ var Application = module.exports = {
         this.resizeUtil = new Resize(this.model);
         this.animateUtil = new Animate(this.model);
         this.viewsManager = React.render( <ViewsManager model={this.model}/> , document.getElementById('pagesApp'));
+        this.homePage = $('#homePage');
+        this.pair2 = $('#pair2');
+        this.pair3 = $('#pair3');
+        this.pair4 = $('#pair4');
+        this.pair5 = $('#pair5');
         setTimeout(this.initResize.bind(this),100);
     },
 
     initResize:function() {
         var self = this;
+        self.resizeContent();
+        self.model.stage.resize(function() {
+            //resize home page
+           self.resizeContent();
+            self.model.eventProxy.emit("onResizeEvent");
+        });
+    },
+
+    resizeContent:function() {
+        var self = this, height = 0;
         self.manageBg((1920 / 1079),$('#homePage'),$('#homePageBg'));
         self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'), "v");
         self.manageBg((1920 / 1077),$('#infoContent'),$('#infoBg'));
 
-        self.model.stage.resize(function() {
-            //resize home page
-            self.manageBg((1920 / 1079),$('#homePage'),$('#homePageBg'));
-            self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'), "v");
-            self.manageBg((1920 / 1077),$('#infoContent'),$('#infoBg'));
-            self.manageVideos();
-
-        });
+        var height = self.model.stage.height() - (self.model.stage.height() * 0.15);
+        self.homePage.css('height',height);
     },
 
     manageBg: function(ratio, el, elImg, type) {
@@ -51,7 +60,6 @@ var Application = module.exports = {
         elImg.css('height', rH);
         domImg.css('width',rW);
         domImg.css('height',rH);
-
     },
 
     manageVideos:function() {
@@ -69,4 +77,8 @@ var Application = module.exports = {
 
 $(function() {
     Application.init();
+    setTimeout(function(){
+        $('#topBar').addClass('show');
+    },100);
+
 });

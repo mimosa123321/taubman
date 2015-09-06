@@ -19,7 +19,7 @@ var InfoDetail = module.exports = React.createClass({
                     <hr></hr>
                     <div className="box">
                         <h3>World's Retail Leader by 2018</h3>
-                        <p>In 2013, China surpassed Japan to become the world’s second largest consumer market and is expected to take the top spot as the world’s largest retail market by 2018, according to PWC. Retail sales volume growth will hit 7.9% by 2018, compared with 2.6% for North America and the global average of 3.4%.  </p>
+                        <p>In 2013, China surpassed Japan to become the world's second largest consumer market. It is expected to take the top spot as the world's largest retail market by 2018, according to PWC. Retail sales volume growth will hit 7.9% by 2018, compared with 2.6% for North America and the global average of 3.4%.  </p>
                     </div>
                     <div className="box">
                         <h3>China: the Top Retail Investment Destination</h3>
@@ -40,7 +40,7 @@ var InfoDetail = module.exports = React.createClass({
                     </div>
                     <div className="box">
                         <h3>China's Middle Class Boom</h3>
-                        <p>In 2002, a mere 4% of China's mainland urban residents were identified as middle class. By 2022, that figure will rise to 78%. Growth in private consumption will come from a big shift from mass middle class to upper middle class noted McKinsey.</p>
+                        <p>In 2002, a mere 4% of China's mainland urban residents were identified as middle class. By 2022, that figure will rise to 78%. Growth in private consumption will come from a big shift from mass middle class to upper middle class, according to McKinsey.</p>
                     </div>
                     <div className="box">
                         <h3>China’s Wealth Distribution</h3>
@@ -53,7 +53,7 @@ var InfoDetail = module.exports = React.createClass({
                     <hr></hr>
                     <div className="box">
                         <h3>ONLINE RETAIL BOOM</h3>
-                        <p>China's e-commerce industry is already the largest in the world according to Forrester Research. Estimates for China’s online sales in 2014 have totaled RMB 2.8 trillion, while total for the US in 2014 is estimated at USD 304 billion (RMB 1.9 trillion). The question is how this e-commerce explosion will threaten or supplement traditional retail.</p>
+                        <p>China's e-commerce industry is already the largest in the world, according to Forrester research. Estimates for China’s online sales in 2014 have totaled RMB 2.8 trillion, while total for the US in 2014 is estimated at USD 304 billion (RMB 1.9 trillion). The question is how this e-commerce explosion will threaten or supplement traditional retail.</p>
                     </div>
                     <div className="box">
                         <h3>M-Commerce Emerges as a{n}Growing Trend</h3>
@@ -74,7 +74,7 @@ var InfoDetail = module.exports = React.createClass({
                         <p>As China's retail consumption has continued to grow, so too have the number of malls in its cities. In the last four years, the number of malls in China has jumped by more than 40%, according to Deloitte.</p>
                     </div>
                     <div className="box">
-                        <h3>China the Home of new Malls</h3>
+                        <h3>China: The Home of New Malls</h3>
                         <p>The country is home to eight out of the top 10 cities for mall space under construction. The total number of new malls is projected to increase to 4,000 by the end of 2015, according to the China Chain Store Association and professional services firm Deloitte.</p>
                     </div>
                     <div className="box">
@@ -82,8 +82,6 @@ var InfoDetail = module.exports = React.createClass({
                         <img src="./build/images/content-mall-inline.png" />
                     </div>
                 </div>
-
-
             </div>
 
         </div>

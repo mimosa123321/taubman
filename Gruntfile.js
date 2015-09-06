@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 
         'concat': {
             sass: {
-                src: ['src/css/**/*.scss', '!src/css/ie8.scss'],
+                src: ['src/css/**/*.scss', '!src/css/ie8.scss','!src/css/ie9.scss'],
                 dest: 'buildtemp/style.scss'
             }
         },
@@ -62,7 +62,8 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'buildtemp/style.css': 'buildtemp/style.scss',
-                    'buildtemp/ie8.css': ['src/css/ie8.scss']
+                    'buildtemp/ie8.css': ['src/css/ie8.scss'],
+                    'buildtemp/ie9.css': ['src/css/ie9.scss']
                 }
             }
         },
@@ -139,5 +140,6 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
     //grunt.registerTask('default', ['clean', 'copy', 'sass', 'cssmin', 'browserify', 'uglify']);
-    grunt.registerTask('default', ['clean:both', 'eslint', 'copy', 'concat:sass', 'sass', 'cssmin', 'browserify','pngmin', 'clean:temp']);
+    //grunt.registerTask('default', ['clean:both', 'eslint', 'copy', 'concat:sass', 'sass', 'cssmin', 'browserify','pngmin', 'clean:temp']);
+    grunt.registerTask('default', ['clean:both', 'eslint', 'copy', 'concat:sass', 'sass', 'cssmin', 'browserify', 'clean:temp']);
 };

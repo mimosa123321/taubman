@@ -8,4 +8,5 @@ module.exports = function() {
     this.preDetailId = null;
     this.pairs = [];
     this.getContentsURL = "./././contents.json";
+    this.didShowSubContent = false;
 };

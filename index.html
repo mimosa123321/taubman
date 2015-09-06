@@ -1,15 +1,40 @@
-<!DOCTYPE html>
+<?<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimal-ui">
+    <meta property="og:title" content="Taubman Asia" />
+    <meta property="og:site_name" content="Taubman Asia China Mall 2020"/>
+    <meta property="og:url" content="http://mimosapoon.com/taubman/" />
+    <meta property="og:description" content="Share this report with your friends and followers" />
+    <meta property="og:image" content="http://mimosapoon.com/build/images/bg.jpg" />
     <title>Taubman</title>
     <link href="build/css/style.min.css" rel="stylesheet">
     <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="build/css/ie8.min.css">
     <![endif]-->
+    <!--[if IE 9]>
+    <link rel="stylesheet" type="text/css" href="build/css/ie9.min.css">
+    <![endif]-->
     <script src="lib/modernizr.custom.77939.js"></script>
     <script src="build/js/main.min.js"></script>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '417190608485197',
+                xfbml      : true,
+                version    : 'v2.4'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <script>
         var isIE8 = false;
         checkVersion();
@@ -34,6 +59,17 @@
             return rv;
         }
 
+
+
+        function fbShare() {
+            FB.ui({
+                method: 'share',
+                href: 'http://mimosapoon.com/taubman/',
+            }, function(response){
+
+            });
+        }
+
     </script>
 </head>
 <body>
@@ -46,35 +82,35 @@
             </div>
         </div>
         <ul id="menusList">
-            <li class="menu">
+            <li class="menu" id="menu1">
                 <div class="content">
                     <span class="center"></span>
                     <span id="icon1" class="icons"></span>
                     <span class="titles">CHINA RETAIL<br>BY THE NUMBERS</span>
                 </div>
             </li>
-            <li class="menu">
+            <li class="menu" id="menu2">
                 <div class="content">
                     <span class="center"></span>
                     <span id="icon2" class="icons"></span>
                     <span class="titles">Brand<br>Bonding</span>
                 </div>
             </li>
-            <li class="menu">
+            <li class="menu" id="menu3">
                 <div class="content">
                     <span class="center"></span>
                     <span id="icon3" class="icons"></span>
-                    <span class="titles">Digitally-Enabled<br>Strategies</span>
+                    <span class="titles">Digitally-Enabled <br> Strategies</span>
                 </div>
             </li>
-            <li class="menu">
+            <li class="menu" id="menu4">
                 <div class="content">
                     <span class="center"></span>
                     <span id="icon4" class="icons"></span>
                     <span class="titles">Mobile<br>Reality</span>
                 </div>
             </li>
-            <li class="menu">
+            <li class="menu" id="menu5">
                 <div class="content">
                     <span class="center"></span>
                     <span id="icon5" class="icons"></span>

@@ -1,0 +1,8 @@
+@mixin transform($transform...) {
+  -webkit-transform: $transform !important;
+  transform: $transform !important;
+}
+
+#bottomBar {
+  @include transform(translateY(0));
+}

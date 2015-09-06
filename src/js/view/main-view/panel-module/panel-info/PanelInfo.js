@@ -22,7 +22,7 @@ var PanelInfo = module.exports = React.createClass({
             <div className="left">
                 <div  className = "info1" >
                     <h1>China sets pace in{n}mobile payments </h1>
-                    <h3>While Paypal has been around much longer and Apple Pay garners more headlines, the biggest players in mobile payments are in China. Alibaba and Tencent are the dominant providers and the numbers from China today far exceed the US, according to figures from iResearch and Forrester.</h3>
+                    <h3>While PayPal has been around much longer and Apple Pay garners more headlines, the biggest players in mobile payments are in China. Alibaba and Tencent are the dominant providers and the numbers from China today far exceed the US, according to figures from iResearch and Forrester.</h3>
                     <div id ="middle">
                         <h2>RMB 6 trillion (USD 980 billion)</h2>
                         <h3>Gross merchandise volume (GMV){n} of mobile payments in China in 2014</h3>
@@ -46,12 +46,12 @@ var PanelInfo = module.exports = React.createClass({
                 </div>
 
                 <div className = "info2">
-                    <h1>Alipay  vs  Tenpay{n}vs  Paypal</h1>
+                    <h1>Alipay  vs  Tenpay{n}vs  PayPal</h1>
                     <h3>China’s leaders leading the world? </h3>
-                    <h3>A quick look at the transaction numbers show that despite a much shorter history, providers like Alipay have left PayPal behind in terms of sheer numbers. </h3>
+                    <h3>A quick look at the transaction numbers show that despite a much shorter history, providers like Alipay have left PayPal behind in terms of numbers. </h3>
                     <img className = "gLine" src="./build/images/schart.png" />
                     <h3>Bigger and broader eco-system </h3>
-                    <h3>While Paypal has remained focused mainly on core e-commerce transactions, it is arguably behind the curve in pushing out the possibilities of new ways of using mobile payments. Alipay and Tenpay have reached far beyond traditional commerce and are more deeply embedded in consumers’ lifestyles with more features and services available through their platforms and wider eco-systems. </h3>
+                    <h3>While PayPal has remained focused mainly on core e-commerce transactions, it is arguably behind the curve in pushing out the possibilities of new ways of using mobile payments. Alipay and Tenpay have reached far beyond traditional commerce and are more deeply embedded in consumers’ lifestyles with more features and services available through their platforms and wider eco-systems. </h3>
                 </div>
             </div>
 

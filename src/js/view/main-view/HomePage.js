@@ -18,6 +18,10 @@ var HomePage = module.exports = React.createClass({
         $('.emailForm').removeClass('show').addClass('hide');
     },
 
+    fbShareHandler: function() {
+        fbShare();
+    },
+
     render:function() {
         var bg = (isIE8? <div id="homePageBg"><img src="build/images/bg.jpg"/></div>:'');
         return <div className="homePage" id="homePage" section="1">
@@ -44,15 +48,15 @@ var HomePage = module.exports = React.createClass({
                 <div className="rightButtons">
                     <div id="socialMedia">
                         <div id="socialShare">
-                            <div id="fbIcon" className="icons"><img src="build/images/fbicon.png"/></div>
-                            <div id="linkedinIcon" className="icons"><img src="build/images/linkedinicon.png"/></div>
-                            <div id="twitterIcon" className="icons"><img src="build/images/twittericon.png"/></div>
-                            <div id="weiboIcon" className="icons"><img src="build/images/weiboicon.png"/></div>
+                            <a id="fbIcon" target='_blank' onClick={this.fbShareHandler} className="icons"><img src="build/images/fbicon.png"/></a>
+                            <a id="linkedinIcon" target='_blank' href="https://www.linkedin.com/cws/share?url=http%3A%2F%2Ftaubman.xenyo.net%2F" className="icons"><img src="build/images/linkedinicon.png"/></a>
+                            <a id="twitterIcon" target='_blank' href="http://www.twitter.com/share?url=http%3A%2F%2Ftaubman.xenyo.net%2F" className="icons"><img src="build/images/twittericon.png"/></a>
+                            <a id="weiboIcon" target='_blank' href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Ftaubman.xenyo.net%2F&title=Taubman Asia China Mall 2020&pic=http://mimosapoon.com/taubman/bg.jpg=&language=zh_cn" className="icons"><img src="build/images/weiboicon.png"/></a>
                         </div>
                     </div>
-                    <div id="aboutAsia">
+                    <a id="aboutAsia" target='_blank' href="http://www.taubmanasia.com/">
                         <div id="asiaIcon"><img src="build/images/talkaboutasia.png"/></div>
-                    </div>
+                    </a>
                 </div>
 
                 <div id="scrollDownBtn">

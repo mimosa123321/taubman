@@ -6,7 +6,12 @@
 .panelSlideShowThumb {
   position: relative;
   width: 90%;
-  margin: 3% auto;
+  margin: 2% auto;
+
+  .bx-wrapper {
+    height:auto !important;
+  }
+
   ul {
     padding:0;
     li {
@@ -36,22 +41,68 @@
     z-index:1;
 
     a {
-      width: 62px !important;
-      height: 61px !important;
-      @include transform(scale(0.5));
+      width: 45px;
+      height: 45px;
     }
 
     .bx-prev {
       position: absolute;
-      left: -5%!important;
-      top: 27%;
+      left: -5%;
+      top: 50%;
+      margin-top: -11px;
+      background: url(../images/leftarrow.png) no-repeat;
+
+    }
+
+    .bx-prev:hover {
+      background-position: 0px -43px;
     }
 
     .bx-next {
       position: absolute;
-      top: 27%;
+      top: 50%;
       right: -5%;
-      background-position: -69px 0;
+      margin-top: -11px;
+      background-position: 0px 0;
+      background: url(../images/rightarrow.png) no-repeat;
+    }
+
+    .bx-next:hover {
+      background-position: 0px -43px;
+    }
+
+  }
+}
+
+
+@media only screen
+and (min-width : 1700px) {
+  .bx-prev {
+    position: absolute;
+    width: 62px !important;
+    height: 61px !important;
+    background: url(../images/leftarrow.png) no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% auto !important;
+    margin-top: -31px !important;
+
+    &:hover {
+      background-size: 100% auto !important;
+      background-position: 0 -59px !important;
+    }
+  }
+
+  .bx-next {
+    width: 62px !important;
+    height: 61px !important;
+    background: url(../images/rightarrow.png) no-repeat;
+    background-position: 0px 0px;
+    background-size: 100% auto !important;
+    margin-top: -31px !important;
+
+    &:hover {
+      background-size: 100% auto !important;
+      background-position: 0 -59px !important;
     }
   }
 }

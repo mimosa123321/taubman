@@ -15,7 +15,7 @@ var PanelScrollText = module.exports = React.createClass({
             <div className="seperator"></div>
             <div className="scroll">
                 <div className="scrollWrap">
-                    <div className="wrap"><div className="desc">{desc}</div></div>
+                    <div className="wrap"><div className="desc" dangerouslySetInnerHTML={{__html: desc}}></div></div>
                 </div>
             </div>
         </div>

@@ -54,7 +54,7 @@ Main.prototype.getPosition = function() {
     pairsPos.push(0);
     for (i = 0; i<self.model.pairs.length; i++) {
         var target = $('#'+self.model.pairs[i]);
-        pairsPos.push((target.offset().top - this.model.stage.width() * 0.049));
+        pairsPos.push((target.offset().top - self.model.stage.height() * 0.08));
     }
 
     return pairsPos;
@@ -78,11 +78,11 @@ Main.prototype.changeSection = function() {
     this.showApp();
 
     //close panel
-    this.model.eventProxy.emit('onClosePanel');
+    //this.model.eventProxy.emit('onClosePanel');
 
     var target = $('#pair' + (this.model.currentSection));
 
-    var offsetHeight = target.offset().top - this.model.stage.width() * 0.049;
+    var offsetHeight = target.offset().top - this.model.stage.height() * 0.08;
     $('html, body').animate({
         scrollTop: offsetHeight
     }, 600);
