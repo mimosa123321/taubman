@@ -8,7 +8,10 @@ var Menu = module.exports = function(model) {
     this.initLogo();
     this.model.eventProxy.addListener('changeMenuBtn',function(id){
         self.choseMenu(id - 1);
+    });
 
+    this.model.eventProxy.addListener('updateMenuBtn',function(id){
+        self.choseMenu(id - 1);
     });
 };
 
@@ -18,14 +21,14 @@ Menu.prototype.init = function() {
     menu.each(function(index){
         self.menu.push($(this));
         $(this).click(function(){
-            $('.menu').removeClass('chosen');
+            //$('.menu').removeClass('chosen');
             if(self.model.currentSection) {
                 self.model.prevSection = self.model.currentSection;
             }
             self.model.currentSection = index + 1;
             //self.model.eventProxy.emit('onMenuClick');
             self.model.eventProxy.emit('onChangeSection');
-            $(this).addClass('chosen');
+            //$(this).addClass('chosen');
         });
     });
 };

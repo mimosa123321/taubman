@@ -59,6 +59,11 @@ var PanelModule = module.exports = React.createClass({
                 <PanelClose onClickCloseBtn = {this.clickCloseHandler} />
             </div>
         }
-        return <div className={classNames}>{html}</div>
+        return <div className={classNames}>
+            <div className="panelBg">
+                <img id="infoBgImg" src="build/images/pattern.png" />
+            </div>
+            {html}
+        </div>
     }
 });

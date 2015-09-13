@@ -30,22 +30,26 @@ Main.prototype.initScroll = function() {
     var scrollBtn = $('#scrollDownBtn');
 
     $(window).scroll(function (event) {
-        var scroll = $(window).scrollTop();
-        var posArr = self.getPosition();
-        var filterPosArr = posArr.filter(function(obj,index){
-            if(scroll >= obj) {
-                return index;
+        if(!self.model.didShowSubContent) {
+            var scroll = $(window).scrollTop();
+            var posArr = self.getPosition();
+            var filterPosArr = posArr.filter(function(obj,index){
+                if(scroll >= obj) {
+                    return index;
+                }
+            });
+
+            var currentSection = filterPosArr.length;
+            self.model.eventProxy.emit('changeMenuBtn',currentSection);
+
+            if(!scrollBtn) {
+                scrollBtn = $('#scrollDownBtn');
             }
-        });
 
-        var currentSection = filterPosArr.length;
-        self.model.eventProxy.emit('changeMenuBtn',currentSection);
-
-        if(!scrollBtn) {
-            scrollBtn = $('#scrollDownBtn');
+            (scroll > 200? scrollBtn.removeClass('show').addClass('hide') : scrollBtn.removeClass('hide').addClass('show'));
         }
 
-        (scroll > 200? scrollBtn.removeClass('show').addClass('hide') : scrollBtn.removeClass('hide').addClass('show'));
+
     });
 };
 
@@ -78,11 +82,13 @@ Main.prototype.changeSection = function() {
     this.showApp();
 
     //close panel
-    //this.model.eventProxy.emit('onClosePanel');
+    if(this.model.didShowSubContent) {
+        this.model.eventProxy.emit('onClosePanel');
+    }
 
     var target = $('#pair' + (this.model.currentSection));
 
-    var offsetHeight = target.offset().top - this.model.stage.height() * 0.08;
+    var offsetHeight = target.offset().top - this.model.stage.height() * 0.078 ;
     $('html, body').animate({
         scrollTop: offsetHeight
     }, 600);

@@ -34,7 +34,8 @@ var ViewsManager = module.exports = React.createClass({
         //allow drag after close panel
         $('body').removeClass('noscroll');
         $(window).scrollTop(this.model.saveScrollTop);
-        console.log("close");
+
+        this.onCloseAllVideos();
 
     },
 
@@ -46,6 +47,46 @@ var ViewsManager = module.exports = React.createClass({
             $('body').addClass('noscroll');
         },1000);
 
+        this.model.eventProxy.emit('updateMenuBtn',subContents.subContent.pageId + 1);
+
+        var that = this;
+        setTimeout( function(){
+            that.openVideos();
+        },100);
+
+    },
+
+    onCloseAllVideos: function() {
+        for(var i=1; i<4; i++) {
+            var slideShowVideoPlayer = document.getElementById('slideShowVideo'+ i);
+
+            if(slideShowVideoPlayer) {
+                if(!isIE8) {
+                    slideShowVideoPlayer.pause();
+                }
+            }
+        }
+
+        if(isIE8) {
+            $('#player1').css('display','none');
+            $('#player2').css('display','none');
+            $('#player3').css('display','none');
+
+            var player1 = document.getElementById('player1');
+            player1.stopVideoPlayer();
+
+            var player2 = document.getElementById('player2');
+            player2.stopVideoPlayer();
+
+            var player3 = document.getElementById('player3');
+            player3.stopVideoPlayer();
+        }
+    },
+
+    openVideos:function() {
+        $('#player1').css('display','block');
+        $('#player2').css('display','block');
+        $('#player3').css('display','block');
     },
 
     updateContents:function(self) {

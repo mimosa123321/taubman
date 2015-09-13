@@ -1,14 +1,30 @@
 <?<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimal-ui">
-    <meta property="og:title" content="Taubman Asia" />
-    <meta property="og:site_name" content="Taubman Asia China Mall 2020"/>
-    <meta property="og:url" content="http://mimosapoon.com/taubman/" />
+    <meta property="og:title" content="Share this report with your friends and followings : http://taubman.xenyo.net" />
     <meta property="og:description" content="Share this report with your friends and followers" />
-    <meta property="og:image" content="http://mimosapoon.com/build/images/bg.jpg" />
+    <meta property="og:url" content="http://taubman.xenyo.net/" />
+    <meta property="og:site_name" content="Taubman Asia China Mall 2020"/>
+    <meta property="og:image" content="http://taubman.xenyo.net/build/images/bg.jpg" />
+    <meta property="og:type" content="article" />
     <title>Taubman</title>
+    <style>
+        .flowplayer {
+            position: absolute;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            border: 1px solid red;
+        }
+
+        .is-poster {
+            background-image: url('http://globe-views.com/dcim/dreams/photo/photo-06.jpg');
+            /*background-color: red;*/
+        }
+    </style>
     <link href="build/css/style.min.css" rel="stylesheet">
     <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="build/css/ie8.min.css">
@@ -16,12 +32,13 @@
     <!--[if IE 9]>
     <link rel="stylesheet" type="text/css" href="build/css/ie9.min.css">
     <![endif]-->
+    <script src="lib/swfobject.js"></script>
     <script src="lib/modernizr.custom.77939.js"></script>
     <script src="build/js/main.min.js"></script>
     <script>
         window.fbAsyncInit = function() {
             FB.init({
-                appId      : '417190608485197',
+                appId      : '1650930968518989',
                 xfbml      : true,
                 version    : 'v2.4'
             });
@@ -38,6 +55,7 @@
     <script>
         var isIE8 = false;
         checkVersion();
+
         function checkVersion() {
             var msg = "You're not using Windows Internet Explorer.";
             var ver = getInternetExplorerVersion();
@@ -64,12 +82,46 @@
         function fbShare() {
             FB.ui({
                 method: 'share',
-                href: 'http://mimosapoon.com/taubman/',
+                href: 'http://taubman.xenyo.net/index.html'
             }, function(response){
 
             });
         }
 
+        function linkedInShareHandler() {
+            window.open('https://www.linkedin.com/cws/share?url=http%3A%2F%2Ftaubman.xenyo.net%2F','LinkedInShare','width=500,height=350');
+        }
+
+        function twitterShareHandler() {
+            window.open('http://www.twitter.com/share?url=http%3A%2F%2Ftaubman.xenyo.net%2F','TwitterShare','width=500,height=350');
+        }
+
+        function weiboShareHandler() {
+            window.open('http://service.weibo.com/share/share.php?url=http%3A%2F%2Ftaubman.xenyo.net%2F&title=Share this report with your friends and followings : http://taubman.xenyo.net&pic=http%3A%2F%2Ftaubman.xenyo.net%2Fimages%2Fbg.jpg&language=zh_cn','WeiboShare','width=500,height=350');
+        }
+
+        function embedFlash() {
+            var flashvars = { movie:"build/video/slideshow1.mp4"};
+            swfobject.embedSWF("video3.swf","player1","100%", "100%", "9", "lib/expressInstall.swf",flashvars,{}, {
+                allowfullscreen: "true",
+                wmode: "transparent",
+                allowscriptaccess: "always"
+            });
+
+            var flashvars2 = { movie:"build/video/slideshow2.mp4"};
+            swfobject.embedSWF("video3.swf","player2","100%", "100%", "9", "lib/expressInstall.swf",flashvars2,{}, {
+                allowfullscreen: "true",
+                wmode: "transparent",
+                allowscriptaccess: "always"
+            });
+
+            var flashvars3 = { movie:"build/video/slideshow3.mp4"};
+            swfobject.embedSWF("video3.swf","player3","100%", "100%", "9", "lib/expressInstall.swf",flashvars3,{}, {
+                allowfullscreen: "true",
+                wmode: "transparent",
+                allowscriptaccess: "always"
+            });
+        }
     </script>
 </head>
 <body>
@@ -98,9 +150,11 @@
             </li>
             <li class="menu" id="menu3">
                 <div class="content">
-                    <span class="center"></span>
-                    <span id="icon3" class="icons"></span>
-                    <span class="titles">Digitally-Enabled <br> Strategies</span>
+                    <div class="menuContents">
+                        <span class="center"></span>
+                        <span id="icon3" class="icons"></span>
+                        <span class="titles">Digitally-Enabled<br>Strategies</span>
+                    </div>
                 </div>
             </li>
             <li class="menu" id="menu4">
@@ -136,6 +190,8 @@
     </div>
 
 </div>
+
+
 <div id="updateBrowser"><div class="content">Your browser version is unsupported. Please download a newer browser such as <a href="http://www.google.com/chrome">Chrome</a> or <a href="http://www.microsoft.com/internetexplorer">Internet Explorer</a>.</div></div>
 <!--[if lt IE 8]><script>document.getElementById('updateBrowser').style.display = 'block';</script><![endif]-->
 </body>

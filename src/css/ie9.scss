@@ -1,8 +1,64 @@
-@mixin transform($transform...) {
-  -webkit-transform: $transform !important;
-  transform: $transform !important;
+@mixin animation($animate...) {
+  -webkit-animation: $animate;
+  animation: $animate;
 }
 
+@mixin fill-mode($fillmode...) {
+  -webkit-animation-fill-mode: $fillmode;
+  animation-fill-mode: $fillmode;
+}
+
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  transform: $transform;
+}
+
+
+@mixin transition($transition...) {
+  -webkit-transition:$transition;
+  transition: $transition;
+}
 #bottomBar {
-  @include transform(translateY(0));
+  @include transform(translateY(0) !important);
+}
+
+.contentPages {
+  .content {
+    @include transition(opacity 0.5s ease-out);
+
+    &.ieshow {
+      visibility: visible;
+      opacity: 1;
+
+    }
+
+    &.iehide {
+      visibility: hidden;
+      opacity: 0;
+
+    }
+  }
+}
+
+.panel {
+  @include transform(translateX(0) !important);
+  @include transition(opacity 0.5s ease-out);
+
+  .scroll {
+    .scrollWrap {
+      height:400px !important;
+    }
+  }
+
+  &.show {
+    visibility: visible;
+    @include transform(translateX(0) !important);
+    opacity: 1;
+  }
+
+  &.hide {
+    visibility: hidden;
+    @include transform(translateX(0) !important);
+    opacity: 0;
+  }
 }

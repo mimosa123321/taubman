@@ -169,6 +169,104 @@
     }
   }
 }
+.buttonContent {
+  font-size: 11px !important;
+}
+
+.buttonDetailText {
+  font-size: 11px !important;
+}
+
+.map {
+  background-color: white !important;
+}
+
+.info {
+
+
+
+  .left {
+    h1 {
+      font-size: 30px;
+    }
+
+    .info1 {
+      display: block;
+    }
+
+    .info2 {
+      display: none;
+    }
+  }
+
+  .right {
+    h1 {
+      font-size: 25px;
+    }
+
+    .info1 {
+      display: block;
+    }
+
+    .info2 {
+      display: none;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  #middle {
+    h2 {
+      font-size: 18px;
+    }
+
+    h2.vs {
+      font-size: 16px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+  }
+
+  ul {
+    li {
+      font-size: 14px;
+    }
+  }
+}
+
+.goAliBtn {
+  margin: 8% auto 0 !important;
+}
+
+.emailForm {
+  .contents {
+    margin-top: 2% !important;
+  }
+
+  p {
+    font-size: 9px !important;
+    line-height: 13px !important;
+    padding: 1% !important;
+  }
+
+  .myInput {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+
+  .submitBtn {
+    //width: 92px !important;
+    //height: 21px !important;
+    //bottom: 13% !important;
+  }
+}
 
 
 

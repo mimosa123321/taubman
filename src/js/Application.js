@@ -2,8 +2,10 @@ require('./../../node_modules/es5-shim/es5-shim');
 require('./../../node_modules/es5-shim/es5-sham');
 // Make bxslider work
 global.jQuery = require("jquery-compat");
-
+//$ = require('jquery-compat'),
+//BxSlider = require('./../../lib/bxslider/jquery.bxslider'),
 var $ = require('jquery-compat'),
+    BxSlider = require('./../../lib/bxslider/jquery.bxslider'),
     React = require('React'),
     Model = require('./model/Model'),
     EventProxy = require('./eventProxy/EventProxy'),
@@ -11,7 +13,6 @@ var $ = require('jquery-compat'),
     Resize = require('./utils/Resize'),
     Animate = require('./utils/Animate'),
     ViewsManager = require('./view/ViewsManager'),
-    BxSlider = require('./../../lib/bxslider/jquery.bxslider'),
     skrollr = require('skrollr');
 
 var Application = module.exports = {
@@ -45,6 +46,7 @@ var Application = module.exports = {
         self.manageBg((1920 / 1079),$('#homePage'),$('#homePageBg'));
         self.manageBg((959 / 1076),$('.leftContent'),$('.contentImage'), "v");
         self.manageBg((1920 / 1077),$('#infoContent'),$('#infoBg'));
+        self.manageBg((1920 / 1077),$('.panel'),$('.panelBg'));
 
         var height = self.model.stage.height() - (self.model.stage.height() * 0.15);
         self.homePage.css('height',height);
@@ -79,6 +81,7 @@ $(function() {
     Application.init();
     setTimeout(function(){
         $('#topBar').addClass('show');
+        //$('.flowplayer').flowplayer().load();
     },100);
 
 });

@@ -47,7 +47,7 @@ var InfoButton= module.exports = React.createClass({
         //console.log(this.props.model);
         var n = "\n";
         return <div className = "buttons">
-            <div className = "button-unit " data-stellar-ratio="1.5" id="button1" onMouseOver={this.handleOver.bind(null,1)} onMouseOut={this.handleOut.bind(null,1)}>
+            <div className = "button-unit " data-stellar-ratio="1.5" id="button1" onMouseOver={this.handleOver.bind(null,1)} onMouseOut={this.handleOut.bind(null,1)} onClick={this.handleSubmit.bind(null,1)}>
                 <div className = "buttonContainer">
                     <div className = "buttonTop">
                         <div className = "center"></div>
@@ -67,7 +67,7 @@ var InfoButton= module.exports = React.createClass({
                     </div>
                 </div>
             </div>
-            <div className = "button-unit" id="button2" onMouseOver={this.handleOver.bind(null,2)} onMouseOut={this.handleOut.bind(null,2)}>
+            <div className = "button-unit" id="button2" onMouseOver={this.handleOver.bind(null,2)} onMouseOut={this.handleOut.bind(null,2)} onClick={this.handleSubmit.bind(null,2)}>
                 <div className = "buttonContainer">
                     <div className = "buttonTop">
                         <div className = "center"></div>
@@ -87,7 +87,7 @@ var InfoButton= module.exports = React.createClass({
                     </div>
                 </div>
             </div>
-            <div className = "button-unit" id="button3" onMouseOver={this.handleOver.bind(null,3)} onMouseOut={this.handleOut.bind(null,3)}>
+            <div className = "button-unit" id="button3" onMouseOver={this.handleOver.bind(null,3)} onMouseOut={this.handleOut.bind(null,3)} onClick={this.handleSubmit.bind(null,3)}>
                 <div className = "buttonContainer">
                     <div className = "buttonTop">
                         <div className = "center"></div>
@@ -107,7 +107,7 @@ var InfoButton= module.exports = React.createClass({
                     </div>
                 </div>
             </div>
-            <div className = "button-unit" id="button4" onMouseOver={this.handleOver.bind(null,4)} onMouseOut={this.handleOut.bind(null,4)}>
+            <div className = "button-unit" id="button4" onMouseOver={this.handleOver.bind(null,4)} onMouseOut={this.handleOut.bind(null,4)} onClick={this.handleSubmit.bind(null,4)}>
                 <div className = "buttonContainer">
                     <div className = "buttonTop">
                         <div className = "center"></div>

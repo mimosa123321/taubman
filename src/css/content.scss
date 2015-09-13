@@ -187,22 +187,54 @@ and (min-width : 1700px) {
     }
   }
 
+  .content {
+    p {
+
+    }
+  }
+
 }
 
 
 @media only screen
-and (min-width : 1200px)
+and (min-width : 1500px)
 and (max-width : 1699px){
   .content.opening {
     p {
+      font-size: 15px !important;
+    }
+  }
+
+  .content {
+    p {
+      font-size: 15px !important;
+    }
+  }
+
+  .title {
+    font-size: 29px !important;
+  }
+}
+
+@media only screen
+and (min-width : 1200px)
+and (max-width : 1499px){
+  .content.opening {
+    p {
       font-size: 14px !important;
+    }
+  }
+
+  .content {
+    p {
+      font-size: 12px !important;
     }
   }
 }
 
 
 @media only screen
-and (min-width : 992px)
+and (min-width : 300px)
 and (max-width : 1199px) {
   .content.opening {
     p {
@@ -210,27 +242,32 @@ and (max-width : 1199px) {
     }
   }
 
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .content.opening {
-    p {
-      font-size: 12px !important;
+  .content {
+    .title {
+      font-size: 19px !important;
     }
+    h3 {
+      font-size: 15px !important;
+    }
+    p {
+      font-size: 11px !important;
+    }
+  }
+
+}
+
+
+@media only screen
+and (min-width : 2200px) {
+  .title {
+    font-size: 46px !important;
+  }
+  .contentPages .content p {
+    font-size: 30px!important;
+  }
+
+  .contentPages .content h3 {
+    font-size: 25px!important;
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  .content.opening {
-    p {
-      font-size: 12px !important;
-    }
-  }
-}
-
-@media only screen and (min-width: 0px) and (max-width: 480px) {
-  .content.opening {
-    p {
-      font-size: 12px !important;
-    }
-  }
-}

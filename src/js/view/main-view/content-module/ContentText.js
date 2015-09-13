@@ -18,7 +18,7 @@ var ContentText = module.exports = React.createClass({
             var btnData = {
                 type : this.props.data.btnType,
                 text : this.props.data.btnText,
-                url : this.props.data.btnUrl,
+                url : this.props.data.btnUrl
             };
         }
         return <div className="contentText">

@@ -1,5 +1,5 @@
 var React = require('React');
-var $ = require('jquery-compat');
+//var $ = require('jquery-compat');
 
 
 var PanelSlideShowThumb = module.exports = React.createClass({
@@ -8,17 +8,15 @@ var PanelSlideShowThumb = module.exports = React.createClass({
     },
 
     handleSubmit:function(index) {
-        console.log(index);
         this.props.model.eventProxy.emit('onClickSlideShowThumb', index);
     },
 
     componentDidMount: function() {
         var self = this;
-
-        self.props.model.eventProxy.addListener('onSlider_1_LoadComplete',function() {
+        if(self.bxslider2 == null){
             self.initBxSlider();
-            console.log("init");
-        });
+        }
+
     },
 
     initBxSlider:function() {
@@ -33,7 +31,6 @@ var PanelSlideShowThumb = module.exports = React.createClass({
                 pager: false,
                 infiniteLoop: false,
                 onSliderLoad: function(index) {
-                    console.log("bxsliderThumb load Done");
                 },
 
                 onSlideBefore: function($slideElement, oldIndex, newIndex) {

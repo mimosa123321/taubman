@@ -51,9 +51,9 @@ html, body {
   height: 100%;
   font: 100% $font-stack;
   color: $primary-color;
-  background: $primary-color;
-  background-color: $primary-color;
-  @include transition(all 0.6s ease-out);
+  background: white;
+  background-color: white;
+  //@include transition(all 0.6s ease-out);
   scrollbar-face-color: #f37421;
   scrollbar-track-color: #727576;
 
@@ -80,8 +80,7 @@ a {
   height:100%;
   //border: 1px solid red;
   box-sizing: border-box;
-  //min-width: 768px;
-  min-height: 600px;
+  min-width: 800px;
 
   #testing {
     position: absolute;
@@ -100,7 +99,6 @@ a {
     width:100%;
     height: 8%;
     min-height:55px;
-    max-height:100px;
     background-color: white;
     border-bottom: 2px solid #f37421;
     z-index:3;
@@ -193,19 +191,29 @@ a {
         }
 
         &#menu2 {
-          width: 18%;
+          width: 20%;
         }
 
         &#menu3 {
-          width: 23%;
+          width: 20%;
+
+          .menuContents {
+            width:72%;
+            margin:0 auto;
+            height:100%;
+          }
+          .titles {
+            white-space: initial;
+            width: 87%;
+          }
         }
 
         &#menu4 {
-          width: 16%;
+          width: 20%;
         }
 
         &#menu5 {
-          width: 23%;
+          width: 20%;
         }
 
 
@@ -333,6 +341,7 @@ a {
         margin: auto;
         width: 28%;
         padding-bottom: 15%;
+        background-color: black;
         @include graidentBackground(1,1,1,0.8,#000000,1,1,1,0.8,#000000);
         @include transition(opacity 0.5s ease-out);
         text-align: center;
@@ -352,8 +361,22 @@ a {
         .contents {
           position: absolute;
           left:0;
-          top:0;
-          margin-top: 4%;
+          top: 11%;
+          bottom: 11%;
+          height: auto !important;
+
+          .form2 {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            margin-top: -40px;
+            @include transition(opaicty 0.4s ease-out);
+            //@include transform(translateY(-50%));
+          }
+
+          .form1 {
+            @include transition(opaicty 0.4s ease-out);
+          }
 
           .closeArea {
             position: absolute;
@@ -370,44 +393,36 @@ a {
           }
 
           .formButtonBg {
-            position: absolute;
+            position: relative;
             width: 66%;
             height: auto;
             left: 0;
             right: 0;
             margin: auto;
+            z-index:4;
           }
 
           .myInput {
-            background: none;
-            width: 58%;
+            background-color: transparent;
             position: absolute;
+            width: 100%;
+            height:100%;
             left: 0;
             right: 0;
-            color: white;
             margin: auto;
+            padding:0 20px;
             border:0;
             font-size: 14px;
             line-height: 22px;
+            z-index:5;
             color: #f37421;
           }
 
           .submitBtn {
-            position:absolute;
-            left:0;
-            right:0;
-            bottom: 21%;
-            margin: auto;
-            width: 126px;
-            height: 27px;
-            border-radius: 23px;
-            border-color: #f0843e;
-            color:white;
-            line-height: 21px;
-            font-family: din-mittelschrift-regular, din-bold;
-            @include graidentBackground(233,112,32,1,e97020,147,71,20,1,934714);
+            position:relative;
+            margin: 5% auto;
+            width: 24%;
           }
-
         }
       }
 
@@ -806,6 +821,7 @@ a {
             font-size: 10px;
             color:white;
             text-align: center;
+            margin-top: 4%;
           }
         }
 
@@ -1072,22 +1088,24 @@ a {
         top: 8%;
         background-color: #282b2d;
         background-color: rgb(40,43,45);
-        z-index:1;
+        z-index:2;
         overflow: hidden;
         @include transform(translateX(-100%));
         @include transition(all 0.8s ease-out);
 
         &.show {
           visibility: visible;
-          @include animation(show-panel 0.6s ease-out);
-          @include fill-mode(forwards);
+          @include transform(translateX(0%));
+          //@include animation(show-panel 0.6s ease-out);
+          //@include fill-mode(forwards);
           z-index:2;
         }
 
         &.hide {
           visibility: hidden;
-          @include animation(hide-panel 0.6s ease-out);
-          @include fill-mode(forwards);
+          @include transform(translateX(-100%));
+          //@include animation(hide-panel 0.6s ease-out);
+          //@include fill-mode(forwards);
         }
 
         @keyframes show-panel {
@@ -1138,6 +1156,9 @@ a {
           }
         }
 
+        .panelBg {
+          position: absolute;
+        }
         .contentsClass {
           position: absolute;
           width: auto;
@@ -1162,7 +1183,33 @@ a {
             -webkit-font-smoothing: antialiased;
 
             .socialIcons {
-              margin-top: 15%;
+              margin-top: 12%;
+
+              ul {
+                position: relative;
+                float: left;
+                bottom: 0;
+
+                li {
+                  width:15%;
+                  cursor: pointer;
+                  opacity: 0.6;
+
+                  &:hover {
+                    opacity: 1;
+                  }
+
+                  &.twitter {
+                    width: 19%;
+                    top:2px;
+                  }
+
+                  &.weibo {
+                    width: 19%;
+                    top:2px;
+                  }
+                }
+              }
             }
 
             .panelText {
@@ -1196,7 +1243,7 @@ a {
             .panelVideo {
               position: absolute;
               width: 67%;
-              padding-bottom: 40%;
+              padding-bottom: 37%;
               right:0;
               top: 10%;
 
@@ -1321,6 +1368,7 @@ a {
           padding: 0;
           margin: 0;
           list-style: none;
+          cursor: pointer;
 
           li {
             position: relative;
@@ -1329,6 +1377,11 @@ a {
             float: left;
             margin-right: 8%;
             line-height: 0;
+            opacity: 0.6;
+
+            &:hover {
+              opacity: 1;
+            }
           }
 
           li.twitter {
@@ -1399,6 +1452,8 @@ a {
 }
 
 
+
+
 @media only screen
 and (min-width : 1700px) {
   #topBar {
@@ -1447,12 +1502,13 @@ and (min-width : 1700px) {
 
   .emailForm {
     font-size: 20px;
-    font-family: din-mittelschrift-regular;
+    font-family: din-mittelschrift-regular, din-bold, Helvetica;
     -webkit-font-smoothing: antialiased;
 
     p {
       width:80%;
       font-size: 18px !important;
+      font-family: din-mittelschrift-regular, din-bold, Helvetica;
     }
 
     .myInput {
@@ -1462,9 +1518,9 @@ and (min-width : 1700px) {
     }
 
     .submitBtn {
-      width: 135px !important;
-      height: 34px !important;
-      font-family: din-mittelschrift-regular, din-bold;
+      //width: 135px !important;
+      //height: 34px !important;
+      //font-family: din-mittelschrift-regular, din-bold;
     }
   }
 
@@ -1577,6 +1633,21 @@ and (min-width : 1700px) {
 
 
 @media only screen
+and (min-width : 1500px)
+and (max-width : 1699px){
+  #wrapper #topBar ul li .content .titles {
+    font-size: 14px !important;
+  }
+
+  .emailForm {
+    p {
+      font-size: 17px !important;
+    }
+  }
+}
+
+
+@media only screen
 and (min-width : 1200px)
 and (max-width : 1699px){
   .mainView {
@@ -1586,9 +1657,9 @@ and (max-width : 1699px){
       }
 
       .desc {
-        font-size: 12px !important;
-        line-height: 17px !important;
-        width:75%;
+        font-size: 16px !important;
+        line-height: 18px !important;
+        width:85%;
       }
     }
   }
@@ -1604,7 +1675,7 @@ and (max-width : 1699px){
       }
 
       .desc {
-        font-size: 12px !important;
+        font-size: 15px !important;
         line-height: 17px !important;
       }
     }
@@ -1616,7 +1687,13 @@ and (max-width : 1699px){
   }
 
   .buttonContent {
-    font-size: 13px !important;
+    font-size: 15px !important;
+  }
+
+  .emailForm {
+    p {
+      font-size: 14px !important;
+    }
   }
 }
 
@@ -1664,8 +1741,31 @@ and (max-width : 1199px) {
     font-size: 13px !important;
   }
 
+  .emailForm {
+    p {
+      font-size: 11px !important;;
+      line-height: 13px !important;
+    }
+
+    .myInput {
+      font-size: 11px !important;
+      line-height: 13px !important;
+    }
+
+    .submitBtn {
+      //width: 92px !important;;
+      //height: 21px !important;;
+    }
+  }
+
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  #middleBar {
+    #homePage {
+      background: url(./../images/bg-half.jpg) 50% 50% no-repeat !important;
+    }
+  }
+
   .mainView {
     .contentText {
       .title {
@@ -1710,6 +1810,29 @@ and (max-width : 1199px) {
       .buttonDetailText {
         font-size: 10px !important;
       }
+    }
+  }
+
+  .emailForm {
+    .contents {
+      margin-top: 2% !important;
+    }
+
+    p {
+      font-size: 9px !important;
+      line-height: 13px !important;
+      padding: 1% !important;
+    }
+
+    .myInput {
+      font-size: 9px !important;
+      line-height: 13px !important;
+    }
+
+    .submitBtn {
+      //width: 92px !important;
+      //height: 21px !important;
+      //bottom: 13% !important;
     }
   }
 
@@ -1794,6 +1917,126 @@ and (max-width : 1199px) {
     font-size: 11px !important;
   }
 }
+
+@media only screen
+and (min-width : 2200px) {
+  #topBar ul li .content .titles {
+    font-size: 23px !important;
+  }
+
+  .pairs .map .button-unit .buttonText {
+    font-size: 25px !important;
+  }
+
+  .pairs .map .button-unit .buttonTitle {
+    font-size: 30px!important;
+    line-height: 32px!important;
+  }
+
+  #wrapper #middleBar #pagesApp .info .map .buttons .button-unit .buttonContainer .buttonDetail .buttonDetailContainer {
+    font-size: 23px !important;
+  }
+
+  .pairs {
+    .detail {
+      .content {
+        .title {
+          text-transform: uppercase;
+        }
+      }
+
+      .opening {
+        .title {
+          font-size: 48px !important;
+        }
+
+        p {
+          font-size: 25px !important;
+        }
+      }
+
+      .retail, .demographics, .ecommerce, .malls {
+        .title {
+          font-size: 46px !important;
+        }
+
+        .box {
+          h3 {
+            font-size: 30px !important;
+          }
+          p {
+            font-size: 25px !important;
+          }
+        }
+      }
+    }
+
+    .contentText .desc {
+      font-size: 24px !important;
+      width: 75% !important;
+    }
+
+    .contentText .contentButton-text {
+      font-size: 24px !important;
+    }
+  }
+
+  .panel {
+    .contents {
+      &-video {
+        .panelText {
+          .title {
+            font-size: 40px !important;
+            height:auto;
+          }
+        }
+      }
+
+      .panelText {
+        .title {
+          font-size: 40px !important;
+          height: 128px !important;
+        }
+        .seperator {
+          height: 0px !important;
+        }
+
+
+        .desc {
+          font-size: 26px !important;
+        }
+      }
+
+    }
+
+    .scroll {
+      font-size: 26px!important;
+    }
+    .desc {
+      font-size: 26px !important;
+    }
+  }
+
+  .emailForm {
+
+
+    p {
+      font-size: 27px!important;
+    }
+
+    .myInput {
+      font-size: 29px!important;
+      line-height: 31px!important;
+    }
+
+    .submitBtn {
+      //font-size: 29px !important;
+      //width: 274px!important;
+      //height: 46px!important;
+    }
+  }
+}
+
 
 
 #updateBrowser {
