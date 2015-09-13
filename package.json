@@ -26,6 +26,7 @@
     "jquery-compat": "^3.0.0-alpha1",
     "load-grunt-tasks": "^3.2.0",
     "mocha": "^2.2.5",
+    "node-sass": "^3.3.2",
     "react": "^0.13.3",
     "reactify": "^1.1.1",
     "skrollr": "^0.6.26"

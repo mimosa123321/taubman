@@ -32,34 +32,31 @@ var PanelInfo = module.exports = React.createClass({
         return <div className="info">
             <div className="left">
                 <div  className = "info1" >
-                    <h1>China sets pace in{n}mobile payments </h1>
-                    <h3>While PayPal has been around much longer and Apple Pay garners more headlines, the biggest players in mobile payments are in China. Alibaba and Tencent are the dominant providers and the numbers from China today far exceed the US, according to figures from iResearch and Forrester.</h3>
+                    <h1>中国领跑移动支付</h1>
+                    <h3>虽然PayPal问世更早，Apple Pay登上新闻头条的次数更多，但最大的移动支付公司却是在中国。艾瑞咨询(iResearch)和弗雷斯特研究公司(Forrester)的数据表明，阿里巴巴和腾讯是占主导地位的移动支付提供商，中国现在的交易额远超美国。</h3>
                     <div id ="middle"><img src="./build/images/panelinfo.png"/></div>
 
-                    <h2>Drivers for China’s surge:</h2>
+                    <h2>中国移动支付迅猛发展的动力</h2>
                     <ul>
-                        <li><img id="panelicon1" src="./build/images/panelicon1.png" /> <p>China: 1.5 billion mobile phone users in 2014 vs{n}
-                            US: 250 million in 2014</p></li>
-                        <li><img id="panelicon2" src="./build/images/panelinfo2.png" /> <p>Only 10% in China have credit cards vs 70% in the US.{n}
-                            Consumers seek other payment methods to enable{n}
-                            mobile commerce</p></li>
+                        <li><img id="panelicon1" src="./build/images/panelicon1.png" /> <p>中国：2014年手机用户为15亿，而美国：2014年手机用户为2.5亿</p></li>
+                        <li><img id="panelicon2" src="./build/images/panelinfo2.png" /> <p>在中国，拥有信用卡的人仅占10%，美国则占70%。中国消费者依赖其他支付方式来推动移动电子商务</p></li>
                     </ul>
                     <div className="goAliBtn" onClick={this.handleSubmit}><img src="./build/images/goalibtn.png" /></div>
                 </div>
 
                 <div className = "info2">
-                    <h1>Alipay  vs  Tenpay{n}vs  PayPal</h1>
-                    <h2>CHINA'S LEADERS FORGING AHEAD </h2>
-                    <h3>A quick look at the transaction numbers show that despite a much shorter history, providers like Alipay have left PayPal behind in terms of numbers. </h3>
+                    <h1>支付宝、财付通、PayPal对比</h1>
+                    <h2>中国的业内翘楚稳步前进</h2>
+                    <h3>快速浏览一下交易数字就会发现，尽管阿里巴巴等移动支付提供商问世比PayPal晚很多，但在交易额上却已把PayPal远远甩在后面。</h3>
                     <img className = "gLine" src="./build/images/schart.png" />
-                    <h2>BIGGER AND BROADER ECO-SYSTEM </h2>
-                    <h3>While PayPal has remained focused mainly on core e-commerce transactions, it is arguably behind the curve in pushing out the possibilities of new ways of using mobile payments. Alipay and Tenpay have reached far beyond traditional commerce and are more deeply embedded in consumers’ lifestyles with more features and services available through their platforms and wider eco-systems. </h3>
+                    <h2>生态系统更大更广</h2>
+                    <h3>尽管PayPal一直以核心电子商务交易为主营业务，但在推出移动支付的新使用方式上却可以说是滞后的。支付宝和财付通远远超出了传统商务的范畴，更深入地根植于消费者的生活方式，通过其平台和更广泛的生态系统提供更多功能和服务。</h3>
                 </div>
             </div>
 
             <div className = "right">
                 <div  className = "info1" >
-                    <h1>china third-party mobile payments gmv 2009 - 2018{n} (RMB billions) </h1>
+                    <h1>2009年至2018年中国第三方移动支付成交金额（单位：十亿人民币）</h1>
                     <div className = "gLine"><img className = "gLineImg" src="./build/images/gline.png" /></div>
                     <img className = "chart" src="./build/images/chart.png" />
                 </div>
