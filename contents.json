@@ -48,7 +48,7 @@
       },
       "rightContent": {
         "type":"video",
-        "title":"Malls Evolve into Community Hubs",
+        "title":"Malls Evolve into\n Community Hubs",
         "desc":"Sebastian Skiff, former Executive Director and Head of Retail Services across Asia Pacific for CBRE, talks about how malls and stores are changing, but remain relevant in the digital age",
         "url":"build/images/brandbg2.jpg",
         "btnType":"click-more",
@@ -82,7 +82,7 @@
       },
       "rightContent": {
         "type":"image",
-        "title":"Trust Issues Challenge\nGrowth of Online Retail",
+        "title":"Trust Issues\nChallenge Growth\nof Online Retail",
         "desc":"Widespread concerns over counterfeit goods and online scams mean that many brands and consumers remain wary of taking the virtual leap.",
         "url":"build/images/digitalbg2.jpg",
         "btnType":"click-more",
@@ -99,7 +99,7 @@
     {
       "leftContent": {
         "type":"image",
-        "title":"The Rise of M-Commerce:\nFour Retailers Leading the Way",
+        "title":"The Rise of \nM-Commerce:\nFour Retailers \nLeading the Way",
         "desc":"China's rapid adoption of mobile platforms is driving a surge in online spending.\nRetailers are also taking advantage of mobile technology to enhance the in-store experience.",
         "url":"build/images/mobilebg1.jpg",
         "btnType":"click-more",
@@ -146,7 +146,7 @@
       },
       "rightContent": {
         "type":"slideshow",
-        "title":"The Mall of the Future",
+        "title":"The Mall of\nthe Future",
         "desc":"Check out our interactive slideshow for a glimpse of how mall design is evolving around the world. ",
         "url":"build/images/mallbg2.jpg",
         "btnType":"click-more",
@@ -156,45 +156,50 @@
           "pageId": 4,
           "title": "The Mall of the Future",
             "imagesUrl":[
+              {"type":"images", "url":"build/images/slideshow/hanam-seoul.jpg","caption":"In addition to a world-class retail offering, the Hanam Union Square Mall in South Korea will feature sports pitches and a swimming pool on the roof."},
               {"type":"video", "url":"build/video/slideshow1.mp4", "cover":"build/images/slideshow/slideshow15.jpg", "caption":"Explore Hanam Union Square, the regional mega-mall which is currently under construction in Seoul, South Korea."},
               {"type":"video", "url":"build/video/slideshow2.mp4", "cover":"build/images/slideshow/slideshow16.jpg", "caption":"Currently under construction, the International Market Place in Waikiki, Hawaii, will include water features, Hawaiian landscaping and an iconicbanyan tree. "},
               {"type":"video", "url":"build/video/slideshow3.mp4", "cover":"build/images/slideshow/slideshow17.jpg", "caption":"Explore The Mall of San Juan, the newly-opened Puerto Rican mall where over 60% of the shops and restaurants are unique to the market."},
-              {"type":"images", "url":"build/images/slideshow/hanammall.jpg","caption":"In addition to a world-class retail offering, the Hanam Union Square Mall in South Korea will feature sports pitches and a swimming pool on the roof."},
-              {"type":"images", "url":"build/images/slideshow/hanamseoul.jpg","caption":"A glimpse inside the Hanam Union Square Mall, Seoul, South Korea shows a spacious and modern environment to spend time with friends and family."},
-              {"type":"images", "url":"build/images/slideshow/zhengzhoumall.jpg","caption":"City.On.Zhengzhou, which is current under construction in Zhengzhou, China, will feature up to 200 shops, in addition to entertainment options, restaurants and a supermarket."},
-              {"type":"images", "url":"build/images/slideshow/zhengzhoufuture.jpg","caption":"City.On.Zhengzhou will combine local mid to high-end brands with a mix of food experiences, as well as the renowned Wangfujing Department Store."},
-              {"type":"images", "url":"build/images/slideshow/watersideusa.jpg","caption":"Waterside Shops, located in Florida, USA, houses over 60 world-class retailers and restaurants including Nordstrom, Saks Fifth Avenue and Barnes & Noble."},
-              {"type":"images", "url":"build/images/slideshow/watersideshopping.jpg","caption": "Visitors to Waterside Shops, Florida, USA, can wander past cascading waterfalls, lush flowering plants and dramatic architecture, all under the canopy of towering royal palm trees. "},
-              {"type":"images", "url":"build/images/slideshow/thegardens.jpg","caption":"An upscale lifestyle center in California, USA, The Gardens on El Paseo's major tenants include Saks Fifth Avenue, Louis Vuitton and Apple."},
-              {"type":"images", "url":"build/images/slideshow/internationalhawaii.jpg","caption":"The International Market Place, currently under construction in Waikiki, Hawaii, will house a Saks Fifth Avenue and Grand Lanai."},
+              {"type":"images", "url":"build/images/slideshow/hanam-mall.jpg","caption":"A glimpse inside the Hanam Union Square Mall, Seoul, South Korea shows a spacious and modern environment to spend time with friends and family."},
+              {"type":"images", "url":"build/images/slideshow/zhengzhou-china.jpg","caption":"City.On.Zhengzhou, which is current under construction in Zhengzhou, China, will feature up to 200 shops, in addition to entertainment options, restaurants and a supermarket."},
+              {"type":"images", "url":"build/images/slideshow/zhengzhou-future.jpg","caption":"City.On.Zhengzhou will combine local mid to high-end brands with a mix of food experiences, as well as the renowned Wangfujing Department Store."},
+              {"type":"images", "url":"build/images/slideshow/waterside-usa.jpg","caption":"Waterside Shops, located in Florida, USA, houses over 60 world-class retailers and restaurants including Nordstrom, Saks Fifth Avenue and Barnes & Noble."},
+              {"type":"images", "url":"build/images/slideshow/waterside-shopping.jpg","caption":"Visitors to Waterside Shops, Florida, USA, can wander past cascading waterfalls, lush flowering plants and dramatic architecture, all under the canopy of towering royal palm trees."},
+              {"type":"images", "url":"build/images/slideshow/the-mall-green-hills.jpg","caption":"Situated in Tennessee, USA, The Mall at Green Hills has a light-flooded interior and a strong mix of luxury and unique-to-market brands."},
+              {"type":"images", "url":"build/images/slideshow/the-gardens.jpg","caption":"An upscale lifestyle center in California, USA, The Gardens on El Paseo's major tenants include Saks Fifth Avenue, Louis Vuitton and Apple."},
+              {"type":"images", "url":"build/images/slideshow/inter-mall-future.jpg","caption":"A birds-eye view of the International Market Place's outdoor terraces, which allow consumers to enjoy a day's shopping in the open air."},
+              {"type":"images", "url":"build/images/slideshow/inter-hawaii-mall.jpg","caption":"The International Market Place, currently under construction in Waikiki, Hawaii, will house a Saks Fifth Avenue and Grand Lanai."},
               {"type":"images", "url":"build/images/slideshow/ifc.jpg","caption":"The IFC Seoul, South Korea, features a light-flooded atrium and approximately 110 stores, including a CGV Cinema, Uniqlo and Korea's first Hollister store."},
-              {"type":"images", "url":"build/images/slideshow/crystals1.jpg","caption":"The Shops at Crystals, Las Vegas, houses one of the world's largest Louis Vuitton flagship stores, in addition to a wide variety of high-fashion boutiques including Prada, Gucci and Roberto Cavalli."},
-              {"type":"images", "url":"build/images/slideshow/crystals2.jpg","caption": "A view of the stunning exterior of The Shops at Crystals, Las Vegas, located at the midpoint of the Vegas strip. "},
-              {"type":"images", "url":"build/images/slideshow/city1.jpg","caption": "City Creek Center, Utah, features a retractable roof which opens and closes dependent on the weather, making the mall adaptable year-round to Utah's variable climate."},
-              {"type":"images", "url":"build/images/slideshow/city2.jpg","caption": "Utah's City Creek Center is home to a 1,200-foot winding creek and a skybridge over mainstreet, creating a naturaland relaxed shopping experience year-round. "},
-              {"type":"images", "url":"build/images/slideshow/city3.jpg","caption": "City.On.Xi'an, currently under construction in Xi'an, China, will be a multilevel shopping center which will offer a comprehensive line-up of fashion, food, and lifestyle retailers."}
+              {"type":"images", "url":"build/images/slideshow/crystals-las-vegas-mall-taubman.jpg","caption":"The Shops at Crystals, Las Vegas, houses one of the world's largest Louis Vuitton flagship stores, in addition to a wide variety of high-fashion boutiques including Prada, Gucci and Roberto Cavalli."},
+              {"type":"images", "url":"build/images/slideshow/crystals-las-vegas-taubman-mall.jpg","caption":"A view of the stunning exterior of The Shops at Crystals, Las Vegas, located at the midpoint of the Vegas strip."},
+              {"type":"images", "url":"build/images/slideshow/city-creek-usa-taubman-mall.jpg","caption":"City Creek Center, Utah, features a retractable roof which opens and closes dependent on the weather, making the mall adaptable year-round to Utah's variable climate."},
+              {"type":"images", "url":"build/images/slideshow/city-creek-taubman-usa-mall.jpg","caption":"Utah's City Creek Center is home to a 1,200-foot winding creek and a skybridge over mainstreet, creating a natural and relaxed shopping experience year-round."},
+              {"type":"images", "url":"build/images/slideshow/city-on-xi-an.jpg","caption":"City.On.Xi'an, currently under construction in Xi'an, China, will be a multilevel shopping center which will offer a comprehensive line-up of fashion, food, and lifestyle retailers."}
             ],
           "thumbsUrl":[
-            "build/images/slideshow/thumb15.png",
-            "build/images/slideshow/thumb16.png",
-            "build/images/slideshow/thumb17.png",
-            "build/images/slideshow/thumb_hanammall.png",
-            "build/images/slideshow/thumb_hanamseoul.png",
-            "build/images/slideshow/thumb_zhengzhoumall.png",
-            "build/images/slideshow/thumb_zhengzhoufuture.png",
-            "build/images/slideshow/thumb_watersideusa.png",
-            "build/images/slideshow/thumb_watersideshopping.png",
-            "build/images/slideshow/thumb_thegardens.png",
-            "build/images/slideshow/thumb_internationalhawaii.png",
-            "build/images/slideshow/thumb_ifc.png",
-            "build/images/slideshow/thumb_crystals1.png",
-            "build/images/slideshow/thumb_crystals2.png",
-            "build/images/slideshow/thumb_city1.png",
-            "build/images/slideshow/thumb_city2.png",
-            "build/images/slideshow/thumb_city3.png"
+            "build/images/slideshow/thumbs/hanam-seoul.png",
+            "build/images/slideshow/thumbs/thumb15.png",
+            "build/images/slideshow/thumbs/thumb16.png",
+            "build/images/slideshow/thumbs/thumb17.png",
+            "build/images/slideshow/thumbs/hanam-mall.png",
+            "build/images/slideshow/thumbs/zhengzhou-china.png",
+            "build/images/slideshow/thumbs/zhengzhou-future.png",
+            "build/images/slideshow/thumbs/waterside-usa.png",
+            "build/images/slideshow/thumbs/waterside-shopping.png",
+            "build/images/slideshow/thumbs/the-mall-green-hills.png",
+            "build/images/slideshow/thumbs/the-gardens.png",
+            "build/images/slideshow/thumbs/inter-mall-future.png",
+            "build/images/slideshow/thumbs/inter-hawaii-mall.png",
+            "build/images/slideshow/thumbs/ifc.png",
+            "build/images/slideshow/thumbs/crystals-las-vegas-mall-taubman.png",
+            "build/images/slideshow/thumbs/crystals-las-vegas-taubman-mall.png",
+            "build/images/slideshow/thumbs/city-creek-usa-taubman-mall.png",
+            "build/images/slideshow/thumbs/city-creek-taubman-usa-mall.png",
+            "build/images/slideshow/thumbs/city-on-xi-an.png"
           ]
         }
       }
     }
   ]
 }
+
