@@ -30,9 +30,9 @@
     position: absolute;
     z-index: 2;
     display: block;
-    padding: 0 6%;
+    padding: 0 6% 6%;
     background-color: #6f6f6f;
-    height: 100%;
+    height: auto;
     visibility: visible;
     @include transition(all 0.5s ease-in-out);
 
@@ -68,8 +68,8 @@
     }
 
     img {
-      height: 39% !important;
-      width: auto !important;
+      //height: 48% !important;
+      //width: auto !important;
     }
   }
 }
@@ -78,7 +78,7 @@
   //overflow-y: hidden;
   .info1 {
     position: absolute;
-    padding: 0 6%;
+    padding: 0 6% 6%;
     @include transition(all 0.5s ease-in-out);
     visibility: visible;
     &.hide {
@@ -93,6 +93,7 @@
   }
   .info2 {
     position: absolute;
+    margin-bottom: 5%;
     left: 0;
     right: 0;
     top: 7%;
@@ -147,6 +148,7 @@
     width: 67%;
     height: 100%;
     background-color: #282b2d;
+    overflow: auto;
     h1 {
       font-size: 35px;
       color: white;
@@ -191,7 +193,7 @@
   #middle {
     margin: 5% auto;
     position: relative;
-    width: 74%;
+    width: 100%;
     h2 {
       margin:0;
       font-size: 30px;
@@ -216,6 +218,8 @@
   ul {
     list-style: none;
     padding-left: 18px;
+    margin:0;
+    float:left;
     li {
       font-size: 23px;
       float: left;
@@ -248,10 +252,16 @@
   }
 
   .goAliBtn {
-    width: 60%;
+    float: left;
+    width: 100%;
     position: relative;
-    margin: 11% auto 0;
+    margin: 2% auto 0;
     cursor: pointer;
+    text-align: center;
+
+    img {
+      width: 68% !important;
+    }
   }
 
 }
@@ -355,7 +365,6 @@ and (max-height : 1000px)
 
   .goAliBtn {
     margin: 2% auto 6%!important;
-    width: 60% !important;
   }
 }
 
@@ -411,7 +420,7 @@ and (max-height : 800px)
   }
 
   .goAliBtn {
-    margin: 8% auto 6% !important;
+    margin: 4% auto 6% !important;
   }
 }
 
@@ -462,7 +471,7 @@ and (max-width : 1699px)
   }
 
   .goAliBtn {
-    margin: 8% auto 6% !important;
+    margin: 4% auto 6% !important;
   }
 }
 
@@ -524,7 +533,7 @@ and (max-width : 1199px) {
   }
 
   .goAliBtn {
-    margin: 8% auto 0 !important;
+    margin: 4% auto 0 !important;
   }
 
 }
@@ -583,7 +592,7 @@ and (max-width : 1199px) {
   }
 
   .goAliBtn {
-    margin: 8% auto 0 !important;
+    margin: 4% auto 0 !important;
   }
 }
 
@@ -642,7 +651,7 @@ and (max-width : 1199px) {
   }
 
   .goAliBtn {
-    margin: 8% auto 0 !important;
+    margin: 4% auto 0 !important;
   }
 }
 

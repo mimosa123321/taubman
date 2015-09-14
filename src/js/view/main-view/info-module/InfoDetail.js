@@ -60,7 +60,7 @@ var InfoDetail = module.exports = React.createClass({
                         <p>根据艾瑞咨询集团(iResearch)的报告，专家预测，到2018年，中国62%的网络购物将在移动设备上进行。这显示，创新推动了国内电子商务巨头在移动销售上的发展速度，远超亚马逊等美国同行。</p>
                     </div>
                     <div className="box">
-                        <h3><img src="./build/images/flag.png"/>China’s online shoppers in context</h3>
+                        <h3><img src="./build/images/flag.png"/>中国网络消费者的购买情境分析</h3>
                         <img src="./build/images/content-ecommerce-inline.png" />
                     </div>
                 </div>

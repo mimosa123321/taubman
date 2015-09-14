@@ -5,10 +5,11 @@
 
 .contents-slideShow {
   position: relative;
-  margin: 3% auto;
+  margin: 3% auto 3%;
   width: 100%;
-  height:100%;
-  min-height:600px;
+  height:auto;
+  //min-height:600px;
+  overflow: auto;
 
   .caption {
     position: absolute;

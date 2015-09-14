@@ -8,7 +8,7 @@ var HomePage = module.exports = React.createClass({
         $(form2).css('display','none');
         this.isWrongInput = false;
         if(isIE8) {
-            $('.myInput').val('Email me');
+            $('.myInput').val('请在这里输入');
             this.isWrongInput = true;
         }
         return {};
@@ -37,7 +37,7 @@ var HomePage = module.exports = React.createClass({
         } else {
             e.preventDefault();
             this.isWrongInput = true;
-            $('.myInput').val('Please enter a valid email');
+            $('.myInput').val('请输入有效的电子邮件');
         }
     },
 
@@ -84,7 +84,7 @@ var HomePage = module.exports = React.createClass({
     render:function() {
         //<input type="submit" className="submitBtn" value="Submit" onClick={this.checkForm} />
         /*<div className = "closeArea" onClick={this.closeForm}></div>*/
-
+        var n = "\n";
         var bg = (isIE8? <div id="homePageBg"><img src="build/images/bg.jpg"/></div>:'');
         return <div className="homePage" id="homePage" section="1">
             {bg}
@@ -116,7 +116,7 @@ var HomePage = module.exports = React.createClass({
                             <a id="weiboIcon" onClick={this.weiboShareHandler} target='_blank' href="javascript:" className="icons"><img src="build/images/weiboicon.png"/></a>
                         </div>
                     </div>
-                    <a id="aboutAsia" target='_blank' href="http://www.taubmanasia.com/">
+                    <a id="aboutAsia" target='_blank' href="http://www.taubmanasia.com.cn/">
                         <div id="asiaIcon"><img src="build/images/talkaboutasia.png"/></div>
                     </a>
                 </div>
@@ -128,13 +128,13 @@ var HomePage = module.exports = React.createClass({
                 <form className="emailForm" id="myEmailForm" method="POST" action="http://chinamall.xenyo.net:8080/download_whitepaper.aspx">
                     <div className = "emailFormBg"></div>
                     <div className = "contents">
-                        <div className = "form2" ref="form2"><p>Thank you, the whitepaper will download now</p></div>
+                        <div className = "form2" ref="form2"><img src="./build/images/thankyou.png"/></div>
                         <div className = "form1" ref="form1">
-                            <p>Taubman Asia thanks you for your interest in downloading the China Mall 2020 whitepaper.</p>
-                            <p>Please enter your details below.</p>
+                            <p>塔博曼亚洲感谢您下载{n}展望2020年的中国购物中心白皮书.</p>
+                            <p>请输入您的个人资料</p>
                             <div className="formButtonBg">
                                 <img src="build/images/formbtn.png"/>
-                                <input type="text" id="email" name="email" className = "myInput" placeholder="Email here" onClick={this.checkIfWrongInput}/>
+                                <input type="text" id="email" name="email" className = "myInput" placeholder="请在这里输入" onClick={this.checkIfWrongInput}/>
                             </div>
                             <div className="submitBtn" onClick={this.checkForm}>
                                 <img src="build/images/formsubmit.png" />

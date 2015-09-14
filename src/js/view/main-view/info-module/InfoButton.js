@@ -77,7 +77,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonLine"></div>
                     <div className = "buttonContent">
                         <div className = "center"></div>
-                        <span className = "buttonText">预计2012年至2022年期间，上层中产阶级的年消费将猛增<span className = "boldText">22%:</span></span>
+                        <span className = "buttonText">预计2012年至2022年期间，上层中产阶级的年消费将猛增<span className = "boldText">22%</span></span>
                     </div>
                     <div className = "buttonDetail" id="buttonDetail2" onClick={this.handleSubmit.bind(null,2)}>
                         <div className= "buttonDetailContainer">

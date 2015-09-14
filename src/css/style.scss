@@ -54,10 +54,24 @@ html, body {
   background: white;
   background-color: white;
   //@include transition(all 0.6s ease-out);
+  font-family: SimHei,STHeiti;
   scrollbar-face-color: #f37421;
   scrollbar-track-color: #727576;
 
 }
+
+p {
+  font-family: SimHei,STHeiti;
+}
+
+.desc {
+  font-family: SimHei,STHeiti;
+}
+
+.title {
+  font-family: SimHei,STHeiti;
+}
+
 
 body.noscroll
 {
@@ -368,10 +382,18 @@ a {
           .form2 {
             position: absolute;
             width: 100%;
-            top: 50%;
-            margin-top: -40px;
+            height: 100%;
             @include transition(opaicty 0.4s ease-out);
             //@include transform(translateY(-50%));
+            img {
+              width: 60%;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
           }
 
           .form1 {
@@ -1004,6 +1026,7 @@ a {
                   text-align: center;
                   color: #6f6f6f;
                   font-family: $font-menu;
+                  white-space: pre-line;
                   .buttonText {
                     vertical-align: middle;
                     display: inline-block;
@@ -1083,9 +1106,9 @@ a {
       .panel {
         @extend .fullSize;
         visibility: hidden;
-        position: fixed;
+        position: absolute;
         height: 84%;
-        top: 8%;
+        top: 0;
         background-color: #282b2d;
         background-color: rgb(40,43,45);
         z-index:2;

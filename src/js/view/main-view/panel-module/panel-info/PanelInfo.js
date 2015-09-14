@@ -13,6 +13,8 @@ var PanelInfo = module.exports = React.createClass({
     handleSubmit: function () {
         $('.info1').removeClass('show').addClass('hide');
         $('.info2').removeClass('hide').addClass('show');
+
+        $('.info').find('.left').scrollTop(0);
     },
 
     render:function() {

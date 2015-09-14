@@ -33,6 +33,10 @@ var PanelSlideShow = module.exports = React.createClass({
                     if(isIE8) {
                         embedFlash();
                     }
+
+                    var height = parseInt(self.props.model.stage.height()) - parseInt(self.props.model.stage.height()) * 0.1 -  parseInt(self.props.model.stage.height()) * 0.1 ;
+                    console.log(height);
+                    $('.contents-slideShow').css('height',height);
                 },
 
                 onSlideBefore: function($slideElement, oldIndex, newIndex) {

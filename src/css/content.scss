@@ -137,6 +137,8 @@ $font-content: din-bold, Helvetica;
     }
 
     img {
+      position: relative;
+      top:-11px;
       width:92% !important;
     }
   }
