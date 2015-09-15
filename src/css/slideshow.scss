@@ -46,7 +46,7 @@
     p {
       position: relative;
       vertical-align: middle;
-      font-size: 11px;
+      font-size: 13px;
       color:white;
       padding: 4%;
       margin: 0;
@@ -221,7 +221,7 @@ and (min-width : 1700px) {
   }
 
   .captionText {
-    font-size: 18px;
+    font-size: 17px !important;
   }
 
   .bx-prev {
@@ -250,12 +250,6 @@ and (min-width : 1700px) {
     &:hover {
       background-size: 100% auto !important;
       background-position: 0 -59px !important;
-    }
-  }
-
-  .caption {
-    p {
-      font-size: 13px;
     }
   }
 }
