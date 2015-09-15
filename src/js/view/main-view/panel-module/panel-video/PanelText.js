@@ -46,9 +46,20 @@ var PanelText = module.exports = React.createClass({
             </div>
 
         }else {
-            html = <div className = "text">
-                <div className="title">{title}</div>
+            html = <div>
+                <div className = "text">
+                    <div className="title">{title}</div>
+                </div>
+                <div className = "socialIcons">
+                    <ul>
+                        <li><a target='_blank' onClick={this.fbShareHandler}><img src="./build/images/fbicon.png" /></a></li>
+                        <li><a onClick={this.linkedInShareHandler}><img src="./build/images/linkedinicon.png" /></a></li>
+                        <li className="twitter"><a onClick={this.twitterShareHandler}><img src="./build/images/twittericon.png" /></a></li>
+                        <li className="weibo"><a onClick={this.weiboShareHandler}><img src="./build/images/weiboicon.png" /></a></li>
+                    </ul>
+                </div>
             </div>
+
         }
         return <div className = "panelText">{html}</div>;
     }

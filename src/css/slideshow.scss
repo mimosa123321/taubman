@@ -11,6 +11,15 @@
   //min-height:600px;
   overflow: auto;
 
+  .socialIcons {
+    width: auto !important;
+     height: 0 !important;
+    margin-left: 27% !important;
+    ul {
+      width: 29% !important;
+    }
+  }
+
   .caption {
     position: absolute;
     z-index: 2;
@@ -186,6 +195,8 @@ and (min-height : 1200px) {
 }
 
 
+
+
 @media only screen
 and (min-width : 1700px) {
   .contents-slideShow  {
@@ -257,6 +268,12 @@ and (max-width : 1199px) {
 and (min-width : 2200px) {
   .panelSlideShow {
     width: 80% !important;
+  }
+
+  .caption {
+    p {
+      font-size: 18px !important;
+    }
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {

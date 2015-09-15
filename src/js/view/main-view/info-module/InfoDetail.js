@@ -78,7 +78,7 @@ var InfoDetail = module.exports = React.createClass({
                         <p>在全球兴建购物中心面积最多的十大城市中，中国就占了八个。根据中国连锁经营协会和专业服务公司德勤的数据，到2015年末，新购物中心的总数预计将增至4,000家。</p>
                     </div>
                     <div className="box">
-                        <h3>兴建购物中心面积最多的十大城市</h3>
+                        <h3>新建购物中心面积最多的十大城市 </h3>
                         <img src="./build/images/content-mall-inline.png" />
                     </div>
                 </div>

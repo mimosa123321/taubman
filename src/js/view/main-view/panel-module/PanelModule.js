@@ -36,6 +36,7 @@ var PanelModule = module.exports = React.createClass({
         if(this.props.type === "slideshow"){
             html = <div className="contents-slideShow">
                 <PanelText type ={this.props.type} contents={this.props.contents}/>
+
                 <PanelSlideShow model={this.props.model} contents={this.props.contents} />
                 <PanelSlideShowThumb model={this.props.model} contents={this.props.contents} />
                 <PanelClose onClickCloseBtn = {this.clickCloseHandler}/>

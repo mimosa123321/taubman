@@ -84,6 +84,9 @@ var HomePage = module.exports = React.createClass({
     render:function() {
         //<input type="submit" className="submitBtn" value="Submit" onClick={this.checkForm} />
         /*<div className = "closeArea" onClick={this.closeForm}></div>*/
+        /*<div id="scrollDownBtn">
+         <img src="build/images/scrollbtn.png"/>
+         </div>*/
         var n = "\n";
         var bg = (isIE8? <div id="homePageBg"><img src="build/images/bg.jpg"/></div>:'');
         return <div className="homePage" id="homePage" section="1">
@@ -121,9 +124,7 @@ var HomePage = module.exports = React.createClass({
                     </a>
                 </div>
 
-                <div id="scrollDownBtn">
-                    <img src="build/images/scrollbtn.png"/>
-                </div>
+
 
                 <form className="emailForm" id="myEmailForm" method="POST" action="http://chinamall.xenyo.net:8080/download_whitepaper.aspx">
                     <div className = "emailFormBg"></div>
