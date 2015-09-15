@@ -114,12 +114,15 @@ module.exports = function(grunt) {
                     ext: '.png',                // use .png as extension for the optimized files
                     quality: '65-80',           // output quality should be between 65 and 80 like jpeg quality
                     speed: 10,                  // pngquant should be as fast as possible
-                    iebug: false                 // optimize image for use in Internet Explorer 6
+                    iebug: false,                 // optimize image for use in Internet Explorer 6
+                    force: true
                 },
                 files: [
                     {
-                        src: 'src/images/*.png',
-                        dest: 'build/images/**/*.png'
+                        expand: true,
+                        cwd: 'src/images/',
+                        src: '**/*.png',
+                        dest: 'build/images/'
                     }
                 ]
             }
