@@ -352,6 +352,8 @@ a {
         position: absolute;
         right: 3%;
         top: 5%;
+        cursor: pointer;
+        z-index:80;
       }
 
       .emailForm {
