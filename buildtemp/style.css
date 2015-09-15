@@ -2288,7 +2288,7 @@
   .contents-slideShow .socialIcons {
     width: auto !important;
     height: 0 !important;
-    margin-left: 27% !important; }
+    margin-left: 19% !important; }
     .contents-slideShow .socialIcons ul {
       width: 29% !important; }
   .contents-slideShow .caption {
@@ -2432,7 +2432,7 @@
       background-size: 100% auto !important;
       background-position: 0 -59px !important; }
   .caption p {
-    font-size: 13px; } }
+    font-size: 18px; } }
 
 @media only screen and (min-width: 1200px) and (max-width: 1699px) {
   .bx-prev {

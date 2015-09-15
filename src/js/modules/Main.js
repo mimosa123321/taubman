@@ -97,6 +97,10 @@ Main.prototype.changeSection = function() {
 
 
 Main.prototype.backHomePage = function() {
+    //close panel
+    if(this.model.didShowSubContent) {
+        this.model.eventProxy.emit('onClosePanel');
+    }
     $('html, body').animate({ scrollTop: "0px" });
 };
 

@@ -92,7 +92,7 @@ var InfoButton= module.exports = React.createClass({
                     <div className = "buttonTop">
                         <div className = "center"></div>
                         <img src="./build/images/buttonicon3.png" />
-                        <span className = "buttonTitle">电子商务方兴</span>
+                        <span className = "buttonTitle">电子商务</span>
                     </div>
                     <div className = "buttonLine"></div>
                     <div className = "buttonContent">
