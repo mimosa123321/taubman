@@ -42,7 +42,7 @@
     p {
       position: relative;
       vertical-align: middle;
-      font-size: 11px;
+      font-size: 13px;
       color:white;
       padding: 4%;
       margin: 0;
@@ -236,7 +236,7 @@ and (min-width : 1700px) {
 
   .caption {
     p {
-      font-size: 18px;
+      font-size: 18px !important;
     }
   }
 }
