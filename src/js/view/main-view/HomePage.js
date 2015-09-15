@@ -105,7 +105,7 @@ var HomePage = module.exports = React.createClass({
                     </div>
                     <div id="viewPrezi">
                         <div id="viewPreziIcon">
-                            <img src="build/images/viewprezi.png"/>
+                            <a href="http://prezi.com/jwkprjaodn0i/?utm_campaign=share&utm_medium=copy" target="_blank"><img src="build/images/viewprezi.png"/></a>
                         </div>
                     </div>
                 </div>
