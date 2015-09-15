@@ -36,6 +36,7 @@ var PanelSlideShow = module.exports = React.createClass({
                 },
 
                 onSlideBefore: function($slideElement, oldIndex, newIndex) {
+                    console.log("slide before");
                     var currentPlayer = document.getElementById('slideShowVideo' + oldIndex);
                     if(currentPlayer != null) {
                         if(!isIE8) {
