@@ -4,3 +4,4 @@ build/*
 index2.html
 index3.html
 *.iml
+buildtemp/
