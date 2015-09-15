@@ -50,7 +50,7 @@ var HomePage = module.exports = React.createClass({
     },
 
     submitForm:function() {
-        $.post("http://www.taubmanasia.com/china-mall-2020/download_whitepaper.aspx", function(result) {
+        $.post("/china-mall-2020/download_whitepaper_zh.aspx", function(result) {
 
         }.bind(this));
     },
@@ -126,7 +126,7 @@ var HomePage = module.exports = React.createClass({
 
 
 
-                <form className="emailForm" id="myEmailForm" method="POST" action="http://www.taubmanasia.com/china-mall-2020/download_whitepaper.aspx">
+                <form className="emailForm" id="myEmailForm" method="POST" action="/china-mall-2020/download_whitepaper_zh.aspx">
                     <div className = "emailFormBg"></div>
                     <div className = "closeButton" onClick={this.closeForm}><img src="build/images/closebtn.png" /></div>
                     <div className = "contents">
