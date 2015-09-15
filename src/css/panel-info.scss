@@ -68,8 +68,8 @@
     }
 
     img {
-      height: 39% !important;
-      width: auto !important;
+      height: auto !important;
+      width: 99%!important;
     }
   }
 }
@@ -112,8 +112,8 @@
     }
 
     .alipay {
-      height: 86% !important;
-      width: auto !important;
+      height: auto !important;
+      width: 80% !important;
     }
 
     img {
@@ -147,6 +147,7 @@
     width: 67%;
     height: 100%;
     background-color: #282b2d;
+    overflow: auto;
     h1 {
       font-size: 35px;
       color: white;
@@ -165,8 +166,8 @@
     }
 
     img.chart {
-      width:auto !important;
-      height:66% !important;
+      width: 90% !important;
+      height: auto !important;
     }
   }
 
@@ -191,7 +192,7 @@
   #middle {
     margin: 5% auto;
     position: relative;
-    width: 74%;
+    width: 92%;
     h2 {
       margin:0;
       font-size: 30px;
