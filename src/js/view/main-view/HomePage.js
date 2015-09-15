@@ -83,7 +83,7 @@ var HomePage = module.exports = React.createClass({
 
     render:function() {
         //<input type="submit" className="submitBtn" value="Submit" onClick={this.checkForm} />
-        /*<div className = "closeArea" onClick={this.closeForm}></div>*/
+
         /*<div id="scrollDownBtn">
          <img src="build/images/scrollbtn.png"/>
          </div>*/
@@ -128,6 +128,7 @@ var HomePage = module.exports = React.createClass({
 
                 <form className="emailForm" id="myEmailForm" method="POST" action="http://chinamall.xenyo.net:8080/download_whitepaper.aspx">
                     <div className = "emailFormBg"></div>
+                    <div className = "closeButton" onClick={this.closeForm}><img src="build/images/closebtn.png" /></div>
                     <div className = "contents">
                         <div className = "form2" ref="form2"><img src="./build/images/thankyou.png"/></div>
                         <div className = "form1" ref="form1">

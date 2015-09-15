@@ -347,6 +347,13 @@ a {
       background-attachment: fixed;
       background-size: cover;
 
+      .closeButton {
+        width: 7%;
+        position: absolute;
+        right: 3%;
+        top: 5%;
+      }
+
       .emailForm {
         position: absolute;
         left: 0;
