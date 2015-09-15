@@ -129,7 +129,7 @@ module.exports = function(grunt) {
         'watch': {
             scripts: {
                 files: ['./src/**/*'],
-                tasks: ['default'],
+                tasks: ['concat:sass', 'sass', 'cssmin', 'browserify'],
                 options: {
                     spawn: false
                 }
