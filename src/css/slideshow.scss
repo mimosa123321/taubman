@@ -136,6 +136,17 @@
         position: absolute;
         width: 100%;
         bottom: -13px;
+
+        .bx-pager-item {
+          a.active{
+            //border:none !important;
+            //background: radial-gradient(ellipse at center, #f37421 0%,#B94D06 78%,#FD6E0B 99%) !important;
+          }
+
+          a {
+            //background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 62%, rgba(224,224,224,1) 100%);
+          }
+        }
       }
     }
   }

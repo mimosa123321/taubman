@@ -132,7 +132,7 @@ var HomePage = module.exports = React.createClass({
                     <div className = "contents">
                         <div className = "form2" ref="form2"><img src="./build/images/thankyou.png"/></div>
                         <div className = "form1" ref="form1">
-                            <p>塔博曼亚洲感谢您下载{n}展望2020年的中国购物中心白皮书.</p>
+                            <p>塔博曼亚洲感谢您下载{n}展望2020年的中国购物中心白皮书。</p>
                             <p>请输入您的个人资料</p>
                             <div className="formButtonBg">
                                 <img src="build/images/formbtn.png"/>

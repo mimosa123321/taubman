@@ -161,11 +161,12 @@ a {
         position:absolute;
         margin:0 auto;
         text-align: center;
+        //max-width: 36px;
       }
 
       img {
         vertical-align: middle;
-        width: 50%;
+        width: 45%;
         height:auto;
       }
     }
@@ -555,6 +556,7 @@ a {
             opacity: 0.6;
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
             //height: 56%;
+            margin: 28% auto !important;
           }
         }
 
@@ -574,10 +576,10 @@ a {
 
           #viewPreziIcon {
               @extend .alignCenter;
-              width: 56%;
+              width: 64%;
               opacity: 0.6;
               -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-              //height: 44%;
+              margin: 24% auto !important;
             }
         }
         img {
@@ -661,10 +663,11 @@ a {
 
           #asiaIcon {
             @extend .alignCenter;
-            width:60%;
+            width:55%;
             opacity: 0.6;
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
             //height: 49%;
+            margin: 21% auto !important;
           }
         }
 
