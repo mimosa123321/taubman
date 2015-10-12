@@ -116,7 +116,7 @@ var HomePage = module.exports = React.createClass({
                             <a id="fbIcon" target='_blank' onClick={this.fbShareHandler} className="icons"><img src="build/images/fbicon.png"/></a>
                             <a id="linkedinIcon" onClick={this.linkedInShareHandler} className="icons"><img src="build/images/linkedinicon.png"/></a>
                             <a id="twitterIcon" onClick={this.twitterShareHandler} className="icons"><img src="build/images/twittericon.png"/></a>
-                            <a id="weiboIcon" onClick={this.weiboShareHandler} target='_blank' href="javascript:" className="icons"><img src="build/images/weiboicon.png"/></a>
+                            <a id="weiboIcon" onClick={this.weiboShareHandler} className="icons"><img src="build/images/weiboicon.png"/></a>
                         </div>
                     </div>
                     <a id="aboutAsia" target='_blank' href="http://www.taubmanasia.com.cn/">
